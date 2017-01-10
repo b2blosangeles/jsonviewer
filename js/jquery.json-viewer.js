@@ -48,7 +48,7 @@
       if (json.length > 0) {
         html += '[<ol class="json-array">';
         for (var i = 0; i < json.length; ++i) {
-          html += '<li>'
+          html += '<li>';
           // Add toggle button if item is collapsable
           if (isCollapsable(json[i])) {
             html += '<a href class="json-toggle"></a>';
