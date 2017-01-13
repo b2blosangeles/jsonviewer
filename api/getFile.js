@@ -6,7 +6,7 @@ var opts = {
   timeout: 60000
 }
 
-pkg.request(opts, function (err, res, body) {
+pkg.request('http://jsonviewer.qalet.com/README.md', function (err, res, body) {
   if (err) {
    res.send(err)
     return
