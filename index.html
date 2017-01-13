@@ -74,8 +74,13 @@ $(function() {
     <pre id="json-renderer"></pre>
     
    <script>
-     converter = new Showdown.converter();
-     console.log(converter.makeHtml('*test'));
+     setTimeout(
+        function() {
+           var converter = new Showdown.converter();
+           console.log(converter.makeHtml('*test'));          
+        },1000
+     );
+
     </script>
     
   </body>
