@@ -72,5 +72,11 @@ $(function() {
     </p>
     <button id="btn-json-viewer" title="run jsonViewer()">Transform to HTML</button>
     <pre id="json-renderer"></pre>
+    
+   <script>
+     converter = new Showdown.converter();
+     console.log(converter.makeHtml('*test');)
+    </script>
+    
   </body>
 </html>
