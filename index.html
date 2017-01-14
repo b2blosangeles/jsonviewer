@@ -65,7 +65,11 @@ $(function() {
    
            $.get('http://jsonviewer.qalet.com/api/data.js',
               function(data) {
-                  console.log(data);            
+				var options = {
+				  collapsed: $('#collapsed').is(':checked'),
+				  withQuotes: $('#with-quotes').is(':checked')
+				};
+				$('#json-renderer').jsonViewer(data, options);          
               }
            );
         
