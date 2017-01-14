@@ -1,4 +1,4 @@
-pkg.request('http://jsonviewer.qalet.com/README.md', function (err, resp, body) {
+pkg.request('http://jsonviewer.qalet.com/js/showdown/README.md', function (err, resp, body) {
 	
 	
 	
