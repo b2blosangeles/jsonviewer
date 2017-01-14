@@ -7,7 +7,7 @@
      <!--script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.5.3/showdown.js"></script-->
     <link href="package/jsonviewer.min.css" type="text/css" rel="stylesheet" />
 
-    <style type="text/css">
+    <!--style type="text/css">
 body {
   margin: 0 100px;
   font-family: sans-serif;
@@ -20,7 +20,7 @@ pre#json-renderer {
   border: 1px solid #aaa;
   padding: 0.5em 1.5em;
 }
-    </style>
+    </style-->
   </head>
   <body>
     <pre id="json-renderer"></pre>
@@ -37,7 +37,7 @@ pre#json-renderer {
            $.get('http://jsonviewer.qalet.com/api/data.js',
               function(data) {
 				var options = {
-				  collapsed: true,
+				  collapsed: false,
 				  withQuotes: false
 				};
 				$('#json-renderer').jsonViewer(data, options);          
