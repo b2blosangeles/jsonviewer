@@ -1,5 +1,5 @@
 
-var showdown  = require(env.space_path + 'pkg/showdown/node_modules/showdown'),
+var showdown  = require(env.space_path + '/pkg/showdown/node_modules/showdown'),
     converter = new showdown.Converter(),
     text      = '#hello, markdown!',
     html      = converter.makeHtml(text);
