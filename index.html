@@ -55,7 +55,7 @@ $(function() {
     <pre id="json-renderer"></pre>
     <div id="md"></div>
    <script>
-           $.get('http://jsonviewer.qalet.com/api/data.json',
+           $.get('http://jsonviewer.qalet.com/api/data.js',
               function(data) {
                   var converter = new showdown.Converter();
                   $('#md').html(converter.makeHtml(data));               
