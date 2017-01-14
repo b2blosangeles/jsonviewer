@@ -74,7 +74,11 @@ $(function() {
     <pre id="json-renderer"></pre>
     
    <script>
-
+           $.get('http://jsonviewer.qalet.com/api/getFile.js',
+              function(data) {
+                 console.log(data);
+              }
+           );
           var converter = new showdown.Converter();
            console.log(converter.makeHtml('*test==='));          
 
