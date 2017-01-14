@@ -45,25 +45,7 @@ $(function() {
   </head>
   <body>
     <h1><a href="https://github.com/abodelot/jquery.json-viewer">jQuery json-viewer</a></h1>
-    <textarea id="json-input" autocomplete="off">
-{
-  "id": 1001,
-  "type": "donut",
-  "name": "Cake",
-  "description": "http://en.wikipedia.org/wiki/Doughnut",
-  "price": 2.55,
-  "available": {
-    store: 42,
-    warehouse: 600
-  },
-  "topping": [
-    { "id": 5001, "type": "None" },
-    { "id": 5002, "type": "Glazed" },
-    { "id": 5005, "type": "Sugar" },
-    { "id": 5003, "type": "Chocolate" },
-    { "id": 5004, "type": "Maple" }
-  ]
-}</textarea>
+
     <p>
       Options:
       <label><input type="checkbox" id="collapsed" />Collapse nodes</label>
@@ -73,10 +55,17 @@ $(function() {
     <pre id="json-renderer"></pre>
     <div id="md"></div>
    <script>
-           $.get('http://jsonviewer.qalet.com/api/getFile.js',
+           $.get('http://jsonviewer.qalet.com/api/data.json',
               function(data) {
                   var converter = new showdown.Converter();
                   $('#md').html(converter.makeHtml(data));               
+              }
+           );   
+   
+   
+           $.get('http://jsonviewer.qalet.com/api/getFile.js',
+              function(data) {
+                  console.log(data);            
               }
            );
         
