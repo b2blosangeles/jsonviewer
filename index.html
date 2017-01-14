@@ -21,37 +21,8 @@ pre#json-renderer {
   padding: 0.5em 1.5em;
 }
     </style>
-
-    <script>
-$(function() {
-  $('#btn-json-viewer').click(function() {
-    try {
-      var input = eval('(' + $('#json-input').val() + ')');
-    }
-    catch (error) {
-      return alert("Cannot eval JSON: " + error);
-    }
-    var options = {
-      collapsed: $('#collapsed').is(':checked'),
-      withQuotes: $('#with-quotes').is(':checked')
-    };
-    $('#json-renderer').jsonViewer(input, options);
-  });
-
-  // Display JSON sample on load
-  $('#btn-json-viewer').click();
-});
-    </script>
   </head>
   <body>
-    <h1><a href="https://github.com/abodelot/jquery.json-viewer">jQuery json-viewer</a></h1>
-
-    <p>
-      Options:
-      <label><input type="checkbox" id="collapsed" />Collapse nodes</label>
-      <label><input type="checkbox" id="with-quotes" />Keys with quotes</label>
-    </p>
-    <button id="btn-json-viewer" title="run jsonViewer()">Transform to HTML</button>
     <pre id="json-renderer"></pre>
     <div id="md"></div>
    <script>
@@ -66,14 +37,12 @@ $(function() {
            $.get('http://jsonviewer.qalet.com/api/data.js',
               function(data) {
 				var options = {
-				  collapsed: $('#collapsed').is(':checked'),
-				  withQuotes: $('#with-quotes').is(':checked')
+				  collapsed: true,
+				  withQuotes: false
 				};
 				$('#json-renderer').jsonViewer(data, options);          
               }
            );
-        
-
     </script>
     
   </body>
