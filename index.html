@@ -72,12 +72,12 @@ $(function() {
     </p>
     <button id="btn-json-viewer" title="run jsonViewer()">Transform to HTML</button>
     <pre id="json-renderer"></pre>
-    
+    <div id="md"></div>
    <script>
            $.get('http://jsonviewer.qalet.com/api/getFile.js',
               function(data) {
                   var converter = new showdown.Converter();
-                  console.log(converter.makeHtml(data));               
+                  $('#md').html(converter.makeHtml(data));               
               }
            );
         
