@@ -1,4 +1,4 @@
-;/*! showdown 19-12-2016 */
+;/*! showdown 09-01-2017 */
 (function(){
 /**
  * Created by Tivie on 13-07-2015.
@@ -22,6 +22,11 @@ function getDefaultOpts(simple) {
       defaultValue: false,
       describe: 'Specify a prefix to generated header ids',
       type: 'string'
+    },
+    ghCompatibleHeaderId: {
+      defaultValue: false,
+      describe: 'Generate header ids compatible with github style (spaces are replaced with dashes, a bunch of non alphanumeric chars are removed)',
+      type: 'boolean'
     },
     headerLevelStart: {
       defaultValue: false,
@@ -97,6 +102,11 @@ function getDefaultOpts(simple) {
       defaultValue: false,
       description: 'Makes adding a space between `#` and the header text mandatory (GFM Style)',
       type: 'boolean'
+    },
+    ghMentions: {
+      defaultValue: false,
+      description: 'Enables github @mentions',
+      type: 'boolean'
     }
   };
   if (simple === false) {
@@ -111,6 +121,18 @@ function getDefaultOpts(simple) {
   return ret;
 }
 
+function allOptionsOn() {
+  'use strict';
+  var options = getDefaultOpts(true),
+      ret = {};
+  for (var opt in options) {
+    if (options.hasOwnProperty(opt)) {
+      ret[opt] = true;
+    }
+  }
+  return ret;
+}
+
 /**
  * Created by Tivie on 06-01-2015.
  */
@@ -120,6 +142,7 @@ var showdown = {},
     parsers = {},
     extensions = {},
     globalOptions = getDefaultOpts(true),
+    setFlavor = 'vanilla',
     flavor = {
       github: {
         omitExtraWLInCodeBlocks:              true,
@@ -134,9 +157,12 @@ var showdown = {},
         tasklists:                            true,
         disableForced4SpacesIndentedSublists: true,
         simpleLineBreaks:                     true,
-        requireSpaceBeforeHeadingText:        true
+        requireSpaceBeforeHeadingText:        true,
+        ghCompatibleHeaderId:                 true,
+        ghMentions:                           true
       },
-      vanilla: getDefaultOpts(true)
+      vanilla: getDefaultOpts(true),
+      allOn: allOptionsOn()
     };
 
 /**
@@ -200,13 +226,36 @@ showdown.resetOptions = function () {
  */
 showdown.setFlavor = function (name) {
   'use strict';
-  if (flavor.hasOwnProperty(name)) {
-    var preset = flavor[name];
-    for (var option in preset) {
-      if (preset.hasOwnProperty(option)) {
-        globalOptions[option] = preset[option];
-      }
+  if (!flavor.hasOwnProperty(name)) {
+    throw Error(name + ' flavor was not found');
+  }
+  var preset = flavor[name];
+  setFlavor = name;
+  for (var option in preset) {
+    if (preset.hasOwnProperty(option)) {
+      globalOptions[option] = preset[option];
     }
+  }
+};
+
+/**
+ * Get the currently set flavor
+ * @returns {string}
+ */
+showdown.getFlavor = function () {
+  'use strict';
+  return setFlavor;
+};
+
+/**
+ * Get the options of a specified flavor. Returns undefined if the flavor was not found
+ * @param {string} name Name of the flavor
+ * @returns {{}|undefined}
+ */
+showdown.getFlavorOptions = function (name) {
+  'use strict';
+  if (flavor.hasOwnProperty(name)) {
+    return flavor[name];
   }
 };
 
@@ -697,7 +746,8 @@ showdown.helper.replaceRecursiveRegExp = function (str, replacement, left, right
 /**
  * POLYFILLS
  */
-if (showdown.helper.isUndefined(console)) {
+// use this instead of builtin is undefined for IE8 compatibility
+if (typeof(console) === 'undefined') {
   console = {
     warn: function (msg) {
       'use strict';
@@ -754,7 +804,12 @@ showdown.Converter = function (converterOptions) {
        * @private
        * @type {{}}
        */
-      listeners = {};
+      listeners = {},
+
+      /**
+       * The flavor set in this converter
+       */
+      setConvFlavor = setFlavor;
 
   _constructor();
 
@@ -1078,14 +1133,24 @@ showdown.Converter = function (converterOptions) {
    * @param {string} name
    */
   this.setFlavor = function (name) {
-    if (flavor.hasOwnProperty(name)) {
-      var preset = flavor[name];
-      for (var option in preset) {
-        if (preset.hasOwnProperty(option)) {
-          options[option] = preset[option];
-        }
+    if (!flavor.hasOwnProperty(name)) {
+      throw Error(name + ' flavor was not found');
+    }
+    var preset = flavor[name];
+    setConvFlavor = name;
+    for (var option in preset) {
+      if (preset.hasOwnProperty(option)) {
+        options[option] = preset[option];
       }
     }
+  };
+
+  /**
+   * Get the currently set flavor of this converter
+   * @returns {string}
+   */
+  this.getFlavor = function () {
+    return setConvFlavor;
   };
 
   /**
@@ -1186,10 +1251,20 @@ showdown.subParser('anchors', function (text, options, globals) {
   text = text.replace(/(\[((?:\[[^\]]*]|[^\[\]])*)]\([ \t]*()<?(.*?(?:\(.*?\).*?)?)>?[ \t]*((['"])(.*?)\6[ \t]*)?\))/g,
                       writeAnchorTag);
 
-  // Last, handle reference-style shortcuts: [link text]
+  // handle reference-style shortcuts: [link text]
   // These must come last in case you've also got [link test][1]
   // or [link test](/foo)
   text = text.replace(/(\[([^\[\]]+)])()()()()()/g, writeAnchorTag);
+
+  // Lastly handle GithubMentions if option is enabled
+  if (options.ghMentions) {
+    text = text.replace(/(^|\s)(\\)?(@([a-z\d\-]+))(?=[.!?;,[\]()]|\s|$)/gmi, function (wm, st, escape, mentions, username) {
+      if (escape === '\\') {
+        return st + mentions;
+      }
+      return st + '<a href="https://www.github.com/' + username + '">' + mentions + '</a>';
+    });
+  }
 
   text = globals.converter._dispatch('anchors.after', text, options, globals);
   return text;
@@ -1258,9 +1333,9 @@ showdown.subParser('blockGamut', function (text, options, globals) {
 
   // Do Horizontal Rules:
   var key = showdown.subParser('hashBlock')('<hr />', options, globals);
-  text = text.replace(/^( ?-){3,}[ \t]*$/gm, key);
-  text = text.replace(/^( ?\*){3,}[ \t]*$$/gm, key);
-  text = text.replace(/^( ?_){3,}[ \t]*$$/gm, key);
+  text = text.replace(/^ {0,2}( ?-){3,}[ \t]*$/gm, key);
+  text = text.replace(/^ {0,2}( ?\*){3,}[ \t]*$/gm, key);
+  text = text.replace(/^ {0,2}( ?_){3,}[ \t]*$/gm, key);
 
   text = showdown.subParser('lists')(text, options, globals);
   text = showdown.subParser('codeBlocks')(text, options, globals);
@@ -1732,7 +1807,7 @@ showdown.subParser('hashHTMLSpans', function (text, config, globals) {
   var matches = showdown.helper.matchRecursiveRegExp(text, '<code\\b[^>]*>', '</code>', 'gi');
 
   for (var i = 0; i < matches.length; ++i) {
-    text = text.replace(matches[i][0], '~L' + (globals.gHtmlSpans.push(matches[i][0]) - 1) + 'L');
+    text = text.replace(matches[i][0], '~C' + (globals.gHtmlSpans.push(matches[i][0]) - 1) + 'C');
   }
   return text;
 });
@@ -1744,7 +1819,7 @@ showdown.subParser('unhashHTMLSpans', function (text, config, globals) {
   'use strict';
 
   for (var i = 0; i < globals.gHtmlSpans.length; ++i) {
-    text = text.replace('~L' + i + 'L', globals.gHtmlSpans[i]);
+    text = text.replace('~C' + i + 'C', globals.gHtmlSpans[i]);
   }
 
   return text;
@@ -1773,6 +1848,7 @@ showdown.subParser('headers', function (text, options, globals) {
 
   var prefixHeader = options.prefixHeaderId,
       headerLevelStart = (isNaN(parseInt(options.headerLevelStart))) ? 1 : parseInt(options.headerLevelStart),
+      ghHeaderId = options.ghCompatibleHeaderId,
 
   // Set text-style headers:
   //	Header 1
@@ -1820,7 +1896,22 @@ showdown.subParser('headers', function (text, options, globals) {
   });
 
   function headerId(m) {
-    var title, escapedId = m.replace(/[^\w]/g, '').toLowerCase();
+    var title, escapedId;
+
+    if (ghHeaderId) {
+      escapedId = m
+        .replace(/ /g, '-')
+        //replace previously escaped chars (&, ~ and $)
+        .replace(/&amp;/g, '')
+        .replace(/~T/g, '')
+        .replace(/~D/g, '')
+        //replace rest of the chars (&~$ are repeated as they might have been escaped)
+        // borrowed from github's redcarpet (some they should produce similar results)
+        .replace(/[&+$,\/:;=?@"#{}|^~\[\]`\\*)(%.!'<>]/g, '')
+        .toLowerCase();
+    } else {
+      escapedId = m.replace(/[^\w]/g, '').toLowerCase();
+    }
 
     if (globals.hashLinkCounts[escapedId]) {
       title = escapedId + '-' + (globals.hashLinkCounts[escapedId]++);
@@ -1952,6 +2043,7 @@ showdown.subParser('italicsAndBold', function (text, options, globals) {
 showdown.subParser('lists', function (text, options, globals) {
   'use strict';
   text = globals.converter._dispatch('lists.before', text, options, globals);
+
   /**
    * Process the contents of a single ordered or unordered list, splitting it
    * into individual list items.
@@ -2039,17 +2131,24 @@ showdown.subParser('lists', function (text, options, globals) {
         // Recursion for sub-lists:
         item = showdown.subParser('lists')(item, options, globals);
         item = item.replace(/\n$/, ''); // chomp(item)
+        item = showdown.subParser('hashHTMLBlocks')(item, options, globals);
+        // Colapse double linebreaks
+        item = item.replace(/\n\n+/g, '\n\n');
+        // replace double linebreaks with a placeholder
+        item = item.replace(/\n\n/g, '~B');
         if (isParagraphed) {
           item = showdown.subParser('paragraphs')(item, options, globals);
         } else {
           item = showdown.subParser('spanGamut')(item, options, globals);
         }
+        item = item.replace(/~B/g, '\n\n');
       }
 
       // now we need to remove the marker (~A)
       item = item.replace('~A', '');
       // we can finally wrap the line in list item tags
       item =  '<li' + bulletStyle + '>' + item + '</li>\n';
+
       return item;
     });
 
@@ -2260,11 +2359,11 @@ showdown.subParser('spanGamut', function (text, options, globals) {
   text = showdown.subParser('strikethrough')(text, options, globals);
 
   // Do hard breaks
-
-  // GFM style hard breaks
   if (options.simpleLineBreaks) {
+    // GFM style hard breaks
     text = text.replace(/\n/g, '<br />\n');
   } else {
+    // Vanilla hard breaks
     text = text.replace(/  +\n/g, '<br />\n');
   }
 
