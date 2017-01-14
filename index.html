@@ -26,23 +26,25 @@ pre#json-renderer {
     <pre id="json-renderer"></pre>
     <div id="md"></div>
    <script>
-           $.get('http://jsonviewer.qalet.com/api/getFile.js',
-              function(data) {
-                  var converter = new showdown.Converter();
-                  $('#md').html(converter.makeHtml(data));               
-              }
-           );   
-   
-   
-           $.get('http://jsonviewer.qalet.com/api/data.js',
-              function(data) {
-				var options = {
-				  collapsed: false,
-				  withQuotes: false
-				};
-				$('#json-renderer').jsonViewer(data, options);          
-              }
-           );
+		var HtmlViwer = function(url, type, target) {
+           $.get(url,
+				function(data) {
+					if (type == 'md') {
+						var converter = new showdown.Converter();
+						target.html(converter.makeHtml(data));
+					}	
+					if (type == 'json') {
+						var options = {
+						  collapsed: false,
+						  withQuotes: false
+						};
+						target.jsonViewer(data, options);   
+					}						
+				}
+           );  		
+		};
+		HtmlViwer('http://jsonviewer.qalet.com/api/getFile.js', 'md',  $('#md'));
+		HtmlViwer('http://jsonviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
     </script>
     
   </body>
