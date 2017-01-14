@@ -5,8 +5,8 @@
   "description": "http://en.wikipedia.org/wiki/Doughnut",
   "price": 2.55,
   "available": {
-    store: 42,
-    warehouse: 600
+    "store": 42,
+    "warehouse": 600
   },
   "topping": [
     { "id": 5001, "type": "None" },
