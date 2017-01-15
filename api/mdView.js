@@ -1,7 +1,7 @@
+var url = req.query.md;
+res.send(url);
+return true;
 pkg.request('http://d3.qalet.com/README.md', function (err, resp, body) {
-	
-	
-	
   if (err) {
    res.send(err)
     return
