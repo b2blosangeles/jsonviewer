@@ -1,6 +1,10 @@
 var url = req.query.md;
 if (url) {
 	pkg.request(url, function (err, resp, body) {
+		
+		res.send(resp)
+		return true;
+		
 	  if (err) {
 	   res.send(err)
 		return
