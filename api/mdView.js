@@ -3,7 +3,7 @@ if (url) {
 	pkg.request(url, function (err, resp, body) {
 		
 		if (resp.statusCode != 200) {
-			res.send(url + ' unexist!');	
+			res.send(url + ' does not exist!');	
 			return true;
 		} else {
 		
