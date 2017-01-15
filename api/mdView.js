@@ -1,4 +1,4 @@
-var url = req.query.md;
+var url = (req.query.md)?req.query.md:req.post.md;
 if (url) {
 	pkg.request(url, function (err, resp, body) {
 		
