@@ -30,7 +30,7 @@ pre#json-renderer {
    <script>
 		var HtmlViwer = function(url, type, target) {
            $.get(url,
-				{url:'http://jsonviewer.qalet.com/js/showdown/README.md'}
+				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'}
 				function(data) {
 					if (type == 'md') {
 						var converter = new showdown.Converter();
