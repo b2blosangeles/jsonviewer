@@ -1,162 +1,96 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <script type="text/javascript" src="/js/d3/d3.v4.js"></script>
-    <script type="text/javascript" src="d3/d3.layout.js"></script>
-    <script type="text/javascript" src="packages.js"></script>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <style type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1000">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mbostock">
+<meta property="og:url" content="http://bl.ocks.org/mbostock/4062045">
+<meta property="og:title" content="Force-Directed Graph">
+<meta property="og:description" content="Mike Bostock’s Block 4062045">
+<meta property="og:image" content="http://bl.ocks.org/mbostock/raw/4062045/5916d145c8c048a6e3086915a6be464467391c62/preview.png">
+<title>Force-Directed Graph - bl.ocks.org</title>
+<link rel="icon" href="/favicon.png">
+<style>
 
-path.arc {
-  cursor: move;
-  fill: #fff;
-}
+@import url("/style.css");
 
-.node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
+</style>
 
-.node {
-  font-size: 10px;
-  pointer-events: none;
-}
-
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-}
-
-    </style>
-  </head>
-  <body>
-    <div id="body">
-      <div id="footer">
-        d3.layout.cluster
-        <div class="hint">
-          drag the ring to rotate
-        </div>
-      </div>
+<header>
+  <div class="column">
+    <div class="navigation">
+      <a href="/">Popular</a>
+      / <a href="/-/about">About</a>
     </div>
-    <script type="text/javascript">
+    <a class="user" href="/mbostock"><img class="avatar" src="https://avatars.githubusercontent.com/u/230541?v=3&amp;s=60" width="30" height="30">Mike Bostock</a>’s
+    Block <a class="gist gist-id self" title="View Gist on GitHub." href="https://gist.github.com/mbostock/4062045">4062045</a>    <div class="date">Updated January 14, 2017</div>
+  </div>
+</header>
 
-var w = 1280,
-    h = 800,
-    rx = w / 2,
-    ry = h / 2,
-    m0,
-    rotate = 0;
+<div class="column">
+  <h1>Force-Directed Graph</h1>
+  <div class="index">
+    <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="/mbostock/raw/4062045/5916d145c8c048a6e3086915a6be464467391c62/" marginwidth="0" marginheight="0" style="height:600px;" scrolling="no"></iframe>
+  </div>
+  <div class="index-pop">
+    <a target="_blank" title="Open Block 4062045 a new window." href="/mbostock/raw/4062045">Open<svg height="16" width="12"><path d="M11 10h1v3c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3v1H1v10h10V10zM6 2l2.25 2.25-3.25 3.25 1.5 1.5 3.25-3.25 2.25 2.25V2H6z"></path></svg></a>
+  </div>
+  <div class="gist-readme" data-key="README.md"></div>
+  <div class="gist-sources">
+    <div class="gist-source" data-key="index.html">
+      <h2>index.html<a name="index.html" class="anchor" href="#index.html">#</a></h2>
+      <pre><code>…</code></pre>
+    </div>
+    <div class="gist-source" data-key="miserables.json">
+      <h2>miserables.json<a name="miserables.json" class="anchor" href="#miserables.json">#</a></h2>
+      <pre><code>…</code></pre>
+    </div>
+  </div>
+  <div class="gist-license">
+    <h2>LICENSE<a name="license" class="anchor" href="#license">#</a></h2>
+    Released under the <a target='_blank' href='https://opensource.org/licenses/GPL-3.0'>GNU General Public License, version 3</a>.
+  </div>
+</div>
 
-var cluster = d3.layout.cluster()
-    .size([360, ry - 120])
-    .sort(null);
+<script src="/js/d3/d3.v4.min.js"></script>
+<script src="/highlight.min.js"></script>
+<script>
 
-var diagonal = d3.svg.diagonal.radial()
-    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+var gist = {"public":true,"sha":"5916d145c8c048a6e3086915a6be464467391c62","files":{".block":{"language":null,"type":"text/plain","filename":".block","size":29,"sha":"cd040b760e372adf7013b839374779a986a3befc"},"README.md":{"language":"Markdown","type":"text/plain","filename":"README.md","size":787,"sha":"58914a2fb1a3d5b09a7994c302785edf97a353a6"},"index.html":{"language":"HTML","type":"text/html","filename":"index.html","size":2122,"sha":"d27d1f0c3d72e242e71048f0d206cac70ef74b0c"},"miserables.json":{"language":"JSON","type":"application/json","filename":"miserables.json","size":18844,"sha":"7db92850f88361c85f9fe4efa20333a454c5632a"},"preview.png":{"language":null,"type":"image/png","filename":"preview.png","size":91130,"sha":"0a568417d9b3617d7e13cc44f8113ba98908d84e"},"thumbnail.png":{"language":null,"type":"image/png","filename":"thumbnail.png","size":12145,"sha":"0bf73a11321b9ffe4d9c59aa3df2161c90ee9235"}},"created_at":"2012-11-12T21:31:44Z","updated_at":"2017-01-14T11:33:21Z","description":"Force-Directed Graph","owner":{"login":"mbostock"},"id":"4062045"};
 
-var svg = d3.select("#body").append("div")
-    .style("width", w + "px")
-    .style("height", w + "px");
+var files = d3.values(gist.files);
 
-var vis = svg.append("svg:svg")
-    .attr("width", w)
-    .attr("height", w)
-  .append("svg:g")
-    .attr("transform", "translate(" + rx + "," + ry + ")");
+d3.select(".gist-readme")
+    .data(files, function(d) { return d ? d.filename : this.getAttribute("data-key"); })
+    .each(function(d) {
+      var readme = d3.select(this);
+      d3.text("/mbostock/raw/4062045/5916d145c8c048a6e3086915a6be464467391c62/" + d.filename, function(error, content) {
+        if (error) content = "Sorry, an error occurred.";
+        readme.html(new Showdown.converter().makeHtml(content));
+        readme.selectAll("code").each(function() { hljs.highlightBlock(this); });
+      });
+    });
 
-vis.append("svg:path")
-    .attr("class", "arc")
-    .attr("d", d3.svg.arc().innerRadius(ry - 120).outerRadius(ry).startAngle(0).endAngle(2 * Math.PI))
-    .on("mousedown", mousedown);
+d3.selectAll(".gist-source")
+    .data(files, function(d) { return d ? d.filename : this.getAttribute("data-key"); })
+  .select("code")
+    .attr("class", function(d) { return d.language && (d.language === "JSON" ? "javascript" : d.language.toLowerCase()); })
+    .each(function(d) {
+      var code = d3.select(this);
+      d3.text("/mbostock/raw/4062045/5916d145c8c048a6e3086915a6be464467391c62/" + (d.filename === "index.html" ? "" : d.filename), function(error, content) {
+        if (error) content = "Sorry, an error occurred.";
+        code.text(content);
+        hljs.highlightBlock(code.node());
+      });
+    });
 
-d3.json("flare.json", function(json) {
-  var nodes = cluster.nodes(json);
+</script>
 
-  var link = vis.selectAll("path.link")
-      .data(cluster.links(nodes))
-    .enter().append("svg:path")
-      .attr("class", "link")
-      .attr("d", diagonal);
+<script>
 
-  var node = vis.selectAll("g.node")
-      .data(nodes)
-    .enter().append("svg:g")
-      .attr("class", "node")
-      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+GoogleAnalyticsObject = "ga", ga = function() { ga.q.push(arguments); }, ga.q = [], ga.l = +new Date;
+ga("create", "UA-48272912-1", "auto");
+ga("send", "pageview");
 
-  node.append("svg:circle")
-      .attr("r", 3);
-
-  node.append("svg:text")
-      .attr("dx", function(d) { return d.x < 180 ? 8 : -8; })
-      .attr("dy", ".31em")
-      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-      .attr("transform", function(d) { return d.x < 180 ? null : "rotate(180)"; })
-      .text(function(d) { return d.name; });
-});
-
-d3.select(window)
-    .on("mousemove", mousemove)
-    .on("mouseup", mouseup);
-
-function mouse(e) {
-  return [e.pageX - rx, e.pageY - ry];
-}
-
-function mousedown() {
-  m0 = mouse(d3.event);
-  d3.event.preventDefault();
-}
-
-function mousemove() {
-  if (m0) {
-    var m1 = mouse(d3.event),
-        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI,
-        tx = "translate3d(0," + (ry - rx) + "px,0)rotate3d(0,0,0," + dm + "deg)translate3d(0," + (rx - ry) + "px,0)";
-    svg
-        .style("-moz-transform", tx)
-        .style("-ms-transform", tx)
-        .style("-webkit-transform", tx);
-  }
-}
-
-function mouseup() {
-  if (m0) {
-    var m1 = mouse(d3.event),
-        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI,
-        tx = "rotate3d(0,0,0,0deg)";
-
-    rotate += dm;
-    if (rotate > 360) rotate -= 360;
-    else if (rotate < 0) rotate += 360;
-    m0 = null;
-
-    svg
-        .style("-moz-transform", tx)
-        .style("-ms-transform", tx)
-        .style("-webkit-transform", tx);
-
-    vis
-        .attr("transform", "translate(" + rx + "," + ry + ")rotate(" + rotate + ")")
-      .selectAll("g.node text")
-        .attr("dx", function(d) { return (d.x + rotate) % 360 < 180 ? 8 : -8; })
-        .attr("text-anchor", function(d) { return (d.x + rotate) % 360 < 180 ? "start" : "end"; })
-        .attr("transform", function(d) { return (d.x + rotate) % 360 < 180 ? null : "rotate(180)"; });
-  }
-}
-
-function cross(a, b) {
-  return a[0] * b[1] - a[1] * b[0];
-}
-
-function dot(a, b) {
-  return a[0] * b[0] + a[1] * b[1];
-}
-
-    </script>
-  </body>
-</html>
-
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
