@@ -42,12 +42,19 @@ pre#json-renderer {
 						  withQuotes: true
 						};
 						target.jsonViewer(data, options);   
-					}						
+					}
+					if (type == 'xml') {
+						var options = {
+						  collapsed: false,
+						  withQuotes: true
+						};
+						target.jsonViewer(data, options);  		   
 				}
            );  		
 		};
 		HtmlViwer('http://docviewer.qalet.com/README.md', 'md',  $('#md'));
 		HtmlViwer('http://docviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
+		HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer'));
     </script>
     
   </body>
