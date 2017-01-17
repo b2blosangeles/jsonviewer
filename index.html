@@ -44,11 +44,14 @@ pre#json-renderer {
 						target.jsonViewer(data, options);   
 					}
 					if (type == 'xml') {
+						
+						var x2js = new X2JS();
+						var jsonObj = x2js.xml_str2json( data );
 						var options = {
 						  collapsed: false,
 						  withQuotes: true
 						};
-						target.jsonViewer(data, options);  	
+						target.jsonViewer(jsonObj, options);  	
 					}	
 				}
            );  		
