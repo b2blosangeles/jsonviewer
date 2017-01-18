@@ -86,7 +86,7 @@ pre.json-renderer {
 			try{
 				target.jsonViewer(JSON.parse(data), options);  
 			} catch	(err) {
-				target.html(err.message);	   
+				target.html('Error! ' + err.message);	   
 				}
 			 
 		}
