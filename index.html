@@ -17,7 +17,7 @@ textarea#json-input {
   height: 200px;
 }
 */
-pre.json-renderer {
+pre.doc_renderer {
  border-top: 6px solid #aaa; 
  margin-top:3px;
   padding: 1.5em;
@@ -52,7 +52,7 @@ pre.json-renderer {
 		</div>
 	</form>
 	
-    <pre id="json-renderer" class="json-renderer"></pre>
+    <pre id="doc-renderer" class="doc_renderer"></pre>
    <script>
 	   function sendForm() {
 		var code  =   $('form').find("[name='code']").val(),
@@ -63,12 +63,12 @@ pre.json-renderer {
             		$.get('http://docviewer.qalet.com/api/dataChannel.js',
 				{url:code}, 
 			     	function (data) {
-					HtmlViwer(data, type, $('#json-renderer')); 
+					HtmlViwer(data, type, $('#doc-renderer')); 
 				},'text'
 			     );
            		 return true;
         	   } else {  
-			HtmlViwer(code, type, $('#json-renderer'));  
+			HtmlViwer(code, type, $('#doc-renderer'));  
 		   }
 
 		console.log(code);   
