@@ -46,6 +46,8 @@ pre#json-renderer {
 					if (type == 'xml') {
 						
 						var x2js = new X2JS();
+						console.log('data--->');
+						console.log(data);
 						var jsonObj = x2js.xml_str2json( data );
 						console.log(jsonObj);
 						var options = {
