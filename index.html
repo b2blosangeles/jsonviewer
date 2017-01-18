@@ -32,7 +32,7 @@ pre.json-renderer {
 				<div class="col-sm-9">
 					<div class="form-group">
 					  <label for="comment">Data Source:</label>
-					  <textarea class="form-control" rows="5" id="comment"></textarea>
+					  <textarea class="form-control" rows="5" name="code"></textarea>
 					</div>	
 
 				</div>
@@ -57,7 +57,9 @@ pre.json-renderer {
     <div id="md"></div>
    <script>
 	   function sendForm() {
-		console.log($('form').find("[name='type']").val());   
+		var code  =   $('form').find("[name='code']").val(),
+		    type =   $('form').find("[name='type']").val();
+		console.log(code);   
 	   };
 		var HtmlViwer = function(url, type, target) {
            		$.get(url,
