@@ -31,6 +31,7 @@ pre#json-renderer {
 		var HtmlViwer = function(url, type, target) {
            		$.get(url,
 				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'},
+			      	dataType:'text',
 				function(data) {
 					if (type == 'md') {
 						var converter = new showdown.Converter();
