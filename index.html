@@ -26,6 +26,7 @@ pre#json-renderer {
   </head>
   <body>
     <pre id="json-renderer"></pre>
+	<pre id="json-renderer2"></pre>
     <div id="md"></div>
    <script>
 		var HtmlViwer = function(url, type, target) {
@@ -61,7 +62,7 @@ pre#json-renderer {
 		};
 		HtmlViwer('http://docviewer.qalet.com/README.md', 'md',  $('#md'));
 		HtmlViwer('http://docviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
-		HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer'));
+		HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer2'));
     </script>
     
   </body>
