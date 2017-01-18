@@ -45,7 +45,7 @@ pre.json-renderer {
 						<option>MarkDown</option>
 					  </select>
 					  <br/>
-					  <button type="button" class="btn btn-default">Submit</button>
+					  <button type="button" class="btn btn-default" onClick="sendForm()">Submit</button>
 					</div>		
 				</div>
 			</div>
@@ -56,6 +56,9 @@ pre.json-renderer {
 	<pre id="json-renderer2" class="json-renderer"></pre>
     <div id="md"></div>
    <script>
+	   function sendForm = function() {
+		console.log($('form')[0]);   
+	   }
 		var HtmlViwer = function(url, type, target) {
            		$.get(url,
 				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'},
