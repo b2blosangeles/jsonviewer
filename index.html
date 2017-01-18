@@ -59,6 +59,20 @@ pre.json-renderer {
 	   function sendForm() {
 		var code  =   $('form').find("[name='code']").val(),
 		    type =   $('form').find("[name='type']").val();
+		var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        	
+		   if (pattern.test(code)) {
+            		$.get(url,
+				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'}, 
+			     	function (data) {
+					HtmlViwer(code, type, $('#json-renderer')); 
+				},'text'
+			     );
+           		 return true;
+        	   } else {  
+			HtmlViwer(code, type, $('#json-renderer'));  
+		   }
+
 		console.log(code);   
 	   };
 		var HtmlViwer = function(url, type, target) {
