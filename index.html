@@ -42,7 +42,7 @@ pre#json-renderer {
 						  collapsed: false,
 						  withQuotes: true
 						};
-						target.jsonViewer(data, options);   
+						target.jsonViewer(jQuery.parseJSON(data), options);   
 					}
 					if (type == 'xml') {
 						
