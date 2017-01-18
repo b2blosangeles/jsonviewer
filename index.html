@@ -3,8 +3,7 @@
   <head>
     <title>jQuery json-viewer</title>
     <meta charset="utf-8" />
-    <script src="package/HtmlViewer.js"></script>
-     <!--script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.5.3/showdown.js"></script-->
+    <script src="package/JQuery_JS-virwer_showdown_x2j_json2.js"></script>
     <link href="package/jsonviewer.min.css" type="text/css" rel="stylesheet" />
 
     <style type="text/css">
@@ -18,15 +17,15 @@ textarea#json-input {
   height: 200px;
 }
 */
-pre#json-renderer {
-//  border: 1px solid #aaa;
-//  padding: 0.5em 1.5em;
+pre.json-renderer {
+  border: 1px solid #aaa;
+  padding: 0.5em 1.5em;
 }
     </style>
   </head>
   <body>
-    <pre id="json-renderer"></pre>
-	<pre id="json-renderer2"></pre>
+    <pre id="json-renderer" class="json-renderer"></pre>
+	<pre id="json-renderer2" class="json-renderer"></pre>
     <div id="md"></div>
    <script>
 		var HtmlViwer = function(url, type, target) {
