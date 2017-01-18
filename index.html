@@ -84,11 +84,11 @@ pre.json-renderer {
 			  withQuotes: false
 			};
 			try{
-			console.log(JSON.parse(data));
+				target.jsonViewer(JSON.parse(data), options);  
 			} catch	(err) {
-				console.log(' Block of code to handle errors');	   
+				target.html(err.message);	   
 				}
-			target.jsonViewer(JSON.parse(data), options);   
+			 
 		}
 		if (type == 'xml') {
 			var x2js = new X2JS();
