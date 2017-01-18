@@ -83,6 +83,7 @@ pre.json-renderer {
 			  collapsed: false,
 			  withQuotes: false
 			};
+			console.log(SON.parse(data));
 			target.jsonViewer(JSON.parse(data), options);   
 		}
 		if (type == 'xml') {
