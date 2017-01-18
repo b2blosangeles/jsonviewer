@@ -1,4 +1,4 @@
-{
+var data = {
   "id": 1001,
   "type": "donut",
   "name": "Cake",
@@ -15,4 +15,5 @@
     { "id": 5003, "type": "Chocolate" },
     { "id": 5004, "type": "Maple" }
   ]
-}
+};
+res.send(data);
