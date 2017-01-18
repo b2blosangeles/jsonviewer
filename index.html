@@ -40,9 +40,9 @@ pre.json-renderer {
 					<div class="form-group">
 					  <label for="sel1">Data type:</label>
 					  <select class="form-control" name="type">
-						<option>JSON</option>
-						<option>XML</option>
-						<option>MarkDown</option>
+						<option value="json">JSON</option>
+						<option value="xml">XML</option>
+						<option value="md">MarkDown</option>
 					  </select>
 					  <br/>
 					  <button type="button" class="btn btn-default" onClick="sendForm()">Submit</button>
@@ -65,7 +65,7 @@ pre.json-renderer {
             		$.get(url,
 				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'}, 
 			     	function (data) {
-					HtmlViwer(code, type, $('#json-renderer')); 
+					HtmlViwer(data, type, $('#json-renderer')); 
 				},'text'
 			     );
            		 return true;
@@ -75,37 +75,32 @@ pre.json-renderer {
 
 		console.log(code);   
 	   };
-		var HtmlViwer = function(url, type, target) {
-           		$.get(url,
-				{md:'http://jsonviewer.qalet.com/js/showdown/README.md'},
-				function(data) {
-					if (type == 'md') {
-						var converter = new showdown.Converter();
-						target.html(converter.makeHtml(data));
-					}	
-					if (type == 'json') {
-						var options = {
-						  collapsed: false,
-						  withQuotes: true
-						};
-						target.jsonViewer(JSON.parse(data), options);   
-					}
-					if (type == 'xml') {
-						var x2js = new X2JS();
-						var jsonObj = x2js.xml_str2json( data );
-						console.log(jsonObj);
-						var options = {
-						  collapsed: false,
-						  withQuotes: true
-						};
-						target.jsonViewer(jsonObj, options);  	
-					}	
-				},'text'
-           );  		
+		var HtmlViwer = function(data, type, target) {
+			if (type == 'md') {
+				var converter = new showdown.Converter();
+				target.html(converter.makeHtml(data));
+			}	
+			if (type == 'json') {
+				var options = {
+				  collapsed: false,
+				  withQuotes: true
+				};
+				target.jsonViewer(JSON.parse(data), options);   
+			}
+			if (type == 'xml') {
+				var x2js = new X2JS();
+				var jsonObj = x2js.xml_str2json( data );
+				console.log(jsonObj);
+				var options = {
+				  collapsed: false,
+				  withQuotes: true
+				};
+				target.jsonViewer(jsonObj, options);  	
+			}	 		
 		};
-		HtmlViwer('http://docviewer.qalet.com/README.md', 'md',  $('#md'));
-		HtmlViwer('http://docviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
-		HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer2'));
+		//HtmlViwer('http://docviewer.qalet.com/README.md', 'md',  $('#md'));
+		//HtmlViwer('http://docviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
+		//HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer2'));
     </script>
     
   </body>
