@@ -1,11 +1,11 @@
 <!doctype HTML>
 <html>
   <head>
-    <title>jQuery json-viewer</title>
+    <title>jQuery document-viewer</title>
     <meta charset="utf-8" />
     <script src="package/JQuery_JS-virwer_showdown_x2j_json2.js"></script>
     <link href="package/jsonviewer.min.css" type="text/css" rel="stylesheet" />
-
+	<link href="http://qalet.com/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
 body {
   margin: 0 100px;
@@ -44,10 +44,7 @@ pre.json-renderer {
 						target.jsonViewer(JSON.parse(data), options);   
 					}
 					if (type == 'xml') {
-						
 						var x2js = new X2JS();
-						console.log('data--->');
-						console.log(data);
 						var jsonObj = x2js.xml_str2json( data );
 						console.log(jsonObj);
 						var options = {
