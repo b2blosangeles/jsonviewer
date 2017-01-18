@@ -57,7 +57,7 @@ pre.json-renderer {
     <div id="md"></div>
    <script>
 	   function sendForm() {
-		console.log($('form').serialize());   
+		console.log($('form').find("input:[name='type']").val());   
 	   };
 		var HtmlViwer = function(url, type, target) {
            		$.get(url,
