@@ -18,6 +18,14 @@ pre.doc_renderer {
  margin-top:3px;
   padding: 1.5em;
 }
+
+pre.doc_form {
+ border: 1px solid #0B7500;
+ border-top: 6px solid #0B7500; 
+ margin-top:3px;
+  padding: 1.5em;
+}
+
 pre.error { border: 1px solid red; border-top: 6px solid red; color: red; }	    
 	    
     </style>
@@ -25,7 +33,7 @@ pre.error { border: 1px solid red; border-top: 6px solid red; color: red; }
   <body>
 	<h1>Document viewer</h1>
 	 <form>
-	 <pre>
+	 <pre class="doc_form">
 		<div class="form-group">
 		  <label for="comment">Data Source:</label>
 		  <textarea class="form-control" rows="5" name="code"></textarea>
