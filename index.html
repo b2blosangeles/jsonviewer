@@ -40,7 +40,7 @@
 				<div class="col-sm-12">
 					<div class="form-group">
 					  <label for="comment">Data Source: (url or text)</label>
-					  <textarea class="form-control" rows="5" name="code" onChange="codeChanged(this)"></textarea>
+					  <textarea class="form-control" rows="5" name="code"></textarea>
 					</div>	
 
 				</div>
@@ -64,14 +64,9 @@
 		</ul>	
 	</div>	
    <script>
-   		function codeChanged(o) {
-   			$('form').find("button").show();
-   		};
-
-   		$('form').find("button").hide();
 		function sendData(type) {
 			var code  =   $('form').find("[name='code']").val();
-			$('form').find("button").hide();
+			
 			var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
 			if (pattern.test(code)) {
@@ -85,8 +80,7 @@
 			} else {  
 				HtmlViwer(code, type, $('#doc-renderer'));  
 			}
-
-			console.log(code);   
+ 
 		};
 
 		function loadSample(url, type) {
