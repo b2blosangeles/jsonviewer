@@ -24,7 +24,7 @@ pre.error { border: 1px solid red; border-top: 6px solid red; color: red; }
   </head>
   <body>
 	<h1>Document viewer<h1>
-	<pre class="doc_renderer">
+	<div class="doc_renderer">
 	 <form>
 		 <div class="container-fluid"  style="background-color:lavender;">
 			<div class="row">
@@ -52,7 +52,12 @@ pre.error { border: 1px solid red; border-top: 6px solid red; color: red; }
 	</form>
 	
     <div id="doc-renderer"></div>
-	</pre>
+	</div>
+	
+		HtmlViwer('http://docviewer.qalet.com/README.md', 'md',  $('#md'));
+		HtmlViwer('http://docviewer.qalet.com/api/data.js', 'json',  $('#json-renderer'));
+		HtmlViwer('http://docviewer.qalet.com/data.xml', 'xml',  $('#json-renderer2'));
+	
    <script>
 	   function sendForm() {
 		var code  =   $('form').find("[name='code']").val(),
