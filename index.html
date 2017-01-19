@@ -64,10 +64,11 @@
 		</ul>	
 	</div>	
    <script>
-   		function codeChanged(v) {
+   		function codeChanged(o) {
    			$('form').find("button").show();
    		};
 
+   		$('form').find("button").hide();
 		function sendData(type) {
 			var code  =   $('form').find("[name='code']").val();
 			$('form').find("button").hide();
