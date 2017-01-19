@@ -29,7 +29,7 @@
 			border-radius: 3px;
 		}
 		.error { border: 1px solid red; border-top: 6px solid red; color: red; }	    
-	    
+	    .sample_section { margin-top:0.5em; }
     </style>
   </head>
   <body>
@@ -61,12 +61,14 @@
 	</form>
 	
     <div class="doc_renderer" id="doc-renderer"></div>
-	Sample:<br/>
-	<ul>
-	  <li>http://docviewer.qalet.com/README.md</li>
-	  <li>http://docviewer.qalet.com/api/data.js</li>
-	  <li>http://docviewer.qalet.com/data.xml</li>
-	</ul>	  
+	<div class="sample_section">  
+		Sample:<br/>
+		<ul>
+		  <li>http://docviewer.qalet.com/README.md</li>
+		  <li>http://docviewer.qalet.com/api/data.js</li>
+		  <li>http://docviewer.qalet.com/data.xml</li>
+		</ul>	
+	</div>	
    <script>
 	   function sendForm() {
 		var code  =   $('form').find("[name='code']").val(),
