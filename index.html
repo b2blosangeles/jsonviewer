@@ -64,9 +64,9 @@
 	<div class="sample_section">  
 		Sample:<br/>
 		<ul>
-		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/README.md')">http://docviewer.qalet.com/README.md</a></li>
-		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/api/data.js')">http://docviewer.qalet.com/api/data.js</a></li>
-		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/data.xml')">http://docviewer.qalet.com/data.xml</a></li>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/README.md', 'md')">http://docviewer.qalet.com/README.md</a></li>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/api/data.js', 'json')">http://docviewer.qalet.com/api/data.js</a></li>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/data.xml', 'xml')">http://docviewer.qalet.com/data.xml</a></li>
 		</ul>	
 	</div>	
    <script>
@@ -90,8 +90,9 @@
 			console.log(code);   
 		};
 
-		function loadSample(url) {
+		function loadSample(url, type) {
 			$('form').find("[name='code']").val(url);
+			$('form').find("[name='type']").val(type);
 			sendForm();
 		};
 
