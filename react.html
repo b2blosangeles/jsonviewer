@@ -10,26 +10,26 @@
     <div id="example"></div>
     <!--script type="text/babel" src="d2.js"></script-->
     <script type="text/babel">
-var NotesList = React.createClass({
+var LikeButton = React.createClass({
+  getInitialState: function() {
+    return {liked: false};
+  },
+  handleClick: function(event) {
+    this.setState({liked: !this.state.liked});
+  },
   render: function() {
+    var text = this.state.liked ? 'like' : 'haven\'t liked';
     return (
-      <ol>
-      {
-        React.Children.map(this.props.children, function (child) {
-          return <li>{child}</li>;
-        })
-      }
-      </ol>
+      <p onClick={this.handleClick}>
+        You {text} this. Click to toggle.
+      </p>
     );
   }
 });
 
 ReactDOM.render(
-  <NotesList>
-    <span>hello</span>
-    <span>world</span>
-  </NotesList>,
-  document.body
+  <LikeButton />,
+  document.getElementById('example')
 );
     </script>
   </body>
