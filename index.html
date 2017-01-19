@@ -44,9 +44,12 @@
 					</div>	
 
 				</div>
-				 <label for="sel1">Data type:</label>
-
-				 <button type="button" class="btn btn-info" onClick="sendForm()">Json</button>
+				<div class="col-sm-12">
+				 	<label for="sel1">Data type:</label>
+				 	<button type="button" class="btn btn-info" onClick="sendData('json')">Json</button>
+				 	<button type="button" class="btn btn-info" onClick="sendData('xml')">XML</button>
+				 	<button type="button" class="btn btn-info" onClick="sendData('md')">Markdown</button>
+				 </div>
 
 				<div class="col-sm-12">
 
@@ -55,7 +58,7 @@
 					  <select class="form-control" name="type">
 						<option value="json">JSON</option>
 						<option value="xml">XML</option>
-						<option value="md">MarkDown</option>
+						<option value="md">Markdown</option>
 					  </select>
 					  <br/>
 					  <button type="button" class="btn btn-default" onClick="sendForm()">Submit</button>
@@ -75,9 +78,8 @@
 		</ul>	
 	</div>	
    <script>
-		function sendForm() {
-			var code  =   $('form').find("[name='code']").val(),
-			type =   $('form').find("[name='type']").val();
+		function sendData(type) {
+			var code  =   $('form').find("[name='code']").val();
 			var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
 			if (pattern.test(code)) {
@@ -97,8 +99,7 @@
 
 		function loadSample(url, type) {
 			$('form').find("[name='code']").val(url);
-			$('form').find("[name='type']").val(type);
-			sendForm();
+			sendForm(type);
 		};
 
 		var HtmlViwer = function(data, type, target) {
