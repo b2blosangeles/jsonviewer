@@ -64,8 +64,13 @@
 		</ul>	
 	</div>	
    <script>
+   		function codeChanged() {
+   			$('form').find("button").show();
+   		};
+
 		function sendData(type) {
 			var code  =   $('form').find("[name='code']").val();
+			$('form').find("button").hide();
 			var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
 			if (pattern.test(code)) {
@@ -85,7 +90,7 @@
 
 		function loadSample(url, type) {
 			$('form').find("[name='code']").val(url);
-			sendForm(type);
+			sendData(type);
 		};
 
 		var HtmlViwer = function(data, type, target) {
