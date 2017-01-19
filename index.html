@@ -40,7 +40,7 @@
 				<div class="col-sm-12">
 					<div class="form-group">
 					  <label for="comment">Data Source: (url or text)</label>
-					  <textarea class="form-control" rows="5" name="code"></textarea>
+					  <textarea class="form-control" rows="5" name="code" onChange="codeChanged(this)"></textarea>
 					</div>	
 
 				</div>
@@ -64,7 +64,7 @@
 		</ul>	
 	</div>	
    <script>
-   		function codeChanged() {
+   		function codeChanged(v) {
    			$('form').find("button").show();
    		};
 
