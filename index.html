@@ -108,7 +108,7 @@
 				target.jsonViewer(jsonObj, options);  	
 			}
 			if (type == '') {
-				target.text(data);  	
+				target.text(data.replace(/\n/ig, '<br/>'));  	
 			}			
 		};
     </script>
