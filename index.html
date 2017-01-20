@@ -106,7 +106,10 @@
 				  withQuotes: true
 				};
 				target.jsonViewer(jsonObj, options);  	
-			}	 		
+			}
+			if (type == '') {
+				target.html(data);  	
+			}			
 		};
     </script>
     
