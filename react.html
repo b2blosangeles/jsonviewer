@@ -8,32 +8,12 @@
     <div id="example"></div>
     
     <div id="example2"></div>
-    <!--script type="text/babel" src="d2.js"></script-->
+    <script type="text/babel" src="da.js"></script>
     <script type="text/jsx" src="dd.js"></script>    
     
     <!--script type="text/babel" src="d2.js"></script-->
     <script type="text/babel">
-var LikeButton = React.createClass({
-  getInitialState: function() {
-    return {liked: false};
-  },
-  handleClick: function(event) {
-    this.setState({liked: !this.state.liked});
-  },
-  render: function() {
-    var text = this.state.liked ? 'like' : 'haven\'t liked';
-    return (
-      <p onClick={this.handleClick}>
-        You {text} this. Click to toggle.
-      </p>
-    );
-  }
-});
 
-ReactDOM.render(
-  <LikeButton />,
-  document.getElementById('example')
-);
     </script>
   </body>
 </html>
