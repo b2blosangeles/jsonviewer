@@ -5,6 +5,15 @@
   </head>
   <body>
     <div id="example"></div>
-    <script type="text/babel" src="/jsx/a1.jsx"></script>  
+    <!--script type="text/babel" src="/jsx/a1.jsx"></script-->  
+    <script>
+      var myDivElement = React.createElement(
+    'div',
+    null,
+    'Hello world ---- dd'
+);
+ReactDOM.render(myDivElement, document.getElementById('example'));
+console.log('we are people');
+      </script>
   </body>
 </html>
