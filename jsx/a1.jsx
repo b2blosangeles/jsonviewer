@@ -30,6 +30,9 @@ const comment = {
 };
 
 ReactDOM.render(
-  comment,
-  document.getElementById('example')
+  <Comment
+    date={comment.date}
+    text={comment.text}
+    author={comment.author} />,
+  document.getElementById('root')
 );
