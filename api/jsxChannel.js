@@ -4,7 +4,7 @@
 				var b = require(env.root_path + "/package/qaletBabel/node_modules/babel-core").transform('code', {
 				  plugins: [env.root_path + '/package/qaletBabel/node_modules/babel-plugin-transform-react-jsx']
 				});
-res.send('vv');
+res.send(b);
 
 //var k = qaletBabel.jsx2jsCode(env.space_path+'/jsx/code/a1.jsx', function() {} );
 //res.send(k);
