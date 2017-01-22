@@ -6,7 +6,7 @@ var qaletBabel = new Babel();
 		//		});
 //res.send(b.code);
 
-var k = qaletBabel.jsx2jsCode(escape(env.space_path+'/jsx/code/a1.jsx'));
+var k = qaletBabel.jsx2jsCode(escape('adasdads'));
 res.send(k);
 /*
 qaletBabel.jsx2jsCode(env.space_path+'/jsx/code/a1.jsx', function(err, v) {
