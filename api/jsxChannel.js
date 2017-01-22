@@ -1,7 +1,9 @@
-res.send(env);
-return true;
-var pp  = require("./package/qaletBabel/qaletBabel.js");
+var pp  = require(env.space_path + "api/pkg/qaletBabel/qaletBabel.js");
 var q = new pp();
 q.jsx2js('a1.jsx', function(err, v) {
-        console.log(v.code);
+	if (err) {
+		res,send(err.message);
+	} else {
+		res.send(v.code);
+	}   
 });
