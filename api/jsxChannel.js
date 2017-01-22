@@ -1,7 +1,7 @@
 //var Babel  = require(env.root_path + "/package/qaletBabel/qaletBabel.js");
 //var qaletBabel = new Babel();
 
-				var b = require(env.root_path + "/package/qaletBabel/node_modules/babel-core").transform(code, {
+				var b = require(env.root_path + "/package/qaletBabel/node_modules/babel-core").transform('code', {
 				  plugins: [env.root_path + '/package/qaletBabel/node_modules/babel-plugin-transform-react-jsx']
 				});
 res.send('vv');
