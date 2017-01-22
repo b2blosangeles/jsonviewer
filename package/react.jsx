@@ -1,7 +1,7 @@
 {
     "tpls":[],
     "filelist":[
-        "/jsx/a1.js",
-        "/jsx/a2.js"
+        "/jsx/a1.jsx",
+        "/jsx/a2.jsx"
       ]
 }
