@@ -1,4 +1,4 @@
 var myDivElement = 
-	<div>商务部：2017年将大幅放宽外资准入限制 Trump , nice job </div>
+	<div><h1>因为这张照片 网友请愿取消她的选美冠军头衔</h1></div>
 	;
 ReactDOM.render(myDivElement,document.getElementById('example'));	
