@@ -12,10 +12,7 @@
         "/jsx/a16.jsx",		
         "/jsx/a17.jsx",
         "/jsx/a18.jsx",		
-        "/jsx/a19.jsx",
-        "/jsx/a1.jsx",		
-        "/jsx/a1.jsx",
-        "/jsx/a1.jsx",			
+        "/jsx/a19.jsx",	
         "/jsx/a2.jsx"
       ]
 }
