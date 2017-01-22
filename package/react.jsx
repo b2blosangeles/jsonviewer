@@ -3,7 +3,7 @@
     "filelist":[
         "/js/react/react.min.js",
         "/js/react/react-dom.min.js",
-        "/jsx/a2.js",	
+        "/jsx/a2.jsx",	
         "/jsx/a11.js",
         "/jsx/a12.js",		
         "/jsx/a13.js",
@@ -13,6 +13,6 @@
         "/jsx/a17.js",
         "/jsx/a18.js",		
         "/jsx/a19.js",	
-        "/jsx/a1.js"
+        "/jsx/a1.jsx"
       ]
 }
