@@ -13,8 +13,14 @@ function Comment(props) {
       <div className="Comment-text">
         {props.text}
       </div>
+      <div className="Comment-date">
+        {formatDate(props.date)}
+      </div>
     </div>
   );
+}
+function formatDate(date) {
+  return date.toLocaleDateString();
 }
 
 const comment = {
