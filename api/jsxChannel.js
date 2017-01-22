@@ -1,6 +1,4 @@
-res.send(env);
-return true;
-var Babel  = require(env.space_path + "/api/pkg/qaletBabel/qaletBabel.js");
+var Babel  = require(env.root_path + "/package/qaletBabel/qaletBabel.js");
 var qaletBabel = new Babel();
 
 qaletBabel.jsx2js(env.space_path+'/jsx/code/a1.jsx', function(err, v) {
