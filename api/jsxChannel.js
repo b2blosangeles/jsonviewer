@@ -1,7 +1,7 @@
 var Babel  = require(env.root_path + "/package/qaletBabel/qaletBabel.js");
 var qaletBabel = new Babel();
 
-var k = qaletBabel.jsx2jsCode(env.space_path+'/jsx/code/a1.jsx');
+var k = qaletBabel.jsx2jsCode(env.space_path+'/jsx/code/a1.jsx', function() {} );
 res.send(k);
 /*
 qaletBabel.jsx2jsCode(env.space_path+'/jsx/code/a1.jsx', function(err, v) {
