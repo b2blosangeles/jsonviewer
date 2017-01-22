@@ -34,5 +34,5 @@ ReactDOM.render(
     date={comment.date}
     text={comment.text}
     author={comment.author} />,
-  document.getElementById('root')
+  document.getElementById('example')
 );
