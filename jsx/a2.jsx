@@ -18,10 +18,10 @@ var RepoList = React.createClass({
     if (this.state.loading) {
       return <span>Loading...</span>;
     }
-    else if (this.state.error !== null) {
+    else*/  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
-    else*/ {
+    else {
       var repos = this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
