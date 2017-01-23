@@ -14,15 +14,13 @@ var RepoList = React.createClass({
   },
 
   render: function() {
-    /*
     if (this.state.loading) {
       return <span>Loading...</span>;
     }
-    else*/  if (this.state.error !== null) {
+    else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-      if (!this.state.data) return <div>-->></div>;
       var repos = this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
@@ -41,5 +39,5 @@ var RepoList = React.createClass({
 
 ReactDOM.render(
   <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
-  document.getElementById('example2')
+  $('#example2')
 );
