@@ -19,6 +19,7 @@ var RepoList = React.createClass({
       return <span>Loading...</span>;
     }
     else if (this.state.error !== null) {
+      alert('Err');
       return <span>Error: {this.state.error.message}</span>;
     }
     else {
@@ -39,6 +40,6 @@ var RepoList = React.createClass({
 });
 
 ReactDOM.render(
-  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
+  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.jsonss')} />,
   document.getElementById('example2')
 );
