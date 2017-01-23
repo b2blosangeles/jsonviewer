@@ -1,33 +1,43 @@
-var UserGist = React.createClass({
+var RepoList = React.createClass({
   getInitialState: function() {
     return {
-      username: '',
-      lastGistUrl: ''
+      loading: true,
+      error: null,
+      data: null
     };
   },
 
-  componentDidMount: function() {
-    $.get(this.props.source, function(result) {
-      var lastGist = result[0];
-      if (this.isMounted()) {
-        this.setState({
-          username: lastGist.owner.login,
-          lastGistUrl: lastGist.html_url
-        });
-      }
-    }.bind(this));
+  componentDidMount() {
+    this.props.promise.then(
+      value => this.setState({loading: false, data: value}),
+      error => this.setState({loading: false, error: error}));
   },
 
   render: function() {
-    return (
-      <div>
-        {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a>.
-      </div>
-    );
+    if (this.state.loading) {
+      return <span>Loading...</span>;
+    }
+    else if (this.state.error !== null) {
+      return <span>Error: {this.state.error.message}</span>;
+    }
+    else {
+      var repos = this.state.data.items;
+      var repoList = repos.map(function (repo, index) {
+        return (
+          <li key={index}><a href={repo.html_url}>{repo.name}</a> ({repo.stargazers_count} stars) <br/> {repo.description}</li>
+        );
+      });
+      return (
+        <main>
+          <h1>Most Popular JavaScript Projects in Github</h1>
+          <ol>{repoList}</ol>
+        </main>
+      );
+    }
   }
 });
 
 ReactDOM.render(
-  <UserGist source="https://api.github.com/users/octocat/gists" />,
-  document.body
+  <RepoList promise={$.getJSON('https://api.github.com/search/repositories?q=javascript&sort=stars')} />,
+  document.getElementById('example2')
 );
