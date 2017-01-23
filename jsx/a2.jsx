@@ -15,12 +15,10 @@ var RepoList = React.createClass({
 
   render: function() {
     if (this.state.loading) {
-      alert('Loading');
       return <span>Loading...</span>;
     }
     else if (this.state.error !== null) {
-      alert('Err');
-      return <span>Error: {this.state.error.message}</span>;
+      return <span>Error--: {this.state.error.message}</span>;
     }
     else {
       var repos = this.state.data.items;
