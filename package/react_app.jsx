@@ -5,15 +5,6 @@
         "/js/react/react-dom.min.js",
 		"/js/jquery-2.1.3.min.js",
         "/jsx/a2.jsx",	
-        "/jsx/a11.js",
-        "/jsx/a12.js",		
-        "/jsx/a13.js",
-        "/jsx/a14.js",	
-        "/jsx/a15.js",
-        "/jsx/a16.js",		
-        "/jsx/a17.js",
-        "/jsx/a18.js",		
-        "/jsx/a19.js",	
         "/jsx/a1.jsx"
       ]
 }
