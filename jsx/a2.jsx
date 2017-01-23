@@ -1,8 +1,8 @@
 var RepoList = React.createClass({
   getInitialState: function() {
     return {
-      loading: true,
-      error: null,
+   //   loading: true,
+  //    error: null,
       data: null
     };
   },
@@ -38,6 +38,6 @@ var RepoList = React.createClass({
 });
 
 ReactDOM.render(
-  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.jsonaa')} />,
+  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
   document.getElementById('example2')
 );
