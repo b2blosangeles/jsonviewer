@@ -15,6 +15,7 @@ var RepoList = React.createClass({
 
   render: function() {
     if (this.state.loading) {
+      alert('Loading');
       return <span>Loading...</span>;
     }
     else if (this.state.error !== null) {
