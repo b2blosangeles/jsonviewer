@@ -1,7 +1,7 @@
 var RepoList = React.createClass({
   getInitialState: function() {
     return {
-//      loading: true,
+      loading: true,
       error: null,      
       data: null
     };
