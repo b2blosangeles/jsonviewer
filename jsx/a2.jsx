@@ -22,7 +22,7 @@ var RepoList = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-      if (!this.state.data) return <div>--</div>;
+      if (!this.state.data) return <div>-->></div>;
       var repos = this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
