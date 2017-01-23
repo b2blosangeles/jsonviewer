@@ -1,3 +1,7 @@
+function Cc(props) {
+  return <span>niu<span>
+};
+
 var RepoList = React.createClass({
   getInitialState: function() {
     return {
@@ -24,7 +28,7 @@ var RepoList = React.createClass({
       var repos = this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
-          <li key={index}><a href={repo.html_url}>{repo.name}</a> ({repo.stargazers_count} stars) <br/> {repo.description}</li>
+          <li key={index}><a href={repo.html_url}>{repo.name}</a> --<Cc></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
         );
       });
       return (
