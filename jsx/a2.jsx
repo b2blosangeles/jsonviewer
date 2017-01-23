@@ -38,6 +38,6 @@ var RepoList = React.createClass({
 });
 
 ReactDOM.render(
-  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
+  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.jsonaa')} />,
   document.getElementById('example2')
 );
