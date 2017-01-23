@@ -1,5 +1,5 @@
-function Cc() {
-  return <span>niu</span>
+function Cc(t) {
+  return <span>niu{t}</span>
 };
 
 var RepoList = React.createClass({
