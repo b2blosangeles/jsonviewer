@@ -27,9 +27,11 @@ var AJAX = React.createClass({
 		}); 
   },
   componentDidMount() {
+	/*
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
+	  */
   },
 
   render: function() {
