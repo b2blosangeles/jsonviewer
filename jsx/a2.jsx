@@ -9,10 +9,7 @@ var AJAX = React.createClass({
       data: null
     };
   },
-	constructor(props) {
-	  console.log('---- constructor ---- ');
-
-	},  
+ 
   componentDidMount() {
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
