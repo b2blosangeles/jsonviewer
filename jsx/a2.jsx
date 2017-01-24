@@ -9,8 +9,8 @@ var AJAX = React.createClass({
       data: null
     };
   },
-  componentDidUpdate () {
-	console.log('--componentDidUpdate--');
+  componentWillUpdate () {
+	console.log('--componentWillUpdate--');
   },
   componentDidMount() {
 	console.log('--componentDidMount--');
