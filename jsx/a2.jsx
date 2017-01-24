@@ -59,7 +59,9 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-	   
+	if (!this.state.data) {
+		return false;
+	}
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
