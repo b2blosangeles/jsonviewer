@@ -85,6 +85,6 @@ var AJAX = React.createClass({
 });
 
 ReactDOM.render(
-  <AJAX promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
+  <AJAX />,
   $('#example2')[0]
 );
