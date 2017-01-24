@@ -9,7 +9,13 @@ var AJAX = React.createClass({
       data: null
     };
   },
-
+	constructor(props) {
+	  console.log('---- constructor ---- ');
+	  super(props);
+	  this.state = {
+		color: props.initialColor
+	  };
+	},  
   componentDidMount() {
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
