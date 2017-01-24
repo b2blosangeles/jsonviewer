@@ -4,7 +4,7 @@ function Cc(props) {
 var AJAX = React.createClass({
   getInitialState: function() {
     return {
-      loading: false, // true,
+      loading: true,
       error: null,      
       data: null
     };
@@ -36,7 +36,7 @@ var AJAX = React.createClass({
 	}).done(function( json ) {
 		setTimeout(
 	  		function() {
-				me.setState({data:json});
+				me.setState({loading:false, data:json});
 			}, 6000
 
 		  );				
