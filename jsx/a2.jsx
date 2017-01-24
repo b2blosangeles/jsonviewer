@@ -29,7 +29,7 @@ var AJAX = React.createClass({
 	  var me =  this;
 	  setTimeout(
 	  	function() {
-			me.setState({data:{items: [{name:123}]}});
+			me.setState({data:{items: [{name:7777}]}});
 	 		 console.log(me.state.data);
 		}, 6000
 	  
