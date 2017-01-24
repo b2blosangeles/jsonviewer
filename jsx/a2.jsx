@@ -10,7 +10,7 @@ var AJAX = React.createClass({
     };
   },
   componentWillMount: function() {
-    console.log(this.props);
+    console.log(this.props.url);
   },
   componentDidMount() {
     this.props.promise.then(
@@ -43,7 +43,7 @@ var AJAX = React.createClass({
 });
 
 ReactDOM.render(
-  <AJAX promise={$.ajax(
+  <AJAX url="http://docviewer.qalet.com//sample/data.json" promise={$.ajax(
 		{
 			url:'http://docviewer.qalet.com//sample/data.json',
 			method: "POST",
