@@ -17,7 +17,13 @@ var AJAX = React.createClass({
 			method: "POST",
 			dataType: 'json',
 			cache: false, 
-			data:{}
+			data:{},
+			 success: function(data) {
+				this.setState({data: data});
+			  }.bind(this),
+			  error: function(xhr, status, err) {
+				console.error(this.props.url, status, err.toString());
+			  }.bind(this)
 		}); 
   },
   componentDidMount() {
