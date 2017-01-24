@@ -4,7 +4,7 @@ function Cc(props) {
 var AJAX = React.createClass({
   getInitialState: function() {
     return {
-      loading: true,
+      loading: fales, // true,
       error: null,      
       data: null
     };
