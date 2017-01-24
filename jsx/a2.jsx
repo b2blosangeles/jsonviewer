@@ -16,6 +16,13 @@ var AJAX = React.createClass({
 	console.log('--componentDidUpdate--');
   },
   
+  componentWillReceiveProps() {
+	console.log('--componentWillReceiveProps--');
+  },  
+  
+  shouldComponentUpdate()() {
+	console.log('--shouldComponentUpdate--');
+  }, 
   
   componentWillMount () {
 	console.log('--componentWillMount--');
@@ -23,9 +30,7 @@ var AJAX = React.createClass({
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
   },  
-  
 
-  
   componentDidMount() {
 	console.log('--componentDidMount--');
     this.props.promise.then(
@@ -36,6 +41,7 @@ var AJAX = React.createClass({
 	//	console.log('--constructor--');
 //	},
   render: function() {
+	console.log('--render--');
     if (this.state.loading) {
       return <span>Loading...</span>;
     }
