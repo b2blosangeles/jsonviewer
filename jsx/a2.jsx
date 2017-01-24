@@ -14,7 +14,7 @@ var jk = [
       "full_name": "twbs/bootstrap"
  }  
 ];
-var RepoList = React.createClass({
+var AJAX = React.createClass({
   getInitialState: function() {
     return {
       loading: true,
@@ -34,7 +34,7 @@ var RepoList = React.createClass({
       return <span>Loading...</span>;
     }
     else  if (this.state.error !== null) {
-      return <span>Error--: {this.state.error.message}</span>;
+      return <span>Error->>-: {this.state.error.message}</span>;
     }
     else {
       var repos = jk;
@@ -55,6 +55,6 @@ var RepoList = React.createClass({
 });
 
 ReactDOM.render(
-  <RepoList promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
+  <AJAX promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
   $('#example2')[0]
 );
