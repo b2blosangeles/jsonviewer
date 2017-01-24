@@ -20,7 +20,7 @@ var AJAX = React.createClass({
 	console.log('--componentWillReceiveProps--');
   },  
   
-  shouldComponentUpdate()() {
+  shouldComponentUpdate() {
 	console.log('--shouldComponentUpdate--');
   }, 
   
