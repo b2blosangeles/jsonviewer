@@ -45,7 +45,7 @@ ReactDOM.render(
 		{
 			url:'http://docviewer.qalet.com//sample/data.json',
 			method: "POST",
-			dataType: 'text',
+		//	dataType: 'json',
 			cache: false, 
 			data:{}
 		})} />,
