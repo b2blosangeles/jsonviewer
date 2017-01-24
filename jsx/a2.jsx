@@ -9,48 +9,21 @@ var AJAX = React.createClass({
       data: null
     };
   },
-  componentWillMount: function() {
-  		console.log(this.props.url);
-		$.ajax(
-		{
-			url:this.props.url,
-			method: "POST",
-			dataType: 'json',
-			cache: false, 
-			data:{},
-			 success: function(data) {
-				console.log(data);
-				this.setState({data: data});
-			  }.bind(this),
-			  error: function(xhr, status, err) {
-				console.error(this.props.url, status, err.toString());
-			  }.bind(this)
-		}); 
-  },
-  componentDidMount() {
-  
 
-  
-  
-  
-	/*
+  componentDidMount() {
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
-	  */
   },
 
   render: function() {
-    /*
-	if (this.state.loading) {
+    if (this.state.loading) {
       return <span>Loading...</span>;
     }
     else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
-    else*/ {
-		if (!this.state.data) return true;
-		console.log('this.state--');
+    else {
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
@@ -68,6 +41,6 @@ var AJAX = React.createClass({
 });
 
 ReactDOM.render(
-  <AJAX url="http://docviewer.qalet.com//sample/data.json"  />,
+  <AJAX promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
   $('#example2')[0]
 );
