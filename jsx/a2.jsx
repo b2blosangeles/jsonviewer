@@ -10,7 +10,15 @@ var AJAX = React.createClass({
     };
   },
   componentWillMount: function() {
-    console.log(this.props.url);
+  
+		$.ajax(
+		{
+			url:this.props.url,
+			method: "POST",
+			dataType: 'json',
+			cache: false, 
+			data:{}
+		}); 
   },
   componentDidMount() {
     this.props.promise.then(
