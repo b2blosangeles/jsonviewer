@@ -10,10 +10,6 @@ var AJAX = React.createClass({
     };
   },
   componentWillMount: function() {
-
-  },
-  componentDidMount() {
-  
   		console.log(this.props.url);
 		$.ajax(
 		{
@@ -30,6 +26,10 @@ var AJAX = React.createClass({
 				console.error(this.props.url, status, err.toString());
 			  }.bind(this)
 		}); 
+  },
+  componentDidMount() {
+  
+
   
   
   
