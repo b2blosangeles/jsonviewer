@@ -9,11 +9,8 @@ var AJAX = React.createClass({
       data: null
     };
   },
-  constructor: function() {
-    console.log('--constructor --');
-  },
 
-  componentDidMount:function() {
+  componentDidMount() {
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
@@ -27,7 +24,6 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-		console.log(1);
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
