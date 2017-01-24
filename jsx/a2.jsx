@@ -32,7 +32,7 @@ var AJAX = React.createClass({
   },  
 
   componentDidMount() {
-	  this.setState({loading: false});
+	  this.setState({data: [{name:123}]});
 	console.log('--componentDidMount--');
 //    this.props.promise.then(
 //      value => this.setState({loading: false, data: value}),
