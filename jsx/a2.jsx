@@ -9,7 +9,7 @@ var AJAX = React.createClass({
       data: null
     };
   },
-  constructor() {
+  constructor: function() {
     console.log('--constructor --');
   },
 
