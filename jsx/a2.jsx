@@ -1,5 +1,5 @@
 function Cc(props) {
-  return <span>niu{props.t.repo.id}</span>
+  return <span>niu{props.t.id}</span>
 };
 var AJAX = React.createClass({
   getInitialState: function() {
