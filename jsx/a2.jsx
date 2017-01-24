@@ -10,7 +10,7 @@ var AJAX = React.createClass({
     };
   },
   componentWillMount: function() {
-    alert(1);
+    alert(this.props.url);
   },
   componentDidMount() {
     this.props.promise.then(
