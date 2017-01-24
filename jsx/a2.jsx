@@ -59,7 +59,7 @@ var AJAX = React.createClass({
   render: function() {
 	
     if (this.state.loading) {
-      return '>> Loading...';
+      return '>> Loading ++...';
     }
     else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
