@@ -26,9 +26,10 @@ var AJAX = React.createClass({
   
   componentWillMount () {
 	console.log('--componentWillMount--');
+	  var me =  this;
 	  setTimeout(
 	  	function() {
-			this.setState({data:{items: [{name:123}]}});
+			me.setState({data:{items: [{name:123}]}});
 	 		 console.log(this.state.data);
 		}, 6000
 	  
