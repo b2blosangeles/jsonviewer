@@ -27,6 +27,16 @@ var AJAX = React.createClass({
   componentWillMount () {
 	console.log('--componentWillMount--');
 	  var me =  this;
+
+	$.ajax({
+	    url: 'http://docviewer.qalet.com//sample/data.json',
+	    data: {},
+	    type: "GET",
+	    dataType : "json",
+	}).done(function( json ) {
+	     console.log(json);
+	  });
+	  
 	  setTimeout(
 	  	function() {
 			me.setState({data:{items: [{name:7777}]}});
