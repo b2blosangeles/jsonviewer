@@ -24,6 +24,7 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
+		console.log(1);
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
