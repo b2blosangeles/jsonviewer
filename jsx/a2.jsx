@@ -10,7 +10,11 @@ var AJAX = React.createClass({
     };
   },
   componentWillMount: function() {
-		console.log(this.props.url);
+
+  },
+  componentDidMount() {
+  
+  		console.log(this.props.url);
 		$.ajax(
 		{
 			url:this.props.url,
@@ -26,8 +30,9 @@ var AJAX = React.createClass({
 				console.error(this.props.url, status, err.toString());
 			  }.bind(this)
 		}); 
-  },
-  componentDidMount() {
+  
+  
+  
 	/*
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
