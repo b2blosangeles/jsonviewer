@@ -41,6 +41,13 @@ var AJAX = React.createClass({
 });
 
 ReactDOM.render(
-  <AJAX promise={$.ajax({url:'http://docviewer.qalet.com//sample/data.json', data:{}})} />,
+  <AJAX promise={$.ajax(
+		{
+			url:'http://docviewer.qalet.com//sample/data.json',
+			method: "POST",
+			dataType: 'json',
+			cache: false, 
+			data:{}
+		})} />,
   $('#example2')[0]
 );
