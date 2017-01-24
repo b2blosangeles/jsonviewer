@@ -9,7 +9,9 @@ var AJAX = React.createClass({
       data: null
     };
   },
-
+  componentWillMount: function() {
+    alert(1);
+  },
   componentDidMount() {
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
@@ -45,7 +47,7 @@ ReactDOM.render(
 		{
 			url:'http://docviewer.qalet.com//sample/data.json',
 			method: "POST",
-		//	dataType: 'json',
+			dataType: 'json',
 			cache: false, 
 			data:{}
 		})} />,
