@@ -2,6 +2,18 @@ function Cc(props) {
   return <span>niu{props.t}</span>
 };
 
+var jk = [
+ {
+      "id": 2126244,
+      "name": "bootstrap",
+      "full_name": "twbs/bootstrap"
+ },  
+ {
+      "id": 2126244,
+      "name": "bootstrap",
+      "full_name": "twbs/bootstrap"
+ }  
+];
 var RepoList = React.createClass({
   getInitialState: function() {
     return {
@@ -25,7 +37,8 @@ var RepoList = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-      var repos = this.state.data.items;
+      var repos = jk;
+          // this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
           <li key={index}><a href={repo.html_url}>{repo.name}</a> --<Cc t={repo.name}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
