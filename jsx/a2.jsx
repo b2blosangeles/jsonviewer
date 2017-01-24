@@ -33,13 +33,13 @@ var AJAX = React.createClass({
 
   componentDidMount() {
 	console.log('--componentDidMount--');
-    this.props.promise.then(
-      value => this.setState({loading: false, data: value}),
-      error => this.setState({loading: false, error: error}));
-  },
+//    this.props.promise.then(
+//      value => this.setState({loading: false, data: value}),
+//      error => this.setState({loading: false, error: error}));
+//  },
 //	constructor: function() {
 	//	console.log('--constructor--');
-//	},
+	},
   render: function() {
 	console.log('--render--');
 	   return false;
