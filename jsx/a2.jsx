@@ -9,7 +9,7 @@ var AJAX = React.createClass({
       data: null
     };
   },
-  componenDidMount: function() {
+  componenWillMount: function() {
   
 		$.ajax(
 		{
@@ -27,7 +27,7 @@ var AJAX = React.createClass({
 			  }.bind(this)
 		}); 
   },
-  componentWillMount() {
+  componentDidMount() {
 	/*
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
