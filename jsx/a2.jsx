@@ -10,7 +10,7 @@ var AJAX = React.createClass({
     };
   },
   componenWillMount: function() {
-  console.log(this.props.url);
+		console.log(this.props.url);
 		$.ajax(
 		{
 			url:this.props.url,
