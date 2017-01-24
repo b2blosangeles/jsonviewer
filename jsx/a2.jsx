@@ -2,6 +2,12 @@ function Cc(props) {
   return <span>niu{props.t.id}</span>
 };
 var AJAX = React.createClass({
+ constructor(props) {
+    super(props);
+    // this.state = {date: new Date()};
+	 console.log('constructor==>');
+  }	
+	
   getInitialState: function() {
     return {
       loading: true,
