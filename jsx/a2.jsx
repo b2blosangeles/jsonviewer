@@ -27,6 +27,7 @@ var AJAX = React.createClass({
   componentWillMount () {
 	console.log('--componentWillMount--');
 	  this.setState({data:{items: [{name:123}]}});
+	  console.log(this.state.data);
   }, 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
@@ -51,7 +52,7 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-	   console.log(this.state.data);
+	   
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
