@@ -42,6 +42,7 @@ var AJAX = React.createClass({
 //	},
   render: function() {
 	console.log('--render--');
+	   return false;
     if (this.state.loading) {
       return <span>Loading...</span>;
     }
@@ -49,7 +50,7 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
-	    return false;
+	   
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
