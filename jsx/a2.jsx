@@ -1,5 +1,5 @@
 function Cc(props) {
-  return <span>niu{props.t}</span>
+  return <span>niu{props.t.repo.name}</span>
 };
 var AJAX = React.createClass({
   getInitialState: function() {
@@ -27,7 +27,7 @@ var AJAX = React.createClass({
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
-          <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo.name}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
+          <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
         );
       });
       return (
