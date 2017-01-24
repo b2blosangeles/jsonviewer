@@ -26,13 +26,14 @@ var AJAX = React.createClass({
   
   componentWillMount () {
 	console.log('--componentWillMount--');
+	  this.setState({data:{items: [{name:123}]}});
   }, 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
   },  
 
   componentDidMount() {
-	  this.setState({data:{items: [{name:123}]}});
+	  
 	console.log('--componentDidMount--');
 //    this.props.promise.then(
 //      value => this.setState({loading: false, data: value}),
