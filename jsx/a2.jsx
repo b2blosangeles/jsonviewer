@@ -18,7 +18,9 @@ var AJAX = React.createClass({
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
   },
-
+	constructor: function() {
+		console.log('--constructor--');
+	},
   render: function() {
     if (this.state.loading) {
       return <span>Loading...</span>;
