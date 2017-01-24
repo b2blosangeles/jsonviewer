@@ -9,6 +9,9 @@ var AJAX = React.createClass({
       data: null
     };
   },
+  constructor() {
+    console.log('--constructor --');
+  },
 
   componentDidMount() {
     this.props.promise.then(
