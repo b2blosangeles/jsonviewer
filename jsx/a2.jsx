@@ -32,6 +32,7 @@ var AJAX = React.createClass({
   },  
 
   componentDidMount() {
+	  this.setState({loading: false});
 	console.log('--componentDidMount--');
 //    this.props.promise.then(
 //      value => this.setState({loading: false, data: value}),
@@ -41,7 +42,7 @@ var AJAX = React.createClass({
 	//	console.log('--constructor--');
 	},
   render: function() {
-	this.setState({loading: false});
+	
 	console.log('--render--');
 	   return false;
     if (this.state.loading) {
