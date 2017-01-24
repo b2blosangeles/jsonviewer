@@ -49,7 +49,7 @@ var AJAX = React.createClass({
       return <span>Error--: {this.state.error.message}</span>;
     }
     else*/ {
-		console.log(this.state.data);
+		console.log(this.state);
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
