@@ -34,9 +34,9 @@ var AJAX = React.createClass({
 	    type: "GET",
 	    dataType : "json",
 	}).done(function( json ) {
-	     console.log(json);
+		me.setState({data:json});
 	  });
-	  
+	  /*
 	  setTimeout(
 	  	function() {
 			me.setState({data:{items: [{name:7777}]}});
@@ -44,7 +44,7 @@ var AJAX = React.createClass({
 		}, 6000
 	  
 	  );
-	  
+	  */
   }, 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
