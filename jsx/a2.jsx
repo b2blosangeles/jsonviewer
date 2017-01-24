@@ -12,12 +12,20 @@ var AJAX = React.createClass({
   componentWillUpdate () {
 	console.log('--componentWillUpdate--');
   },
+  componentDidUpdate(){
+	console.log('--componentDidUpdate--');
+  },
+  
+  
   componentWillMount () {
 	console.log('--componentWillMount--');
   }, 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
-  },   
+  },  
+  
+
+  
   componentDidMount() {
 	console.log('--componentDidMount--');
     this.props.promise.then(
