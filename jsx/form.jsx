@@ -17,7 +17,7 @@ class NameForm extends React.Component {
     event.preventDefault();
   }
   
-  handleClick() {
+  handleClick(e) {
     this.setState({form:{value: 'niu'}});
   }
   
