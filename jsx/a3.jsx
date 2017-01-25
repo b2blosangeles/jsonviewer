@@ -2,7 +2,7 @@ class AJAX1 extends React.Component {
 
   constructor(props) {
     super(props);
-     this.state = {inputContent: 'startValue'};
+   //  this.state = {inputContent: 'startValue'};
 	// this.state = {date: new Date()};
 
   }	
