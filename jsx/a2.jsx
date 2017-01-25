@@ -65,7 +65,7 @@ class AJAX extends React.Component {
 //	constructor: function() {
 	//	console.log('--constructor--');
 	}
-  render: function() {
+  render() {
 	
     if (this.state.loading) {
       return <span>Loading ++...</span>;
@@ -91,7 +91,7 @@ class AJAX extends React.Component {
       );
     }
   }
-});
+//});
 
 ReactDOM.render(
   <AJAX />,
