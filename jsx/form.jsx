@@ -28,3 +28,7 @@ class NameForm extends React.Component {
     );
   }
 }
+ReactDOM.render(
+  <NumberList numbers={numbers} />,
+  document.getElementById('example1')
+);
