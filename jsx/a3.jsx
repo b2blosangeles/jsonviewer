@@ -4,9 +4,10 @@ class AJAX1 extends React.Component {
     super(props);
     // this.state = {date: new Date()};
 	 console.log('constructor A==>');
+	 /*
 	 this.setState({loading: true});
 	 console.log(this.date);
-	 console.log('constructor B==>');
+	 console.log('constructor B==>');*/
   }	
 
   componentWillUpdate () {
@@ -23,7 +24,7 @@ class AJAX1 extends React.Component {
   componentWillMount () {
 	console.log('--componentWillMount--');
 	  var me =  this;
-
+	/*
 	$.ajax({
 	    url: 'http://docviewer.qalet.com//sample/data.json',
 	    data: {},
@@ -42,6 +43,7 @@ class AJAX1 extends React.Component {
 
 		  );				
 	  });
+	  */
   } 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
