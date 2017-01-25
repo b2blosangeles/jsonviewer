@@ -1,6 +1,7 @@
+/*
 function Cc(props) {
   return <span>niu{props.t.id}</span>
-};
+};*/
 //var AJAX = React.createClass({
 class AJAX extends React.Component {	
  /*
