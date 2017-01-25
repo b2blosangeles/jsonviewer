@@ -10,15 +10,7 @@ class AJAX extends React.Component {
     // this.state = {date: new Date()};
 	 console.log('constructor==>');
   }	
-/*	
-  getInitialState: function() {
-    return {
-      loading: true,
-      error: null,      
-      data: null
-    };
-  }
-  */
+
   componentWillUpdate () {
 	console.log('--componentWillUpdate--');
   }
@@ -29,11 +21,7 @@ class AJAX extends React.Component {
   componentWillReceiveProps() {
 	console.log('--componentWillReceiveProps--');
   }  
-  
-//  shouldComponentUpdate() {
-//	console.log('--shouldComponentUpdate--');
-//  }, 
-  
+
   componentWillMount () {
 	console.log('--componentWillMount--');
 	  var me =  this;
@@ -59,40 +47,16 @@ class AJAX extends React.Component {
   componentDidMount() {
 	  
 	console.log('--componentDidMount--');
-//    this.props.promise.then(
-//      value => this.setState({loading: false, data: value}),
-//      error => this.setState({loading: false, error: error}));
-//  },
-//	constructor: function() {
-	//	console.log('--constructor--');
-	}
+  }
+  
   render() {
-	
-    if (this.state.loading) {
-      return <span>Loading ++...</span>;
-    }
-    else  if (this.state.error !== null) {
-      return <span>Error--: {this.state.error.message}</span>;
-    }
-    else {
-	if (!this.state.data) {
-		return false;
-	}
-      var repos =  (this.state.data)?this.state.data.items:[]; 
-      var repoList = repos.map(function (repo, index) {
-        return (
-          <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
-        );
-      });
       return (
-        <main>
-          <h1>Most Popular JavaScript Projects in Github</h1>
-          <ol>{repoList}</ol>
-        </main>
+        <span>
+          niu
+        </span>
       );
     }
-  };
-//});
+};
 
 ReactDOM.render(
   <AJAX />,
