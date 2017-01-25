@@ -10,7 +10,7 @@ class AJAX extends React.Component {
     // this.state = {date: new Date()};
 	 console.log('constructor A==>');
 	 this.setState({loading: true});
-	 console.log(this.state);
+	 console.log(this.date);
 	 console.log('constructor B==>');
   }	
 
@@ -43,7 +43,7 @@ class AJAX extends React.Component {
 				console.log('constructor C0==>');
 				console.log(me.state.data);
 				console.log('constructor C==>');
-			}, 6000
+			}, 1000
 
 		  );				
 	  });
