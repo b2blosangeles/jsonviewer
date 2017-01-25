@@ -59,6 +59,22 @@ class AJAX1 extends React.Component {
   }
   
   render() {
+	if (this.state.loading) {
+      return <span>Loading...</span>;
+    }
+    else  if (this.state.error !== null) {
+      return <span>Error--: {this.state.error.message}</span>;
+    }
+    else  {
+		console.log(this.state);
+		if (!this.state.data) return true;
+      var repos =  this.state.data.items;
+      var repoList = repos.map(function (repo, index) {
+        return (
+          <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
+        );
+      }); 
+	}  
       return (
         <main>
           <h1>Most Popular JavaScript Projects in Github</h1>
