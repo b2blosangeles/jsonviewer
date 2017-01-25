@@ -20,16 +20,16 @@ class AJAX1 extends React.Component {
 
   componentWillMount () {
 	console.log('--componentWillMount--');
+	var me = this;
 	
+	 console.log(me.setState);
 	
-	 console.log(this.setState);
-	
-	 this.setState({loading: true});
-	 console.log(this.state);
+	 me.setState({loading: true});
+	 console.log(me.state);
 	 console.log('constructor B==>');	
 	
 	
-	  var me =  this;
+	//  var me =  this;
 	/*
 	$.ajax({
 	    url: 'http://docviewer.qalet.com//sample/data.json',
