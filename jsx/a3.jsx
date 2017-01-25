@@ -65,7 +65,7 @@ class AJAX extends React.Component {
     else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
-    else */ {
+    else  {
 		console.log(this.state);
 		if (!this.state.data) return true;
       var repos =  this.state.data.items;
@@ -74,14 +74,14 @@ class AJAX extends React.Component {
           <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
         );
       }); 
-	}
+	}*/
       return (
         <main>
           <h1>Most Popular JavaScript Projects in Github</h1>
           <ol>{repoList}</ol>
         </main>
       );
-	}
+	//}
 };
 
 ReactDOM.render(
