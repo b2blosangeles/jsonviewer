@@ -86,5 +86,5 @@ class AJAX extends React.Component {
 
 ReactDOM.render(
   <AJAX />,
-  $('#example2')[0]
+  $('#example6')[0]
 );
