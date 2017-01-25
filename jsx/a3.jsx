@@ -21,7 +21,7 @@ class AJAX1 extends React.Component {
 	var me = this;
 
 	this.setState({loading: true}, function() {
-	  	console.log('===niu ss==');
+	  //	console.log('===niu ss==');
 	  });	  
 	  
 //	console.log(me.state);
@@ -37,13 +37,7 @@ class AJAX1 extends React.Component {
 		console.log(json);
 		setTimeout(
 	  		function() {
-				console.log('constructor FF==>');
 				me.setState({loading:false, data:json}); 
-			//	me.setState({loading: false});
-				
-				console.log('constructor C0==>');
-			//	console.log(me.state.data);
-				console.log('constructor C==>');
 			}, 1000
 
 		  );				
