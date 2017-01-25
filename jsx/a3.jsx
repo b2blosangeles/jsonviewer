@@ -62,9 +62,9 @@ class AJAX1 extends React.Component {
 	if (this.state.loading) {
       return <span>Loading...</span>;
     }
-    else  if (this.state.error !== null) {
+  /*else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
-    }
+    }*/
     else  {
 		console.log(this.state);
 		if (!this.state.data) return true;
