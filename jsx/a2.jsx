@@ -90,7 +90,7 @@ class AJAX extends React.Component {
         </main>
       );
     }
-  }
+  };
 //});
 
 ReactDOM.render(
