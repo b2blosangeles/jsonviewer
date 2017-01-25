@@ -30,7 +30,7 @@ class AJAX1 extends React.Component {
 	
 	
 	//  var me =  this;
-	/*
+
 	$.ajax({
 	    url: 'http://docviewer.qalet.com//sample/data.json',
 	    data: {},
@@ -41,7 +41,7 @@ class AJAX1 extends React.Component {
 		setTimeout(
 	  		function() {
 				console.log('constructor FF==>');
-				me.setState({loading:false, data:json});
+				me.state({loading:false, data:json});
 				console.log('constructor C0==>');
 			//	console.log(me.state.data);
 				console.log('constructor C==>');
@@ -49,7 +49,7 @@ class AJAX1 extends React.Component {
 
 		  );				
 	  });
-	  */
+	  
   } 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
