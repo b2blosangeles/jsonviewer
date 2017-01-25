@@ -1,71 +1,90 @@
+/*
 function Cc(props) {
   return <span>niu{props.t.id}</span>
-};
-var AJAX = React.createClass({
-  getInitialState: function() {
-    return {
-      loading: true,
-      error: null,      
-      data: null
-    };
-  },
+};*/
+//var AJAX = React.createClass({
+class AJAX extends React.Component {	
+
+  constructor(props) {
+    super(props);
+    // this.state = {date: new Date()};
+	 console.log('constructor A==>');
+	 this.setState({loading: true});
+	 console.log(this.date);
+	 console.log('constructor B==>');
+  }	
+
   componentWillUpdate () {
 	console.log('--componentWillUpdate--');
-  },
+  }
   componentDidUpdate(){
 	console.log('--componentDidUpdate--');
-  },
+  }
   
   componentWillReceiveProps() {
 	console.log('--componentWillReceiveProps--');
-  },  
-  
-//  shouldComponentUpdate() {
-//	console.log('--shouldComponentUpdate--');
-//  }, 
-  
+  }  
+
   componentWillMount () {
 	console.log('--componentWillMount--');
-  }, 
+	  var me =  this;
+
+	$.ajax({
+	    url: 'http://docviewer.qalet.com//sample/data.json',
+	    data: {},
+	    type: "GET",
+	    dataType : "json",
+	}).done(function( json ) {
+		console.log(json);
+		setTimeout(
+	  		function() {
+				console.log('constructor FF==>');
+				me.setState({loading:false, data:json});
+				console.log('constructor C0==>');
+			//	console.log(me.state.data);
+				console.log('constructor C==>');
+			}, 1000
+
+		  );				
+	  });
+  } 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
-  },  
+  }  
 
   componentDidMount() {
-	console.log('--componentDidMount--');
-    this.props.promise.then(
-      value => this.setState({loading: false, data: value}),
-      error => this.setState({loading: false, error: error}));
-  },
-//	constructor: function() {
-	//	console.log('--constructor--');
-//	},
-  render: function() {
-	console.log('--render--');
-    if (this.state.loading) {
+	  
+	console.log('--componentDidMount--'); 
+  }
+  
+  render() {
+	/*
+	if (this.state.loading) {
       return <span>Loading...</span>;
     }
     else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
-    else {
+    else */ {
+		console.log(this.state);
+		if (!this.state.data) return true;
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
           <li key={index}><a href={repo.html_url}>{repo.name}</a> ->>-<Cc t={repo}></Cc> --  ({repo.stargazers_count} stars) <br/> {repo.description}</li>
         );
-      });
+      }); 
+	}
       return (
         <main>
           <h1>Most Popular JavaScript Projects in Github</h1>
           <ol>{repoList}</ol>
         </main>
       );
-    }
-  }
-});
+	}
+};
 
 ReactDOM.render(
-  <AJAX promise={$.getJSON('http://docviewer.qalet.com//sample/data.json')} />,
+  <AJAX />,
   $('#example2')[0]
 );
