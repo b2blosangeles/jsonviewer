@@ -3,11 +3,7 @@ class AJAX1 extends React.Component {
   constructor(props) {
     super(props);
     // this.state = {date: new Date()};
-	 console.log('constructor A==>');
-	
-	 this.setState({loading: true});
-	 console.log(this.state);
-	 console.log('constructor B==>');
+
   }	
 
   componentWillUpdate () {
@@ -23,6 +19,15 @@ class AJAX1 extends React.Component {
 
   componentWillMount () {
 	console.log('--componentWillMount--');
+	
+	
+	 console.log('constructor A==>');
+	
+	 this.setState({loading: true});
+	 console.log(this.state);
+	 console.log('constructor B==>');	
+	
+	
 	  var me =  this;
 	/*
 	$.ajax({
