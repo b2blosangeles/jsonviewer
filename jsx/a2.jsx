@@ -34,6 +34,7 @@ class AJAX extends React.Component {
 	    type: "GET",
 	    dataType : "json",
 	}).done(function( json ) {
+		console.log(json);
 		setTimeout(
 	  		function() {
 				me.setState({loading:false, data:json});
