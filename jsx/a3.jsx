@@ -59,6 +59,7 @@ class AJAX1 extends React.Component {
           <ol>{repoList}</ol>
         </main>
       );
+	}  
 };
 
 ReactDOM.render(
