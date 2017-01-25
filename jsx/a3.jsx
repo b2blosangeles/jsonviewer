@@ -2,30 +2,30 @@ class AJAX1 extends React.Component {
 
   constructor(props) {
     super(props);
-	  this.state = {loading: true};
+	//  this.state = {loading: true};
   }	
 
   componentWillUpdate () {
-	console.log('--componentWillUpdate--');
+//	console.log('--componentWillUpdate--');
   }
   componentDidUpdate(){
-	console.log('--componentDidUpdate--');
+//	console.log('--componentDidUpdate--');
   }
   
   componentWillReceiveProps() {
-	console.log('--componentWillReceiveProps--');
+//	console.log('--componentWillReceiveProps--');
   }  
 
   componentWillMount () {
-	console.log('--componentWillMount--');
+//	console.log('--componentWillMount--');
 	var me = this;
-/*
+
 	this.setState({loading: true}, function() {
 	  	console.log('===niu ss==');
 	  });	  
-*/	  
-	console.log(me.state);
-	console.log('constructor BBH==>');	  
+	  
+//	console.log(me.state);
+//	console.log('constructor BBH==>');	  
 	//  var me =  this;
 
 	$.ajax({
@@ -51,12 +51,12 @@ class AJAX1 extends React.Component {
 	  
   } 
   componentWillUnmount () {
-	console.log('--componentWillUnmount--');
+//	console.log('--componentWillUnmount--');
   }  
 
   componentDidMount() {
 	  
-	console.log('--componentDidMount--'); 
+//	console.log('--componentDidMount--'); 
   }
   
   render() {
