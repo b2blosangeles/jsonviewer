@@ -29,7 +29,7 @@ class NameForm extends React.Component {
           <input type="text" value={this.state.form.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit==" />
-          <a href="#" onClick={handleClick}>
+          <a href="#" onClick={this.handleClick}>
             Click me
           </a>        
         
