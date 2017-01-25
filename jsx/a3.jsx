@@ -22,7 +22,7 @@ class AJAX1 extends React.Component {
 	console.log('--componentWillMount--');
 	var me = this;
 
-	me.state={loading: true};
+	me.state=setState({loading: true});
 	 console.log(me.state);
 	 console.log('constructor B==>');	
 	
