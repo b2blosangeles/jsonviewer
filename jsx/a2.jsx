@@ -38,6 +38,7 @@ class AJAX extends React.Component {
 		setTimeout(
 	  		function() {
 				me.setState({loading:false, data:json});
+				console.log(this.state.data);
 			}, 6000
 
 		  );				
@@ -49,7 +50,7 @@ class AJAX extends React.Component {
 
   componentDidMount() {
 	  
-	console.log('--componentDidMount--');
+	console.log('--componentDidMount--'); 
   }
   
   render() {
