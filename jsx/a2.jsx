@@ -10,14 +10,14 @@ var AJAX = React.createClass({
     };
   },
   componentWillUpdate () {
-	console.log('--componentWillUpdate--');
+//	console.log('--componentWillUpdate--');
   },
   componentDidUpdate(){
-	console.log('--componentDidUpdate--');
+//	console.log('--componentDidUpdate--');
   },
   
   componentWillReceiveProps() {
-	console.log('--componentWillReceiveProps--');
+//	console.log('--componentWillReceiveProps--');
   },  
   
 //  shouldComponentUpdate() {
@@ -32,7 +32,7 @@ var AJAX = React.createClass({
   },  
 
   componentDidMount() {
-	console.log('--componentDidMount--');
+//	console.log('--componentDidMount--');
     this.props.promise.then(
       value => this.setState({loading: false, data: value}),
       error => this.setState({loading: false, error: error}));
@@ -41,7 +41,7 @@ var AJAX = React.createClass({
 	//	console.log('--constructor--');
 //	},
   render: function() {
-	console.log('--render--');
+//	console.log('--render--');
     if (this.state.loading) {
       return <span>Loading...</span>;
     }
