@@ -9,7 +9,7 @@ class AJAX extends React.Component {
     super(props);
     // this.state = {date: new Date()};
 	 console.log('constructor==>');
-	 this.setState({loading: false})
+	 this.setState({loading: true});
   }	
 
   componentWillUpdate () {
@@ -58,6 +58,7 @@ class AJAX extends React.Component {
       return <span>Error--: {this.state.error.message}</span>;
     }
     else {
+		
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
