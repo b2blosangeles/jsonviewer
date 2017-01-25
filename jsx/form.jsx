@@ -29,6 +29,6 @@ class NameForm extends React.Component {
   }
 }
 ReactDOM.render(
-  <NumberList numbers={numbers} />,
+  <NameForm />,
   document.getElementById('example')
 );
