@@ -11,6 +11,7 @@ class AJAX1 extends React.Component {
 		  console.log(c);
 	  	console.log('===niu ff===');
 	  });
+	  console.log('===niu kk===');
   }	
 
   componentWillUpdate () {
