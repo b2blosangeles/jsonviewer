@@ -1,3 +1,6 @@
+function Cc(props) {
+  return <span>niu{props.t.id}</span>
+};
 class AJAX1 extends React.Component {	
 
   constructor(props) {
@@ -34,7 +37,6 @@ class AJAX1 extends React.Component {
 	    type: "GET",
 	    dataType : "json",
 	}).done(function( json ) {
-		console.log(json);
 		setTimeout(
 	  		function() {
 				me.setState({loading:false, data:json}); 
