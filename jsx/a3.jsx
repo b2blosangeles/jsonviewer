@@ -4,7 +4,13 @@ class AJAX1 extends React.Component {
     super(props);
    //  this.state = {inputContent: 'startValue'};
 	// this.state = {date: new Date()};
-
+	  
+	this.setState({loading: true}, function(a, b, c) {
+		  console.log(a);
+		  console.log(b);
+		  console.log(c);
+	  	console.log('===niu ff===');
+	  });
   }	
 
   componentWillUpdate () {
@@ -21,22 +27,9 @@ class AJAX1 extends React.Component {
   componentWillMount () {
 	console.log('--componentWillMount--');
 	var me = this;
-	  me.setState({loading: true}, function(a, b, c) {
-		  console.log(a);
-		  console.log(b);
-		  console.log(c);
-	  	console.log('===niu vv===');
-	  });
-	setTimeout(
-		function() {
-	 		console.log(me.state);
-	 		console.log('constructor BBG==>');	  
-		}, 1);
-	  
-	
-	
-	
-	
+
+	console.log(me.state);
+	console.log('constructor BBH==>');	  
 	//  var me =  this;
 
 	$.ajax({
