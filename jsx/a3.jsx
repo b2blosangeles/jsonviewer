@@ -25,7 +25,7 @@ class AJAX1 extends React.Component {
 	setTimeout(
 		function() {
 	 		console.log(me.state);
-	 		console.log('constructor BB==>');	  
+	 		console.log('constructor BBG==>');	  
 		}, 1);
 	  
 	
