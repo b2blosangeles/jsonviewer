@@ -37,6 +37,7 @@ class AJAX extends React.Component {
 		console.log(json);
 		setTimeout(
 	  		function() {
+				console.log('constructor F==>');
 				me.setState({loading:false, data:json});
 				console.log(this.state.data);
 				console.log('constructor C==>');
