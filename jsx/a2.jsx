@@ -40,6 +40,7 @@ class AJAX extends React.Component {
 	  		function() {
 				console.log('constructor FF==>');
 				me.setState({loading:false, data:json});
+				console.log('constructor C0==>');
 				console.log(me.state.data);
 				console.log('constructor C==>');
 			}, 6000
