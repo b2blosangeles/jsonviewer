@@ -5,7 +5,7 @@ function Cc(props) {
 //var AJAX = React.createClass({
 class AJAX extends React.Component {	
 
-	constructor(props) {
+  constructor(props) {
     super(props);
     // this.state = {date: new Date()};
 	 console.log('constructor A==>');
@@ -52,14 +52,15 @@ class AJAX extends React.Component {
   }
   
   render() {
-     if (this.state.loading) {
+	/*
+	if (this.state.loading) {
       return <span>Loading...</span>;
     }
     else  if (this.state.error !== null) {
       return <span>Error--: {this.state.error.message}</span>;
     }
-    else {
-		
+    else */ {
+		console.log(this.state);
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
