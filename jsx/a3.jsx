@@ -21,7 +21,9 @@ class AJAX1 extends React.Component {
   componentWillMount () {
 	console.log('--componentWillMount--');
 	var me = this;
-	  me.setState({loading: true});
+	  me.setState({loading: true}, function() {
+	  	console.log('===niu===');
+	  });
 	setTimeout(
 		function() {
 	 		console.log(me.state);
