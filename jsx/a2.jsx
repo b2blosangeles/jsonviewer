@@ -4,13 +4,13 @@ function Cc(props) {
 };*/
 //var AJAX = React.createClass({
 class AJAX extends React.Component {	
- /*
+
 	constructor(props) {
     super(props);
     // this.state = {date: new Date()};
 	 console.log('constructor==>');
   }	
-	
+/*	
   getInitialState: function() {
     return {
       loading: true,
