@@ -16,7 +16,11 @@ class NameForm extends React.Component {
     alert('A name was submitted: ' + this.state.form.value);
     event.preventDefault();
   }
-
+  
+  handleClick() {
+    this.setState({form:{value: 'niu'}});
+  }
+  
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -25,6 +29,10 @@ class NameForm extends React.Component {
           <input type="text" value={this.state.form.value} onChange={this.handleChange} />
         </label>
         <input type="submit" value="Submit==" />
+          <a href="#" onClick={handleClick}>
+            Click me
+          </a>        
+        
       </form>
     );
   }
