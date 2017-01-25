@@ -58,7 +58,6 @@ class AJAX1 extends React.Component {
       return (
         <main>
           <h1>Most Popular JavaScript Projects in Github</h1>
-          <!--ol>{repoList}</ol-->
         </main>
       );
 	}  
