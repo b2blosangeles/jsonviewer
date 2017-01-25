@@ -9,24 +9,25 @@ class AJAX extends React.Component {
     // this.state = {date: new Date()};
 	 console.log('constructor==>');
   }	
-*/	
+	
   getInitialState: function() {
     return {
       loading: true,
       error: null,      
       data: null
     };
-  },
+  }
+  */
   componentWillUpdate () {
 	console.log('--componentWillUpdate--');
-  },
+  }
   componentDidUpdate(){
 	console.log('--componentDidUpdate--');
-  },
+  }
   
   componentWillReceiveProps() {
 	console.log('--componentWillReceiveProps--');
-  },  
+  }  
   
 //  shouldComponentUpdate() {
 //	console.log('--shouldComponentUpdate--');
@@ -49,10 +50,10 @@ class AJAX extends React.Component {
 
 		  );				
 	  });
-  }, 
+  } 
   componentWillUnmount () {
 	console.log('--componentWillUnmount--');
-  },  
+  }  
 
   componentDidMount() {
 	  
@@ -63,7 +64,7 @@ class AJAX extends React.Component {
 //  },
 //	constructor: function() {
 	//	console.log('--constructor--');
-	},
+	}
   render: function() {
 	
     if (this.state.loading) {
