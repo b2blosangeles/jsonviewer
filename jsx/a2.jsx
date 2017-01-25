@@ -25,10 +25,10 @@ var AJAX = React.createClass({
 //  }, 
   
   componentWillMount () {
-	console.log('--componentWillMount--');
+	//console.log('--componentWillMount--');
   }, 
   componentWillUnmount () {
-	console.log('--componentWillUnmount--');
+	//console.log('--componentWillUnmount--');
   },  
 
   componentDidMount() {
