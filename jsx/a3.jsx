@@ -71,6 +71,7 @@ class AJAX1 extends React.Component {
 		console.log('this.state-->');
 		console.log(this.state);
 		if (!this.state.data) return true;
+		console.log('this.state-->>');
       var repos =  this.state.data.items;
       var repoList = repos.map(function (repo, index) {
         return (
