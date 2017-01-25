@@ -8,8 +8,9 @@ class AJAX extends React.Component {
 	constructor(props) {
     super(props);
     // this.state = {date: new Date()};
-	 console.log('constructor==>');
+	 console.log('constructor A==>');
 	 this.setState({loading: true});
+	 console.log('constructor B==>');
   }	
 
   componentWillUpdate () {
