@@ -29,6 +29,10 @@ class AJAX1 extends React.Component {
 	console.log('--componentWillMount--');
 	var me = this;
 
+	this.setState({loading: true}, function(a, b, c) {
+	  	console.log('===niu ll==');
+	  });	  
+	  
 	console.log(me.state);
 	console.log('constructor BBH==>');	  
 	//  var me =  this;
