@@ -65,9 +65,10 @@ class AJAX extends React.Component {
       }); 
 	}
       return (
-        <span>
-          niu
-        </span>
+        <main>
+          <h1>Most Popular JavaScript Projects in Github</h1>
+          <ol>{repoList}</ol>
+        </main>
       );
 	}
 };
