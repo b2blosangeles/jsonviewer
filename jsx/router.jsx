@@ -1,9 +1,7 @@
-var ReactRouter = window.ReactRouter
-var Router = ReactRouter.Router
-var Route = ReactRouter.Route
-var Link = ReactRouter.Link
-var Redirect = ReactRouter.Redirect
-var browserHistory = ReactRouter.browserHistory
+let Router = window.ReactRouter;
+let RouteHandler = Router.RouteHandler;
+let Route = Router.Route;
+let DefaultRoute = Router.DefaultRoute;
 
 class App extends React.Component {
    render() {
