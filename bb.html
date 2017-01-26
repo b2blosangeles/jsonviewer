@@ -44,19 +44,12 @@ let valid = check({
 valid; 	  
 </script>	  
   <script type="text/babel">
-export default function deprecated(propType, explanation) {
-  return function validate(props, propName, componentName, ...rest) { // Note ...rest here
-    if (props[propName] != null) {
-      const message = `"${propName}" property of "${componentName}" has been deprecated.\n${explanation}`;
-      if (!warned[message]) {
-        warning(false, message);
-        warned[message] = true;
-      }
-    }
-
-    return propType(props, propName, componentName, ...rest); // and here
-  };
-}  
+Button.propTypes = {
+  highlighted: ThirdPartyPropTypes.deprecated(
+    React.PropTypes.bool,
+    'Use `active` prop instead'
+  )
+}
   var destination = document.querySelector("#container");
 var { Router,
       Route,
