@@ -20,19 +20,29 @@
   
   </div>
   <script>
- function check(props, propTypes) {
-    for (let prop in propTypes) {
-        if (propTypes.hasOwnProperty(prop)) {
-            let err = propTypes[prop](props, prop, 'name', 'prop');
-            if (err) {
-                console.warn(err);
-                return false;
-            }
-        }
+import warning from 'warning';
+
+let warned = {};
+
+export default function deprecated(propType, explanation) {
+  return function validate(props, propName, componentName) {
+    if (props[propName] != null) {
+      const message = `"${propName}" property of "${componentName}" has been deprecated.\n${explanation}`;
+      if (!warned[message]) {
+        warning(false, message);
+        warned[message] = true;
+      }
     }
-    return true;
+
+    return propType(props, propName, componentName);
+  };
 }
 
+function _resetWarned() {
+  warned = {};
+}
+
+deprecated._resetWarned = _resetWarned;
 let valid = check({
   a: 42,
   b: 'News'
