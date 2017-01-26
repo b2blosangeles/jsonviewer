@@ -1,3 +1,10 @@
+var ReactRouter = window.ReactRouter
+var Router = ReactRouter.Router
+var Route = ReactRouter.Route
+var Link = ReactRouter.Link
+var Redirect = ReactRouter.Redirect
+var browserHistory = ReactRouter.browserHistory
+
 class App extends React.Component {
    render() {
       return (
