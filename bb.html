@@ -20,6 +20,18 @@
   
   </div>
   <script>
+
+let valid = check({
+  a: 42,
+  b: 'News'
+}, {
+  a: PropTypes.number,
+  b: PropTypes.oneOf(['News', 'Photos'])
+});
+
+valid; 	  
+</script>	  
+  <script type="text/babel">
 import warning from 'warning';
 
 let warned = {};
@@ -43,23 +55,6 @@ function _resetWarned() {
 }
 
 deprecated._resetWarned = _resetWarned;
-let valid = check({
-  a: 42,
-  b: 'News'
-}, {
-  a: PropTypes.number,
-  b: PropTypes.oneOf(['News', 'Photos'])
-});
-
-valid; 	  
-</script>	  
-  <script type="text/babel">
-Button.propTypes = {
-  highlighted: ThirdPartyPropTypes.deprecated(
-    React.PropTypes.bool,
-    'Use `active` prop instead'
-  )
-}
   var destination = document.querySelector("#container");
 var { Router,
       Route,
