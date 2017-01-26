@@ -1,16 +1,114 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-  <head></head>
+  <head>
+    <title>jQuery document-viewer</title>
+    <meta charset="utf-8" />
+    <script src="package/JQuery_JS-virwer_showdown_x2j_json2.js"></script>
+	<link href="http://qalet.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="package/jsonviewer.min.css" type="text/css" rel="stylesheet" >
+	
+  </head>
   <body>
-    <div id="example"></div>
-	<!--table>
+	<table>
 		<tr>
-			<td width="50%"><div id="example6" style="border:1px dotted red"></div></td>
-			<td width="50%"><div id="example2">===</div></td>
-		</tr>
-	</table-->	
-	<div id="example3"></div>
-    <!--script type="text/babel" src="/jsx/a1.jsx"></script-->  
-    <script type="text/javascript" src="/package/react_int.jsx"></script>
+			<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"></td>
+			<td width="*"><h3> Document viewer</h3></td>
+		</tr>	
+	</table>
+				
+	
+	 <form>
+		 <div class="container-fluid form_section">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+					<button type="button" class="btn btn-warning pull-right" onClick="sendData('')" style="margin-top:-12px">
+						Show Original
+					</button>	
+					
+					<label for="comment">
+						  Data Source: (url or text)
+							
+					  </label>
+					  
+					  <textarea class="form-control" rows="5" name="code"></textarea>
+					</div>	
+
+				</div>
+				<div class="col-sm-12">
+				 	<label for="sel1">Show data as:</label>
+				 	<button type="button" class="btn btn-info" onClick="sendData('json')">JSON</button>
+				 	<button type="button" class="btn btn-info" onClick="sendData('xml')">XML</button>
+				 	<button type="button" class="btn btn-info" onClick="sendData('md')">Markdown</button>
+				 </div>
+			</div>
+		</div>
+	</form>
+	
+    <div class="doc_renderer" id="doc-renderer"></div>
+	<div class="sample_section">  
+		Sample:<br/>
+		<ul>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/README.md', 'md')">http://docviewer.qalet.com/README.md</a></li>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com//sample/data.json', 'json')">http://docviewer.qalet.com/sample/data.json</a></li>
+		  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/sample/data.xml', 'xml')">http://docviewer.qalet.com/sample/data.xml</a></li>
+		</ul>	
+	</div>	
+   <script>
+		function sendData(type) {
+			var code  =   $('form').find("[name='code']").val();
+			
+			var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+			if (pattern.test(code)) {
+				$.get('http://docviewer.qalet.com/api/dataChannel.js',
+				{url:code}, 
+				function (data) {
+					HtmlViwer(data, type, $('#doc-renderer')); 
+					},'text'
+				);
+			 	return true;
+			} else {  
+				HtmlViwer(code, type, $('#doc-renderer'));  
+			}
+ 
+		};
+		function loadSample(url, type) {
+			$('form').find("[name='code']").val(url);
+			sendData(type);
+		};
+		var HtmlViwer = function(data, type, target) {
+			target.removeClass("error");
+			if (type == 'md') {
+				var converter = new showdown.Converter();
+				target.html(converter.makeHtml(data));
+			}	
+			if (type == 'json') {
+				var options = {
+				  collapsed: false,
+				  withQuotes: false
+				};
+				try{
+					target.jsonViewer(JSON.parse(data), options);  
+				} catch	(err) {
+					target.addClass("error").html('Error! ' + err.message);	   
+					}
+				 
+			}
+			if (type == 'xml') {
+				var x2js = new X2JS();
+				var jsonObj = x2js.xml_str2json( data );
+				console.log(jsonObj);
+				var options = {
+				  collapsed: false,
+				  withQuotes: true
+				};
+				target.jsonViewer(jsonObj, options);  	
+			}
+			if (type == '') {
+				target.html(data.replace(/\n/ig, '<br/>'));  	
+			}			
+		};
+    </script>
+    
   </body>
 </html>
