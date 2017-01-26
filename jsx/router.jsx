@@ -4,6 +4,22 @@ let Route = Router.Route;
 let DefaultRoute = Router.DefaultRoute;
 var browserHistory = ReactRouter.browserHistory
 
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <ul>
+               <li>Home</li>
+               <li>About</li>
+               <li>Contact</li>
+            </ul>
+				
+           {this.props.children}
+         </div>
+      )
+   }
+}
+
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>
