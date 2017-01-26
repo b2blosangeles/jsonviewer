@@ -100,7 +100,7 @@ var App = React.createClass({
   }
 });
 
-render(
+render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <Route path="about" component={About}/>
@@ -110,7 +110,7 @@ render(
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>
-  ,
+  ),
   destination
 );
   </script>
