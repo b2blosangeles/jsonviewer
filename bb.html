@@ -19,7 +19,30 @@
   <div id="container">
   
   </div>
-  
+  <script>
+ function check(props, propTypes) {
+    for (let prop in propTypes) {
+        if (propTypes.hasOwnProperty(prop)) {
+            let err = propTypes[prop](props, prop, 'name', 'prop');
+            if (err) {
+                console.warn(err);
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+let valid = check({
+  a: 42,
+  b: 'News'
+}, {
+  a: PropTypes.number,
+  b: PropTypes.oneOf(['News', 'Photos'])
+});
+
+valid; 	  
+</script>	  
   <script type="text/babel">
   var destination = document.querySelector("#container");
 var { Router,
