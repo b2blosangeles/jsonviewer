@@ -20,6 +20,26 @@ class App extends React.Component {
    }
 }
 
+class Home extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Home...</h1>
+         </div>
+      )
+   }
+}
+
+class About extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>About...</h1>
+         </div>
+      )
+   }
+}
+
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>
