@@ -1,63 +1,46 @@
-var Router = window.ReactRouter;
-var RouteHandler = Router.RouteHandler;
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
-var browserHistory = ReactRouter.browserHistory
+var Router = ReactRouter;
+var Route = Router.Route, DefaultRoute = Router.DefaultRoute,
+  Link=Router.Link, RouteHandler = Router.RouteHandler;
 
-class App extends React.Component {
-   render() {
-      return (
-         <div>
-            <ul>
-               <li>Home</li>
-               <li>About</li>
-               <li>Contact</li>
-            </ul>
-				
-           {this.props.children}
-         </div>
-      )
-   }
-}
+var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <ul>
+            <li><Link to="view1">View1 link</Link></li>    
+            <li><Link to="view2">View2 link</Link></li>    
+        </ul>
 
-class Home extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>Home...</h1>
-         </div>
-      )
-   }
-}
+        <RouteHandler key={name}/>
+      </div>
+    );
+  }
+});
+          
+var View1 = React.createClass({
+    render: function() {
+        return (
+          <div>View 1 content</div>
+        );
+    }          
+});
+          
+var View2 = React.createClass({
+    render: function() {
+        return (
+          <div>View 2 content</div>
+        );
+    }          
+});
+    
+var routes = (
+  <Route name="app" path="/" handler={App}>
+    <Route name="view1" handler={View1}/>
+    <Route name="view2" handler={View2}/>
+  </Route>
+);
 
-class About extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>About...</h1>
-         </div>
-      )
-   }
-}
-
-class Contact extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>Contact...</h1>
-         </div>
-      )
-   }
-}
-
-
-ReactDOM.render((
-   <Router history = {browserHistory}>
-      <Route path = "/" component = {App}>
-         <Route path = "home" component = {Home} />
-         <Route path = "about" component = {About} />
-         <Route path = "contact" component = {Contact} />
-      </Route>
-   </Router>
-	
-), document.getElementById('app'))
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.getElementById('app'));
+});
+    
