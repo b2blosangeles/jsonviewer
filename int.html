@@ -9,6 +9,12 @@
 	
   </head>
   <body>
+	<Router history={hashHistory}>
+	  <Route path="/" component={App}/>
+	  <Route path="/repos" component={Repos}/>
+	  <Route path="/about" component={About}/>
+	</Router>	  
+	  
 	<table>
 		<tr>
 			<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"></td>
