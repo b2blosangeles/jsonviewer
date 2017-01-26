@@ -4,10 +4,14 @@ let Route = Router.Route;
 let DefaultRoute = Router.DefaultRoute;
 var browserHistory = ReactRouter.browserHistory
 
-<Router history={history}>
-    <Route path="/" component={MainComponent}>
-      //<Route path="topics/:id" compponent={Topic} />
-    </Route>
-  </Router>
-
-  ReactDOM.render(<Router />,  document.getElementById('app'));
+ReactDOM.render((
+   <Router history = {browserHistory}>
+      <Route path = "/" component = {App}>
+         <IndexRoute component = {Home} />
+         <Route path = "home" component = {Home} />
+         <Route path = "about" component = {About} />
+         <Route path = "contact" component = {Contact} />
+      </Route>
+   </Router>
+	
+), document.getElementById('app'))
