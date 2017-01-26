@@ -14,8 +14,6 @@ class App extends React.Component {
    }
 }
 
-export default App;
-
 class Home extends React.Component {
    render() {
       return (
@@ -26,8 +24,6 @@ class Home extends React.Component {
    }
 }
 
-export default Home;
-
 class About extends React.Component {
    render() {
       return (
@@ -37,8 +33,6 @@ class About extends React.Component {
       )
    }
 }
-
-export default About;
 
 class Contact extends React.Component {
    render() {
