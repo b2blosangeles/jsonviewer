@@ -40,6 +40,17 @@ class About extends React.Component {
    }
 }
 
+class Contact extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Contact...</h1>
+         </div>
+      )
+   }
+}
+
+
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>
