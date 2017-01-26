@@ -1,46 +1,85 @@
-var Router = ReactRouter;
-var Route = Router.Route, DefaultRoute = Router.DefaultRoute,
-  Link=Router.Link, RouteHandler = Router.RouteHandler;
+  var destination = document.querySelector("#container");
+var { Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      Link } = ReactRouter;
+var Home = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>HELLO</h2>
+          <p>Cras facilisis urna ornare ex volutpat, et
+          convallis erat elementum. Ut aliquam, ipsum vitae
+          gravida suscipit, metus dui bibendum est, eget rhoncus nibh
+          metus nec massa. Maecenas hendrerit laoreet augue
+          nec molestie. Cum sociis natoque penatibus et magnis
+          dis parturient montes, nascetur ridiculus mus.</p>
+  
+          <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+        </div>
+      );
+    }
+});
+
+var Contact = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>GOT QUESTIONS?</h2>
+          <p>The easiest thing to do is post on
+          our <a href="http://forum.kirupa.com">forums</a>.
+          </p>
+        </div>
+      );
+    }
+});
+
+var Stuff = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>STUFF</h2>
+          <p>Mauris sem velit, vehicula eget sodales vitae,
+          rhoncus eget sapien:</p>
+          <ol>
+            <li>Nulla pulvinar diam</li>
+            <li>Facilisis bibendum</li>
+            <li>Vestibulum vulputate</li>
+            <li>Eget erat</li>
+            <li>Id porttitor</li>
+          </ol>
+        </div>
+      );
+    }
+});
 
 var App = React.createClass({
   render: function() {
     return (
       <div>
-        <ul>
-            <li><Link to="view1">View1 link</Link></li>    
-            <li><Link to="view2">View2 link</Link></li>    
+        <h1>Simple SPA</h1>
+        <ul className="header">
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/stuff">Stuff</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
-
-        <RouteHandler key={name}/>
+        <div className="content">
+          {this.props.children}
+        </div>
       </div>
-    );
+    )
   }
 });
-          
-var View1 = React.createClass({
-    render: function() {
-        return (
-          <div>View 1 content</div>
-        );
-    }          
-});
-          
-var View2 = React.createClass({
-    render: function() {
-        return (
-          <div>View 2 content</div>
-        );
-    }          
-});
-    
-var routes = (
-  <Route name="app" path="/" handler={App}>
-    <Route name="view1" handler={View1}/>
-    <Route name="view2" handler={View2}/>
-  </Route>
-);
 
-Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.getElementById('app'));
-});
-    
+ReactDOM.render(
+  <ReactRouter.Router>
+    <ReactRouter.Route path="/" component={App}>
+		<IndexRoute component={Home}/>
+		<Route path="home" component={Home} />
+		<Route path="stuff" component={Stuff} />
+		<Route path="contact" component={Contact} />		
+    </ReactRouter.Route>
+  </ReactRouter.Router>,
+  destination
+);

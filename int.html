@@ -6,62 +6,17 @@
     <script src="package/JQuery_JS-virwer_showdown_x2j_json2.js"></script>
 	<link href="http://qalet.com/css/bootstrap.min.css" rel="stylesheet">
     <link href="package/jsonviewer.min.css" type="text/css" rel="stylesheet" >
-	<script type="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-	<script type="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+	<!--script type="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+	<script type="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script-->
 	
-	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-router/0.13.4/ReactRouter.js"></script>
+	 <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-router/0.13.4/ReactRouter.js"></script-->
+	<script type="text/javascript" src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
+	
 	
   </head>
   <body>
-	<div id="app"></div>
-	<!--script type="text/javascript" src="/package/react_int.jsx"></script-->
-<script type="text/jsx">
-var Router = ReactRouter;
-var Route = Router.Route, DefaultRoute = Router.DefaultRoute,
-  Link=Router.Link, RouteHandler = Router.RouteHandler;
+	<div id="container"></div>
+	<script type="text/javascript" src="/package/react_int.jsx"></script>
 
-var App = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <ul>
-            <li><Link to="view1">View1 link</Link></li>    
-            <li><Link to="view2">View2 link</Link></li>    
-        </ul>
-
-        <RouteHandler key={name}/>
-      </div>
-    );
-  }
-});
-          
-var View1 = React.createClass({
-    render: function() {
-        return (
-          <div>View 1 content</div>
-        );
-    }          
-});
-          
-var View2 = React.createClass({
-    render: function() {
-        return (
-          <div>View 2 content</div>
-        );
-    }          
-});
-    
-var routes = (
-  <Route name="app" path="/" handler={App}>
-    <Route name="view1" handler={View1}/>
-    <Route name="view2" handler={View2}/>
-  </Route>
-);
-
-Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.getElementById('app'));
-});
-    
-</script>
   </body>
 </html>
