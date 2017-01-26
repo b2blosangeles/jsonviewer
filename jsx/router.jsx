@@ -1,7 +1,7 @@
-let Router = window.ReactRouter;
-let RouteHandler = Router.RouteHandler;
-let Route = Router.Route;
-let DefaultRoute = Router.DefaultRoute;
+var Router = window.ReactRouter;
+var RouteHandler = Router.RouteHandler;
+var Route = Router.Route;
+var DefaultRoute = Router.DefaultRoute;
 var browserHistory = ReactRouter.browserHistory
 
 class App extends React.Component {
