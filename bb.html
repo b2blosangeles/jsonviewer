@@ -20,7 +20,11 @@
   
   <script type="text/babel">
   var destination = document.querySelector("#container");
-
+var { Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      Link } = ReactRouter;
 var Home = React.createClass({
   render: function() {
       return (
