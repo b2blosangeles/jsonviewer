@@ -1,4 +1,4 @@
-var pp = <span>niupp</span>;
+var pp = '<span>niupp1</span>';
 var Home = React.createClass({
   render: function() {
      return pp;
