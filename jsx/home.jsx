@@ -1,7 +1,7 @@
 var Home = React.createClass({
   render: function() {
- /*     return 'niu';*/
-      return (
+     return 'niu';
+  /*    return (
         <div>
           <h2>HELLO</h2>
           <p>Cras facilisis urna ornare ex volutpat, et
@@ -14,5 +14,6 @@ var Home = React.createClass({
           <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
         </div>
       );
+      */
     }
 });
