@@ -1,7 +1,7 @@
 var pp = '<span>niupp2</span>';
 var Home = React.createClass({
   render: function() {
-     return {pp};
+     return <span>{pp}</span>;
   /*    return (
         <div>
           <h2>HELLO</h2>
