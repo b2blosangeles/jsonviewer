@@ -15,7 +15,7 @@
 <script src="https://unpkg.com/react-router/umd/ReactRouter.min.js"></script>	
 	
 	
-  <!--script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script-->
+  <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
  <!--script src="https://unpkg.com/react-router@next/umd/react-router.min.js"></script-->
 		
 	
@@ -23,7 +23,7 @@
 	<!--script src="https://unpkg.com/react-router/umd/ReactRouter.min.js">  not working   </script-->	
 	
 	
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/4.0.0-0/react-router.js"></script>
+   <!--script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/4.0.0-0/react-router.js"></script-->
   <style>
   
   </style>
@@ -112,14 +112,14 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-
-  <Router>
-    <Route path="/" component={App}>
-	<Route path="home" component={Home} />
-	<Route path="stuff" component={Stuff} />
-	<Route path="contact" component={Contact} />	
-    </Route>
-  </Router>
+	<ReactRouter.Router>
+	    <ReactRouter.Route path="/" component={App}>
+			<IndexRoute component={Home}/>
+			<Route path="home" component={Home} />
+			<Route path="stuff" component={Stuff} />
+			<Route path="contact" component={Contact} />		
+	    </ReactRouter.Route>
+	  </ReactRouter.Router>
 ,
   destination
 );
