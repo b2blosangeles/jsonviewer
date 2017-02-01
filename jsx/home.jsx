@@ -1,6 +1,6 @@
 var Home = React.createClass({
   render: function() {
-     return '<span>niu</span>';
+     return <span>niu</span>;
   /*    return (
         <div>
           <h2>HELLO</h2>
