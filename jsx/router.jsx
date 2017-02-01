@@ -1,4 +1,4 @@
-  var destination = document.querySelector("#container");
+  
 var { Router,
       Route,
       IndexRoute,
@@ -71,16 +71,20 @@ var App = React.createClass({
     )
   }
 });
-
-ReactDOM.render(
-	<ReactRouter.Router>
-	    <ReactRouter.Route path="/" component={App}>
-			<IndexRoute component={Home}/>
-			<Route path="home" component={Home} />
-			<Route path="stuff" component={Stuff} />
-			<Route path="contact" component={Contact} />		
-	    </ReactRouter.Route>
-	  </ReactRouter.Router>
-,
-  destination
-);
+$(function() {
+    console.log( "ready!" );
+	var destination = document.querySelector("#container");
+	ReactDOM.render(
+		<ReactRouter.Router>
+		    <ReactRouter.Route path="/" component={App}>
+				<IndexRoute component={Home}/>
+				<Route path="home" component={Home} />
+				<Route path="stuff" component={Stuff} />
+				<Route path="contact" component={Contact} />		
+		    </ReactRouter.Route>
+		  </ReactRouter.Router>
+	,
+	  destination
+	);	
+	
+});
