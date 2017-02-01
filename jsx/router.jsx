@@ -72,8 +72,7 @@ var App = React.createClass({
   }
 });
 $(function() {
-    console.log( "ready!" );
-	var destination = document.querySelector("#container");
+    console.log( "ready OK!" );
 	ReactDOM.render(
 		<ReactRouter.Router>
 		    <ReactRouter.Route path="/" component={App}>
@@ -84,7 +83,7 @@ $(function() {
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 	,
-	  destination
+	 $("#container")[0]
 	);	
 	
 });
