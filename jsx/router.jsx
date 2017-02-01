@@ -73,13 +73,14 @@ var App = React.createClass({
 });
 
 ReactDOM.render(
-  <ReactRouter.Router>
-    <ReactRouter.Route path="/" component={App}>
-		<IndexRoute component={Home}/>
-		<Route path="home" component={Home} />
-		<Route path="stuff" component={Stuff} />
-		<Route path="contact" component={Contact} />		
-    </ReactRouter.Route>
-  </ReactRouter.Router>,
+	<ReactRouter.Router>
+	    <ReactRouter.Route path="/" component={App}>
+			<IndexRoute component={Home}/>
+			<Route path="home" component={Home} />
+			<Route path="stuff" component={Stuff} />
+			<Route path="contact" component={Contact} />		
+	    </ReactRouter.Route>
+	  </ReactRouter.Router>
+,
   destination
 );
