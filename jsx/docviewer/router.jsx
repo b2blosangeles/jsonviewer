@@ -50,8 +50,8 @@ var App = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
-	
-			<table border="1">
+		<div className="row">
+			<table>
 				<tr>
 					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
 					<td width="*"><h3> Document viewer</h3></td>
@@ -64,7 +64,7 @@ var App = React.createClass({
 					</td>
 				</tr>	
 			</table>		
-		 
+		</div> 
         <div className="container-fluid">
           {this.props.children}
         </div>	
