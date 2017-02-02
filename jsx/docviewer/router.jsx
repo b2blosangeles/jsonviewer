@@ -50,6 +50,10 @@ var App = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
+	  
+		<ul className="nav nav-pills">
+		  <li role="presentation" class="disabled"><a href="#">Disabled link</a></li>
+		</ul>	  
 		<Link className="pull-right" to="/home">Home</Link>  
 		<Link className="pull-right" to="/stuff">Stuff</Link> 
 		<Link className="pull-right" to="/contact">Contact</Link>	
