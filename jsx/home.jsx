@@ -11,7 +11,7 @@ var Home = React.createClass({
         <div>
 			<table>
 				<tr>
-					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"></td>
+					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
 					<td width="*"><h3> Document viewer</h3></td>
 				</tr>	
 			</table>			  
