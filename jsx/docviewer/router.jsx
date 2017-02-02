@@ -55,7 +55,7 @@ var App = React.createClass({
 				<tr>
 					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
 					<td width="*"><h3> Document viewer</h3></td>
-					<td width="*">
+					<td width="*" align="right">
 						<ul className="nav nav-pills">
 						  <li role="presentation"><Link to="/home">Home</Link></li>
 						  <li role="presentation"><Link to="/stuff">Stuff</Link> </li>
