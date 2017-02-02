@@ -5,9 +5,9 @@ var Home = React.createClass({
 	handleChange:function(){
 		console.log(new Date());
 	},	
-	sendData:function() {
+	sendData:function(a) {
 	},
-	loadSample:function() {
+	loadSample:function(a,b) {
 	},	
 	render: function() {
 		return (
@@ -46,7 +46,7 @@ var Home = React.createClass({
 						</div>
 					</div>
 				</form>						
-				
+			
 				<div class="doc_renderer" id="doc-renderer"></div>
 				<div class="sample_section">  
 					Sample:<br/>
