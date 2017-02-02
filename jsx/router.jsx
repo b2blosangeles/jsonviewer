@@ -14,7 +14,7 @@ var Contact = React.createClass({
           <p>The easiest thing to do is post on
           our <a href="http://forum.kirupa.com">forums</a>.
 		  ===
-		  <Stuff/>
+		  <Stuff name="niu"/>
           </p>
         </div>
       );
@@ -25,7 +25,7 @@ var Stuff = React.createClass({
   render: function() {
       return (
         <div>
-          <h2>STUFF</h2>
+          <h2>STUFF{this.props.name}</h2>
           <p>Mauris sem velit, vehicula eget sodales vitae,
           rhoncus eget sapien:</p>
           <ol>
