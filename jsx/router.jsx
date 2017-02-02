@@ -8,6 +8,10 @@ var { Router,
 
 var Contact = React.createClass({
   pp:9990,
+  constructor:function(props) {
+    super(props);
+    this.pp = this.pp.bind(this);
+  },  
   render: function() {
       return (
         <div>
