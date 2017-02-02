@@ -68,7 +68,7 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<Router  history={browserHistory}>
+		<Router  history={createBrowserHistory()}>
 		    <Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
