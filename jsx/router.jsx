@@ -1,7 +1,7 @@
   
 var { Router,
       Route,
-      BrowserHistory,
+      browserHistory,
       IndexRoute,
       IndexLink,
       Link
