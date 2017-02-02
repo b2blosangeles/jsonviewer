@@ -12,7 +12,7 @@ handleChange:function(){
 	this.state.value = "123";
     return (
         <div>
-          <h2>HELLO<span dangerouslySetInnerHTML={{ __html : pp.html }}/> </h2>
+          <h2>HELLO==<span dangerouslySetInnerHTML={{ __html : pp.html }}/> </h2>
           <p>Cras facilisis urna ornare ex volutpat, et
           convallis erat elementum. Ut aliquam, ipsum vitae
           gravida suscipit, metus dui bibendum est, eget rhoncus nibh
