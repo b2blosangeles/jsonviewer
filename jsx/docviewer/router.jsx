@@ -62,7 +62,7 @@ var App = React.createClass({
 						  <li role="presentation"><Link to="/contact">Contact</Link></li>
 						</ul>					
 					</td>
-					<td  width="280" valign="top" align="right"><h3> Document viewer</h3></td>
+					<td width="220" valign="top" align="right"><h3> Document viewer</h3></td>
 				</tr>	
 			</table>		
 		</div> 
