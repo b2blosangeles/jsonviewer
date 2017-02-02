@@ -57,6 +57,7 @@ var App = React.createClass({
 					<td width="*"><h3> Document viewer</h3></td>
 					<td width="*" align="right">
 						<ul className="nav nav-pills">
+						  <li role="presentation">Document viewer</li>
 						  <li role="presentation"><Link to="/home">Home</Link></li>
 						  <li role="presentation"><Link to="/stuff">Stuff</Link> </li>
 						  <li role="presentation"><Link to="/contact">Contact</Link></li>
