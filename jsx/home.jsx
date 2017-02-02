@@ -57,8 +57,8 @@ var Home = React.createClass({
 						Sample:<br/>
 						<ul>
 						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/README.md','md')}>http://docviewer.qalet.com/README.md</a></li>
-						  <li><a href="JavaScript:void(0)" onClick={this.loadSample(2,9)}>http://docviewer.qalet.com/sample/data.json</a></li>
-						  <li><a href="JavaScript:void(0)" onClick={this.loadSample(3,8)}>http://docviewer.qalet.com/sample/data.xml</a></li>
+						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/sample/data.json','json')}>http://docviewer.qalet.com/sample/data.json</a></li>
+						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/sample/data.xml','xml')}>http://docviewer.qalet.com/sample/data.xml</a></li>
 						</ul>	
 					</div>
 				</div>	
