@@ -54,7 +54,7 @@ var App = React.createClass({
 			<table width="100%">
 				<tr>
 					<td width="180">
-						// <img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
+						{/* <img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/> */}
 					</td>
 					
 					<td width="*" align="right" valign="bottom">
