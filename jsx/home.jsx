@@ -24,7 +24,7 @@ var Home = React.createClass({
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="form-group">
-									<button type="button" class="btn btn-warning pull-right" onClick="{this.sendData('')}" style="margin-top:-12px">
+									<button type="button" class="btn btn-warning pull-right" onClick="{this.sendData('')}" >
 										Show Original
 									</button>	
 								
