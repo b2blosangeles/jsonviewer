@@ -3,7 +3,9 @@ var { Router,
       Route,
       IndexRoute,
       IndexLink,
-      Link } = ReactRouter;
+      Link,
+      browserHistory	
+    } = ReactRouter;
 
 
 var Contact = React.createClass({
@@ -66,7 +68,7 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<Router>
+		<Router  history={browserHistory}>
 		    <Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
