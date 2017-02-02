@@ -19,16 +19,6 @@ var Home = React.createClass({
 				 <div class="container-fluid form_section">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="form-group">
-					
-							
-								<label for="comment">
-								  Data Source: (url or text)
-									
-								</label>
-							  
-								<textarea class="form-control" rows="5" name="code"></textarea>
-							</div>	
 
 						</div>
 						<div class="col-sm-12">
