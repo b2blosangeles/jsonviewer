@@ -51,7 +51,7 @@ var App = React.createClass({
     return (
       <div className="container-fluid">
 		<div className="container-fluid">
-			<table>
+			<table width="100%">
 				<tr>
 					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
 					
