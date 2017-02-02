@@ -15,7 +15,7 @@ var Home = React.createClass({
 	},	
 	render: function() {
 		return (
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<table border="1">
 						<tr>
