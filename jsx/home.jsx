@@ -24,7 +24,7 @@ var Home = React.createClass({
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="form-group">
-									<button type="button" class="btn btn-warning pull-right" onClick="sendData('')" style="margin-top:-12px">
+									<button type="button" class="btn btn-warning pull-right" onClick="{this.sendData('')}" style="margin-top:-12px">
 										Show Original
 									</button>	
 								
@@ -39,9 +39,9 @@ var Home = React.createClass({
 							</div>
 							<div class="col-sm-12">
 								<label for="sel1">Show data as:</label>
-								<button type="button" class="btn btn-info" onClick="sendData('json')">JSON</button>
-								<button type="button" class="btn btn-info" onClick="sendData('xml')">XML</button>
-								<button type="button" class="btn btn-info" onClick="sendData('md')">Markdown</button>
+								<button type="button" class="btn btn-info" onClick="{this.sendData('json')}">JSON</button>
+								<button type="button" class="btn btn-info" onClick="{this.sendData('xml')}">XML</button>
+								<button type="button" class="btn btn-info" onClick="{this.sendData('md')}">Markdown</button>
 							 </div>
 						</div>
 					</div>
@@ -51,9 +51,9 @@ var Home = React.createClass({
 				<div class="sample_section">  
 					Sample:<br/>
 					<ul>
-					  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/README.md', 'md')">http://docviewer.qalet.com/README.md</a></li>
-					  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com//sample/data.json', 'json')">http://docviewer.qalet.com/sample/data.json</a></li>
-					  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/sample/data.xml', 'xml')">http://docviewer.qalet.com/sample/data.xml</a></li>
+					  <li><a href="JavaScript:void(0)" onClick="{this.loadSample('http://docviewer.qalet.com/README.md', 'md')}">http://docviewer.qalet.com/README.md</a></li>
+					  <li><a href="JavaScript:void(0)" onClick="{this.loadSample('http://docviewer.qalet.com//sample/data.json', 'json')}">http://docviewer.qalet.com/sample/data.json</a></li>
+					  <li><a href="JavaScript:void(0)" onClick="{this.loadSample('http://docviewer.qalet.com/sample/data.xml', 'xml')}">http://docviewer.qalet.com/sample/data.xml</a></li>
 					</ul>	
 				</div>			  
 			</div>
