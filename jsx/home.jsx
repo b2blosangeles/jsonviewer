@@ -1,4 +1,4 @@
-var Home = React.createclassName({
+var Home = React.createClass({
 	getInitialState: function() {
 		return {};
 	},
