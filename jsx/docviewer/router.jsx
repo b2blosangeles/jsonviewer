@@ -61,16 +61,17 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-	    <BrowserRouter>
-	      <div className="router">
-			<Match exactly pattern="/home" component={Home}/>
-		      	<Match exactly pattern="/stuff" component={Stuff}/>
-		        <Match exactly pattern="/document" component={Document}/>
-			<Miss component={Home} />
-	      </div>
-    </BrowserRouter>
-	,
-	 $('body')[0]
+		<ReactRouter.Router  history={browserHistory}>
+		    <ReactRouter.Route path="/" component={App}>
+				<IndexRoute component={Home}/>
+				<Route path="home" component={Home} />
+				<Route path="stuff" component={Stuff} />
+				<Route path="document" component={Document} />	
+				<Route path="*" component={Home}/>	
+		    </ReactRouter.Route>
+		  </ReactRouter.Router>
+		,
+		 $('body')[0]
 	);	
 	
 });
