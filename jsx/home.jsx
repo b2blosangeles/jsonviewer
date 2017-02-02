@@ -1,11 +1,9 @@
 var pp = '1234';
 var Home = React.createClass({
   render: function() {
-    var template = { __html: _TPL_['/tpl/home.html'] };
-     return <div dangerouslySetInnerHTML={template} />;
-  /*    return (
+    return (
         <div>
-          <h2>HELLO</h2>
+          <h2 dangerouslySetInnerHTML={pp} >HELLO</h2>
           <p>Cras facilisis urna ornare ex volutpat, et
           convallis erat elementum. Ut aliquam, ipsum vitae
           gravida suscipit, metus dui bibendum est, eget rhoncus nibh
@@ -16,6 +14,5 @@ var Home = React.createClass({
           <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
         </div>
       );
-      */
     }
 });
