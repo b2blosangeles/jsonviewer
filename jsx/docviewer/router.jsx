@@ -50,8 +50,10 @@ var App = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
-		<Link to="/home">Home</Link>  <Link to="/stuff">Stuff</Link> <Link to="/contact">Contact</Link>	
-        <div className="container">
+		<Link className="pull-right" to="/home">Home</Link>  
+		<Link className="pull-right" to="/stuff">Stuff</Link> 
+		<Link className="pull-right" to="/contact">Contact</Link>	
+        <div className="container-fluid">
           {this.props.children}
         </div>	
       </div>
