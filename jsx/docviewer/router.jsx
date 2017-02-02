@@ -63,9 +63,9 @@ $(function() {
 	ReactDOM.render(
 	    <BrowserRouter>
 	      <div className="router">
-			<Match pattern="/home" component={Home}/>
-		      	<Match pattern="/stuff" component={Stuff}/>
-		        <Match pattern="/document" component={Document}/>
+			<Match exactly pattern="/home" component={Home}/>
+		      	<Match exactly pattern="/stuff" component={Stuff}/>
+		        <Match exactly pattern="/document" component={Document}/>
 			<Miss component={Home} />
 	      </div>
     </BrowserRouter>
