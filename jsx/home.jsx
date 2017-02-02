@@ -1,5 +1,10 @@
 var pp = {html:'<span style="color:red">html</span>'};
 var Home = React.createClass({
+  getInitialState: function() {
+        return {
+           
+        };
+    },
 handleChange:function(){
 	console.log(new Date());
 },	
