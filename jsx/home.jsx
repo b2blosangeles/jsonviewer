@@ -7,9 +7,9 @@ var Home = React.createClass({
 	},	
 	sendData:function() {
 	},
-	loadSample:function(a,b) {
+	loadSample:function(url,type) {
 		return function() {
-			alert(b);
+			$('form').find("[name='code']").val(url);
 		}
 		
 	},	
