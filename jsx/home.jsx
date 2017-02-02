@@ -1,9 +1,9 @@
-var pp = '<span style="color:red">123</span>';
+var pp = {html:'<span style="color:red">html</span>'};
 var Home = React.createClass({
   render: function() {
     return (
         <div>
-          <h2>HELLO<span dangerouslySetInnerHTML={{ __html : pp }}/> </h2>
+          <h2>HELLO<span dangerouslySetInnerHTML={{ __html : pp.html }}/> </h2>
           <p>Cras facilisis urna ornare ex volutpat, et
           convallis erat elementum. Ut aliquam, ipsum vitae
           gravida suscipit, metus dui bibendum est, eget rhoncus nibh
