@@ -14,7 +14,12 @@ var Home = React.createClass({
 					<td width="*"><h3> Document viewer</h3></td>
 				</tr>	
 			</table>
-						
+			
+			 <form>
+				 <div class="container-fluid form_section">
+
+				</div>
+			</form>						
 			
 			<div class="doc_renderer" id="doc-renderer"></div>
 			<div class="sample_section">  
