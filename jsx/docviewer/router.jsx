@@ -61,10 +61,12 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-	    <Router>
-		<Match pattern="/home" component={Home}/>
-		<Miss component={Home} />
-	    </Router>	
+	    <BrowserRouter>
+	      <div className="router">
+			<Match pattern="/home" component={Home}/>
+			<Miss component={Home} />
+	      </div>
+    </BrowserRouter>
 	,
 	 $('body')[0]
 	);	
