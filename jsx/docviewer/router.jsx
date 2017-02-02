@@ -51,11 +51,19 @@ var App = React.createClass({
     return (
       <div className="container-fluid">
 		<div className="container">
-			<ul className="nav nav-pills">
-			  <li role="presentation"><Link className="pull-right" to="/home">Home</Link></li>
-			  <li role="presentation"><Link className="pull-right" to="/stuff">Stuff</Link> </li>
-			  <li role="presentation"><Link className="pull-right" to="/contact">Contact</Link></li>
-			</ul>	  
+			<table border="1">
+				<tr>
+					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
+					<td width="*"><h3> Document viewer</h3></td>
+					<td width="*">
+						<ul className="nav nav-pills">
+						  <li role="presentation"><Link to="/home">Home</Link></li>
+						  <li role="presentation"><Link to="/stuff">Stuff</Link> </li>
+						  <li role="presentation"><Link to="/contact">Contact</Link></li>
+						</ul>					
+					</td>
+				</tr>	
+			</table>		
 		 </div>
         <div className="container-fluid">
           {this.props.children}
