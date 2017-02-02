@@ -4,12 +4,64 @@ var Home = React.createClass({
 	},
 	handleChange:function(){
 		console.log(new Date());
+	},
+	HtmlViwer : function(data, type, target) {
+		target.removeClass("error");
+		if (type == 'md') {
+			var converter = new showdown.Converter();
+			target.html(converter.makeHtml(data));
+		}	
+		if (type == 'json') {
+			var options = {
+			  collapsed: false,
+			  withQuotes: false
+			};
+			try{
+				target.jsonViewer(JSON.parse(data), options);  
+			} catch	(err) {
+				target.addClass("error").html('Error! ' + err.message);	   
+				}
+			 
+		}
+		if (type == 'xml') {
+			var x2js = new X2JS();
+			var jsonObj = x2js.xml_str2json( data );
+			console.log(jsonObj);
+			var options = {
+			  collapsed: false,
+			  withQuotes: true
+			};
+			target.jsonViewer(jsonObj, options);  	
+		}
+		if (type == '') {
+			target.html(data.replace(/\n/ig, '<br/>'));  	
+		}			
 	},	
-	sendData:function() {
+	sendData:function(type) {
+		var me = this;
+		return function() {
+			var code  =   $('form').find("[name='code']").val();
+			
+			var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+
+			if (pattern.test(code)) {
+				$.get('http://docviewer.qalet.com/api/dataChannel.js',
+				{url:code}, 
+				function (data) {
+					me.HtmlViwer(data, type, $('#doc-renderer')); 
+					},'text'
+				);
+			 	return true;
+			} else {  
+				me.HtmlViwer(code, type, $('#doc-renderer'));  
+			}		
+		}
 	},
 	loadSample:function(url,type) {
+		var me = this;
 		return function() {
 			$('form').find("[name='code']").val(url);
+			me.sendData(type);
 		}
 		
 	},	
