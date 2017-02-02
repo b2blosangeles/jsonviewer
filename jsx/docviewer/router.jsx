@@ -50,13 +50,13 @@ var App = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
-	  
-		<ul className="nav nav-pills">
-		  <li role="presentation"><Link className="pull-right" to="/home">Home</Link></li>
-		  <li role="presentation"><Link className="pull-right" to="/stuff">Stuff</Link> </li>
-		  <li role="presentation"><Link className="pull-right" to="/contact">Contact</Link></li>
-		</ul>	  
-		
+		<div className="container">
+			<ul className="nav nav-pills">
+			  <li role="presentation"><Link className="pull-right" to="/home">Home</Link></li>
+			  <li role="presentation"><Link className="pull-right" to="/stuff">Stuff</Link> </li>
+			  <li role="presentation"><Link className="pull-right" to="/contact">Contact</Link></li>
+			</ul>	  
+		 </div>
         <div className="container-fluid">
           {this.props.children}
         </div>	
