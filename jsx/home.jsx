@@ -17,7 +17,15 @@ var Home = React.createClass({
 			
 			 <form>
 				 <div class="container-fluid form_section">
+					<div class="row">
 
+						<div class="col-sm-12">
+							<label for="sel1">Show data as:</label>
+							<button type="button" class="btn btn-info" onClick="sendData('json')">JSON</button>
+							<button type="button" class="btn btn-info" onClick="sendData('xml')">XML</button>
+							<button type="button" class="btn btn-info" onClick="sendData('md')">Markdown</button>
+						 </div>
+					</div>
 				</div>
 			</form>						
 			
