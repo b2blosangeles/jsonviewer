@@ -66,14 +66,14 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<ReactRouter.Router>
-		    <ReactRouter.Route path="/" component={App}>
+		<Router>
+		    <Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
 				<Route path="stuff" component={Stuff} />
 				<Route path="contact" component={Contact} />		
-		    </ReactRouter.Route>
-		  </ReactRouter.Router>
+		    </Route>
+		  </Router>
 	,
 	 $('body')[0]
 	);	
