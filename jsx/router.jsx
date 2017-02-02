@@ -8,6 +8,12 @@ var { Router,
 
 var Contact = React.createClass({
   pp:9990,
+  getInitialState: function() {
+        return {
+            qq: '456'
+        };
+    },
+  
   render: function() {
       return (
         <div>
@@ -15,7 +21,7 @@ var Contact = React.createClass({
           <p>The easiest thing to do is post on
           our <a href="http://forum.kirupa.com">forums</a>.
 		  ===
-		  <Stuff name="niu" parent={this}/>
+		  <Stuff name="niu" parent={this.state}/>
           </p>
         </div>
       );
@@ -26,7 +32,7 @@ var Stuff = React.createClass({
   render: function() {
       return (
         <div>
-          <h2>STUFF{this.props.name + " ** " +  this.props.parent.pp}</h2>
+          <h2>STUFF{this.props.name + " ** " +  this.props.parent.qq}</h2>
           <p>Mauris sem velit, vehicula eget sodales vitae,
           rhoncus eget sapien:</p>
           <ol>
