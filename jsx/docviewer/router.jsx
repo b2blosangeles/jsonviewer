@@ -69,7 +69,8 @@ $(function() {
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
 				<Route path="stuff" component={Stuff} />
-				<Route path="contact" component={Contact} />		
+				<Route path="contact" component={Contact} />	
+				<Route path="*" component={Home}/>	
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 	,
