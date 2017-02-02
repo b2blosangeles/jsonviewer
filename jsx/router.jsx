@@ -7,6 +7,7 @@ var { Router,
 
 
 var Contact = React.createClass({
+  pp:9990,
   render: function() {
       return (
         <div>
@@ -25,7 +26,7 @@ var Stuff = React.createClass({
   render: function() {
       return (
         <div>
-          <h2>STUFF{this.props.name+'88'}</h2>
+          <h2>STUFF{this.props.name+ Contact.pp}</h2>
           <p>Mauris sem velit, vehicula eget sodales vitae,
           rhoncus eget sapien:</p>
           <ol>
