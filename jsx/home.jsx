@@ -1,7 +1,8 @@
-var pp = '<span>niupp2</span>';
+var pp = '<span>niupp6</span>';
 var Home = React.createClass({
   render: function() {
-     return <div dangerouslySetInnerHTML={{__html: pp}} />;
+    var template = { __html: pp };
+     return <div dangerouslySetInnerHTML={template} />;
   /*    return (
         <div>
           <h2>HELLO</h2>
