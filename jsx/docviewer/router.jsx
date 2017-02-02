@@ -50,7 +50,6 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Simple SPA</h1>
         <ul className="header">
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/stuff">Stuff</Link></li>
