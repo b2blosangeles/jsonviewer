@@ -18,7 +18,7 @@ handleChange:function(){
 			<textarea
           onChange={this.handleChange}
           ref="textarea"
-          defaultValue={this.state.value} />		  
+          defaultValue="t" />		  
         </div>
       );
     }
