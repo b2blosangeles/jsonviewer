@@ -69,13 +69,6 @@ var Home = React.createClass({
 		return (
 			<div className="container-fluid">
 				<div className="row">
-					<table border="1">
-						<tr>
-							<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
-							<td width="*"><h3> Document viewer</h3></td>
-						</tr>	
-					</table>
-					
 					 <form>
 						 <div className="container-fluid form_section">
 							<div className="row">
