@@ -1,5 +1,8 @@
 var pp = {html:'<span style="color:red">html</span>'};
 var Home = React.createClass({
+handleChange:function(){
+	console.log(new Date());
+},	
   render: function() {
     return (
         <div>
@@ -12,6 +15,10 @@ var Home = React.createClass({
           dis parturient montes, nascetur ridiculus mus.</p>
   
           <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+			<textarea
+          onChange={this.handleChange}
+          ref="textarea"
+          defaultValue={this.state.value} />		  
         </div>
       );
     }
