@@ -4,6 +4,7 @@ handleChange:function(){
 	console.log(new Date());
 },	
   render: function() {
+	this.state.value = "123";
     return (
         <div>
           <h2>HELLO<span dangerouslySetInnerHTML={{ __html : pp.html }}/> </h2>
