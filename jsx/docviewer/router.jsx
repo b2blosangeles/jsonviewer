@@ -50,14 +50,14 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
+        <div className="content">
+          {this.props.children}
+        </div>	  
         <ul className="header">
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/stuff">Stuff</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-        <div className="content">
-          {this.props.children}
-        </div>
       </div>
     )
   }
