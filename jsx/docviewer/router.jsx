@@ -53,7 +53,7 @@ var App = React.createClass({
 		<div className="container-fluid">
 			<table width="100%">
 				<tr>
-					<td width="260">
+					<td width="240">
 						<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
 					</td>
 					<td width="220" valign="top" align="left"><h3> Document viewer</h3></td>
