@@ -16,7 +16,7 @@ var Home = React.createClass({
 			</table>
 						
 			
-			 <form>
+			 <!--form>
 				 <div class="container-fluid form_section">
 					<div class="row">
 						<div class="col-sm-12">
@@ -52,7 +52,7 @@ var Home = React.createClass({
 				  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com//sample/data.json', 'json')">http://docviewer.qalet.com/sample/data.json</a></li>
 				  <li><a href="JavaScript:void(0)" onClick="loadSample('http://docviewer.qalet.com/sample/data.xml', 'xml')">http://docviewer.qalet.com/sample/data.xml</a></li>
 				</ul>	
-			</div>			  
+			</div-->			  
         </div>
       );
     }
