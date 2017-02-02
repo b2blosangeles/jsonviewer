@@ -54,7 +54,7 @@ var App = React.createClass({
 			<table>
 				<tr>
 					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
-					<td width="*"><h3> Document viewer</h3></td>
+					
 					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills">
 						  <li role="presentation"><Link to="/home">Home</Link></li>
@@ -62,6 +62,7 @@ var App = React.createClass({
 						  <li role="presentation"><Link to="/contact">Contact</Link></li>
 						</ul>					
 					</td>
+					<td width="*"><h3> Document viewer</h3></td>
 				</tr>	
 			</table>		
 		</div> 
