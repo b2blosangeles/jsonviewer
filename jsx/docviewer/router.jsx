@@ -2,6 +2,7 @@
 var { Router,
       Route,
       browserHistory,
+      BrowserRouter,
       IndexRoute,
       IndexLink,
       Link } = ReactRouter;
