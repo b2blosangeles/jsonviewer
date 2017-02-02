@@ -3,7 +3,7 @@ var Home = React.createClass({
   render: function() {
     return (
         <div>
-          <h2 dangerouslySetInnerHTML={pp} >HELLO</h2>
+          <h2>HELLO</h2>
           <p>Cras facilisis urna ornare ex volutpat, et
           convallis erat elementum. Ut aliquam, ipsum vitae
           gravida suscipit, metus dui bibendum est, eget rhoncus nibh
