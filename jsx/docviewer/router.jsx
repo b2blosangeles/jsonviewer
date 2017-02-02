@@ -7,7 +7,6 @@ var { Router,
 
 
 var Contact = React.createClass({
-  pp:9990,
   getInitialState: function() {
         return {
             qq: '456'

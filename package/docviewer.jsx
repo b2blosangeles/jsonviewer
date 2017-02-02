@@ -7,7 +7,5 @@
 		"/js/jquery-2.1.3.min.js",
 			"/jsx/home.jsx",
 			"/jsx/docviewer/router.jsx"
-	    	
-	       
       ]
 }
