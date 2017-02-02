@@ -1,4 +1,4 @@
-var pp = '<span>niupp6</span>';
+var pp = '1234';
 var Home = React.createClass({
   render: function() {
     var template = { __html: _TPL_['/tpl/home.html'] };
