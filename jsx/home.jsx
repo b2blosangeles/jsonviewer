@@ -1,4 +1,4 @@
-var pp = '123';
+var pp = '<span style="color:red">123</span>';
 var Home = React.createClass({
   render: function() {
     return (
