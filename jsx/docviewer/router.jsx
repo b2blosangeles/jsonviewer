@@ -52,7 +52,8 @@ var App = React.createClass({
       <div>
         <div className="content">
           {this.props.children}
-        </div>	  
+        </div>	
+		<Link to="/home">Home</Link>  <Link to="/stuff">Stuff</Link> <Link to="/contact">Contact</Link>	
         <ul className="header">
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/stuff">Stuff</Link></li>
