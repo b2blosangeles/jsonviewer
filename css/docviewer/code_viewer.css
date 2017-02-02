@@ -3,6 +3,10 @@ body {
   font-family: sans-serif !important;
   overflow-y:scroll !important;
 }
+.form_button {
+	margin:0.5em !important;
+}
+
 .form_section {
 	border: 1px solid #0B7500 !important;
 	border-top: 6px solid #0B7500 !important; 
