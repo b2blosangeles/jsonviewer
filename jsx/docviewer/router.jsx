@@ -50,12 +50,12 @@ var App = React.createClass({
   render: function() {
     return (
       <div className="container-fluid">
-		<div className="row">
+		<div className="container-fluid">
 			<table>
 				<tr>
 					<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
 					<td width="*"><h3> Document viewer</h3></td>
-					<td width="*" align="right">
+					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills">
 						  <li role="presentation"><Link to="/home">Home</Link></li>
 						  <li role="presentation"><Link to="/stuff">Stuff</Link> </li>
