@@ -8,7 +8,10 @@ var Home = React.createClass({
 	sendData:function() {
 	},
 	loadSample:function(a,b) {
-		alert(b);
+		return function() {
+			alert(b);
+		}
+		
 	},	
 	render: function() {
 		return (
