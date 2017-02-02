@@ -52,11 +52,11 @@ var App = React.createClass({
       <div className="container-fluid">
 	  
 		<ul className="nav nav-pills">
-		  <li role="presentation" class="disabled"><a href="#">Disabled link</a></li>
+		  <li role="presentation"><Link className="pull-right" to="/home">Home</Link></li>
+		  <li role="presentation"><Link className="pull-right" to="/stuff">Stuff</Link> </li>
+		  <li role="presentation"><Link className="pull-right" to="/contact">Contact</Link></li>
 		</ul>	  
-		<Link className="pull-right" to="/home">Home</Link>  
-		<Link className="pull-right" to="/stuff">Stuff</Link> 
-		<Link className="pull-right" to="/contact">Contact</Link>	
+		
         <div className="container-fluid">
           {this.props.children}
         </div>	
