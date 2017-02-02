@@ -1,7 +1,7 @@
 var pp = '<span>niupp2</span>';
 var Home = React.createClass({
   render: function() {
-     return <span>{pp}</span>;
+     return <div dangerouslySetInnerHTML={{__html: pp}} />;
   /*    return (
         <div>
           <h2>HELLO</h2>
