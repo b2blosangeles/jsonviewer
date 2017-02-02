@@ -15,7 +15,7 @@ var Home = React.createClass({
 	},	
 	render: function() {
 		return (
-			<div>
+			<div class="container">
 				<table>
 					<tr>
 						<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
