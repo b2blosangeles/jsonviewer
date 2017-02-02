@@ -53,10 +53,10 @@ var App = React.createClass({
 		<div className="container-fluid">
 			<table width="100%">
 				<tr>
-					{/* <td width="180">
+					<td width="180">
 						<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
-					</td> */}
-					
+					</td>
+					<td width="220" valign="top" align="left"><h3> Document viewer</h3></td>
 					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills pull-right">
 						  <li role="presentation"><Link to="/home">Home</Link></li>
@@ -64,7 +64,7 @@ var App = React.createClass({
 						  <li role="presentation"><Link to="/contact">Contact</Link></li>
 						</ul>					
 					</td>
-					<td width="220" valign="top" align="right"><h3> Document viewer</h3></td>
+					
 				</tr>	
 			</table>		
 		</div> 
