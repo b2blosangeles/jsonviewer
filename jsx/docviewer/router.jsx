@@ -1,6 +1,7 @@
   
 var { Router,
       Route,
+      browserHistory,
       IndexRoute,
       IndexLink,
       Link } = ReactRouter;
@@ -57,7 +58,7 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<ReactRouter.Router>
+		<ReactRouter.Router  history={browserHistory}>
 		    <ReactRouter.Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
