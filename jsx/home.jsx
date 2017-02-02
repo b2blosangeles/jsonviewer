@@ -1,4 +1,4 @@
-var pp = '<div>--123</div>';
+var pp = '123';
 var Home = React.createClass({
   render: function() {
     return (
