@@ -53,7 +53,9 @@ var App = React.createClass({
 		<div className="container-fluid">
 			<table width="100%">
 				<tr>
-					<td width="180">/*<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>*/</td>
+					<td width="180">
+						// <img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
+					</td>
 					
 					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills">
