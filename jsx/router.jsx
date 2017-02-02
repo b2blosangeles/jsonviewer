@@ -32,7 +32,7 @@ var Stuff = React.createClass({
   render: function() {
       return (
         <div>
-          <h2>STUFF{this.props.name + " ** " +  this.props.parent.qq}</h2>
+          <h2>STUFF{this.props.name + " ** " +  (this.props.parent)?this.props.parent.qq:''}</h2>
           <p>Mauris sem velit, vehicula eget sodales vitae,
           rhoncus eget sapien:</p>
           <ol>
