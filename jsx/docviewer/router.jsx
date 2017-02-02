@@ -63,8 +63,6 @@ $(function() {
 	ReactDOM.render(
 	    <BrowserRouter>
 		<Match pattern="/home" component={Home}/>
-		<Match pattern="/stuff" component={Stuff}/>
-		<Match pattern="/document" component={Document}/>
 		<Miss component={Home} />
 	    </BrowserRouter>		
 	,
