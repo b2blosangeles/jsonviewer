@@ -3,6 +3,8 @@ var { Router,
       Route,
       browserHistory,
       BrowserRouter,
+      Match, 
+      Miss,
       IndexRoute,
       IndexLink,
       Link } = ReactRouter;
