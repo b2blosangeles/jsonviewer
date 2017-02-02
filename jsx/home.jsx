@@ -20,11 +20,14 @@ var Home = React.createClass({
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="form-group">
-								<button type="button" class="btn btn-warning pull-right" onClick="sendData('')" style="margin-top:-12px">
-									Show Original
-								</button>	
+					
 							
-
+								<label for="comment">
+								  Data Source: (url or text)
+									
+								</label>
+							  
+								<textarea class="form-control" rows="5" name="code"></textarea>
 							</div>	
 
 						</div>
