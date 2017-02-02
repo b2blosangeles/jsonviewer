@@ -9,7 +9,7 @@ var { Router,
 var Contact = React.createClass({
   getInitialState: function() {
         return {
-            qq: '456'
+            qq: '456--'
         };
     },
   
