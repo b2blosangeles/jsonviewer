@@ -17,6 +17,9 @@ var Home = React.createClass({
 		return (
 			<div class="container-fluid">
 				<div class="row">
+						<button type="button" class="btn btn-warning pull-right" onClick={this.sendData} >
+											Show Original
+										</button>	
 					<table border="1">
 						<tr>
 							<td width="180"><img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/></td>
