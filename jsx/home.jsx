@@ -5,9 +5,9 @@ var Home = React.createClass({
 	handleChange:function(){
 		console.log(new Date());
 	},	
-	sendData:function(a) {
+	sendData:function() {
 	},
-	loadSample:function(a,b) {
+	loadSample:function() {
 	},	
 	render: function() {
 		return (
