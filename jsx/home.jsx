@@ -96,9 +96,9 @@ var Home = React.createClass({
 								</div>
 								<div className="col-sm-12">
 									<label for="sel1">Show data as:</label>
-									<button type="button" className="btn btn-info form_button" onClick={this.sendData}>JSON</button>
-									<button type="button" className="btn btn-info form_button" onClick={this.sendData}>XML</button>
-									<button type="button" className="btn btn-info form_button" onClick={this.sendData}>Markdown</button>
+									<button type="button" className="btn btn-info form_button" onClick={this.sendData('json')}>JSON</button>
+									<button type="button" className="btn btn-info form_button" onClick={this.sendData('xml')}>XML</button>
+									<button type="button" className="btn btn-info form_button" onClick={this.sendData('md')}>Markdown</button>
 								 </div>
 							</div>
 						</div>
