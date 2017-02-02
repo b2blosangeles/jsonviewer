@@ -49,9 +49,9 @@ var Stuff = React.createClass({
 var App = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="container-fluid">
 		<Link to="/home">Home</Link>  <Link to="/stuff">Stuff</Link> <Link to="/contact">Contact</Link>	
-        <div className="container-fluid">
+        <div className="container">
           {this.props.children}
         </div>	
       </div>
