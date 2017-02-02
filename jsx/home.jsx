@@ -15,7 +15,7 @@ var Home = React.createClass({
 	},	
 	render: function() {
 		return (
-						<button type="button" class="btn btn-warning pull-right" onClick={this.sendData} >
+						<button type="button" className="btn btn-warning pull-right" onClick={this.sendData} >
 											Show Original
 										</button>	
 		  );
