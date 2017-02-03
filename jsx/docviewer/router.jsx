@@ -11,9 +11,7 @@ var { Router,
 var Error = React.createClass({
   render: function() {
       return (
-        <div>
-          404 Error
-        </div>
+	<div className="doc_renderer">404 Error</div>
       );
     }
 });
