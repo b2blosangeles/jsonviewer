@@ -23,7 +23,7 @@ body {
 	min-height:280px !important;
 	border-radius: 3px !important;
 };
-.box_error {
+.doc_error {
 	border: 1px solid red !important;
 	border-top: 6px solid red !important; 
 	padding: 1.5em !important;
