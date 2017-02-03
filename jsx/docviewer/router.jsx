@@ -51,7 +51,7 @@ $(function() {
 		    <ReactRouter.Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
-				<Route path="stuff" component={Stuff} />
+				<Route path="stuff" component={StuffFrame} />
 				<Route path="document" component={Document} />	
 			    	<Route path="*" component={Error}/>	
 		    </ReactRouter.Route>

@@ -1,7 +1,8 @@
+
 var Stuff = React.createClass({
   render: function() {
       return (
-        <div className="doc_renderer">
+        <div>
           <h2>STUFF{this.props.name + " ** " +  ((this.props.parent)?this.props.parent.qq:'==')}</h2>
           <p>Mauris sem velit, vehicula eget sodales vitae,
           rhoncus eget sapien:</p>
@@ -12,6 +13,15 @@ var Stuff = React.createClass({
             <li>Eget erat</li>
             <li>Id porttitor</li>
           </ol>
+        </div>
+      );
+    }
+});
+var StuffFrame = React.createClass({
+  render: function() {
+      return (
+        <div className="doc_renderer">
+          <Stuff/>
         </div>
       );
     }
