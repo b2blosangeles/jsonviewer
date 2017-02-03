@@ -61,7 +61,15 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<App/>
+		<ReactRouter.Router  history={browserHistory}>
+		    <ReactRouter.Route path="/" component={App}>
+				<IndexRoute component={Home}/>
+				<Route path="home" component={Home} />
+				<Route path="stuff" component={Stuff} />
+				<Route path="document" component={Document} />	
+				<Route path="*" component={Home}/>	
+		    </ReactRouter.Route>
+		  </ReactRouter.Router>
 		,
 		 $('body')[0]
 	);	
