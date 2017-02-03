@@ -39,7 +39,7 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<ReactRouter.Router history={createMemoryHistory}>
+		<ReactRouter.Router history={hashHistory}>
 		    <ReactRouter.Route path="/" component={App}>
 				<IndexRoute component={Home}/>
 				<Route path="home" component={Home} />
