@@ -22,9 +22,9 @@ var App = React.createClass({
 					<td width="220" valign="top" align="left"><h3> Document viewer</h3></td>
 					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills pull-right">
-						  <li role="presentation"><Link to="home">Home</Link></li>
-						  <li role="presentation"><Link to="stuff">Stuff</Link> </li>
-						  <li role="presentation"><Link to="document">Document</Link></li>
+						  <li role="presentation"><Link to="/home">Home</Link></li>
+						  <li role="presentation"><Link to="/stuff">Stuff</Link> </li>
+						  <li role="presentation"><Link to="/document">Document</Link></li>
 						</ul>					
 					</td>
 					
