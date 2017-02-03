@@ -8,6 +8,16 @@ var { Router,
       IndexLink,
       Link } = ReactRouter;
 
+var Error = React.createClass({
+  render: function() {
+      return (
+        <div>
+          404 Error
+        </div>
+      );
+    }
+});
+
 var App = React.createClass({
   render: function() {
     return (
@@ -45,7 +55,7 @@ $(function() {
 				<Route path="home" component={Home} />
 				<Route path="stuff" component={Stuff} />
 				<Route path="document" component={Document} />	
-			    {/*<Route path="*" component={Home}/>*/}	
+			    	<Route path="*" component={Error}/>	
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 		,
