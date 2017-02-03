@@ -6,7 +6,7 @@ var Home = React.createClass({
 		console.log(new Date());
 	},
 	HtmlViwer : function(data, type, target) {
-		target.removeClass("error");
+		target.removeClass("box_error");
 		if (type == 'md') {
 			var converter = new showdown.Converter();
 			target.html(converter.makeHtml(data));
@@ -19,7 +19,7 @@ var Home = React.createClass({
 			try{
 				target.jsonViewer(JSON.parse(data), options);  
 			} catch	(err) {
-				target.addClass("error").html('Error! ' + err.message);	   
+				target.addClass("box_error").html('Error! ' + err.message);	   
 				}
 			 
 		}
