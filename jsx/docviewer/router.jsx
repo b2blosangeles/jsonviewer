@@ -11,7 +11,7 @@ var { Router,
 var Error = React.createClass({
   render: function() {
       return (
-	<div className="doc_error">404 Error! Link does not exist!</div>
+	<div className="doc_error">404 Error! Link does not exist!</div> 
       );
     }
 });
