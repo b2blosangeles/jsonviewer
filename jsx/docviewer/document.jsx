@@ -7,7 +7,7 @@ var Document = React.createClass({
   
   render: function() {
       return (
-        <div>
+        <div className="doc_renderer">
           <h2>GOT QUESTIONS-->{this.pp}?</h2>
           <p>The easiest thing to do is post on
           our <a href="http://forum.kirupa.com">forums</a>.
