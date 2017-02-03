@@ -46,7 +46,7 @@ $(function() {
 				<Route path="home" component={Home} />
 				<Route path="stuff" component={Stuff} />
 				<Route path="document" component={Document} />	
-				<Route path="*" component={Home}/>	
+			    {/*<Route path="*" component={Home}/>*/}	
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 		,
