@@ -6,7 +6,7 @@ var Form = React.createClass({
 					<div className="row">
 						<div className="col-sm-12">
 							<div className="form-group">
-								<button type="button" className="btn btn-warning pull-right form_button" onClick={this.props.p.sendData('')}>
+								<button type="button" className="btn btn-warning pull-right form_button" onClick={props.parent.sendData('')}>
 									Show Original
 								</button>	
 
@@ -21,9 +21,9 @@ var Form = React.createClass({
 						</div>
 						<div className="col-sm-12">
 							<label for="sel1">Show data as:</label>
-							<button type="button" className="btn btn-info form_button" onClick={this.props.p.sendData('json')}>JSON</button>
-							<button type="button" className="btn btn-info form_button" onClick={this.props.p.sendData('xml')}>XML</button>
-							<button type="button" className="btn btn-info form_button" onClick={this.props.p.sendData('md')}>Markdown</button>
+							<button type="button" className="btn btn-info form_button" onClick={props.parent.sendData('json')}>JSON</button>
+							<button type="button" className="btn btn-info form_button" onClick={props.parent.sendData('xml')}>XML</button>
+							<button type="button" className="btn btn-info form_button" onClick={props.parent.sendData('md')}>Markdown</button>
 						 </div>
 					</div>
 				</div>
@@ -103,7 +103,7 @@ var Home = React.createClass({
 		return (
 			<div className="container-fluid">
 				<div className="row">
-					<Form p={this}/>
+					<Form parent={this}/>
 				
 					<div className="doc_renderer" id="doc-renderer"></div>
 					<div className="sample_section">  
