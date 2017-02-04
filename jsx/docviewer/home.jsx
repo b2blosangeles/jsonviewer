@@ -3,7 +3,7 @@ var Form = React.createClass({
 		return (	
 			 <form>
 				 <div className="container-fluid form_section">
-					<div className="row">===
+					<div className="row">
 						<div className="col-sm-12">
 							<div className="form-group">
 								<button type="button" className="btn btn-warning pull-right form_button" onClick={this.sendData('')}>
