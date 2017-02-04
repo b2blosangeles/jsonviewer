@@ -39,6 +39,9 @@ var Home = React.createClass({
 	handleChange:function(){
 		console.log(new Date());
 	},
+	hh : function() {
+		console.log('=hh=');
+	},
 	HtmlViwer : function(data, type, target) {
 		target.removeClass("box_error");
 		if (type == 'md') {
@@ -93,6 +96,7 @@ var Home = React.createClass({
 	},
 	loadSample:function(url,type) {
 		var me = this;
+		me.hh();
 		return function() {
 			$('form').find("[name='code']").val(url);
 			me.sendData(type);
