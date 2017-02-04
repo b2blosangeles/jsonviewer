@@ -96,8 +96,8 @@ var Home = React.createClass({
 	},
 	loadSample:function(url,type) {
 		var me = this;
-		me.hh();
 		return function() {
+			me.hh();
 			$('form').find("[name='code']").val(url);
 			me.sendData(type);
 		}
