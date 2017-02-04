@@ -103,7 +103,7 @@ var Home = React.createClass({
 		return (
 			<div className="container-fluid">
 				<div className="row">
-					<From/>
+					<Form/>
 				
 					<div className="doc_renderer" id="doc-renderer"></div>
 					<div className="sample_section">  
