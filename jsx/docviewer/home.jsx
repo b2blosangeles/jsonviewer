@@ -34,7 +34,6 @@ var Form = React.createClass({
 		
 var Home = React.createClass({
 	getInitialState: function() {
-		super();
 		this.onClick  = this.hh.bind(this);
 		return {};
 	},
