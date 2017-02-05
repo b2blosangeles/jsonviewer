@@ -33,6 +33,13 @@ var Form = React.createClass({
 });
 		
 var Home = React.createClass({
+
+	constructor() {
+		super();
+		this.onClick  = this.hh.bind(this);
+	},
+
+
 	getInitialState: function() {
 		return {};
 	},
