@@ -33,14 +33,9 @@ var Form = React.createClass({
 });
 		
 var Home = React.createClass({
-
-	constructor() {
+	getInitialState: function() {
 		super();
 		this.onClick  = this.hh.bind(this);
-	},
-
-
-	getInitialState: function() {
 		return {};
 	},
 	handleChange:function(){
