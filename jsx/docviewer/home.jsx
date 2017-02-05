@@ -34,7 +34,7 @@ var Form = React.createClass({
 		
 var Home = React.createClass({
 	getInitialState: function() {
-		this.onClick  = this.hh.bind(this);
+		this.onClickLoadSample  = this.loadSample.bind(this);
 		return {};
 	},
 	handleChange:function(){
@@ -114,8 +114,7 @@ var Home = React.createClass({
 					<div className="sample_section">  
 						Sample:<br/>
 						<ul>
-							 <li><a href="JavaScript:void(0)" onClick={this.onClick}>---</a></li>
-						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/README.md','md')}>http://docviewer.qalet.com/README.md</a></li>
+						  <li><a href="JavaScript:void(0)" onClick={onClickLoadSample('http://docviewer.qalet.com/README.md','md')}>http://docviewer.qalet.com/README.md</a></li>
 						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/sample/data.json','json')}>http://docviewer.qalet.com/sample/data.json</a></li>
 						  <li><a href="JavaScript:void(0)" onClick={this.loadSample('http://docviewer.qalet.com/sample/data.xml','xml')}>http://docviewer.qalet.com/sample/data.xml</a></li>
 						</ul>	
