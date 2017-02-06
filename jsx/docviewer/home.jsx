@@ -97,11 +97,11 @@ var Home = React.createClass({
 	},
 	loadSample:function(url,type) {
 		var me = this;
-	//	return function() {
+		return function() {
 			me.hh();
 			$('form').find("[name='code']").val(url);
 			me.sendData(type);
-//		}
+		}
 		
 	},	
 	render: function() {
