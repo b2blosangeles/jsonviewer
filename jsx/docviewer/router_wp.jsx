@@ -1,4 +1,4 @@
-  
+(function(){ 
 var { Router,
       Route,
       browserHistory,
@@ -241,4 +241,5 @@ var Document = React.createClass({
       );
     }
 });
-
+alert(1);
+})();
