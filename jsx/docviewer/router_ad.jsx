@@ -9,9 +9,13 @@
 		  Link } = ReactRouter;
 
 	var App = React.createClass({
+		getInitialState: function() {
+			$('.niu').html('---');
+			return {};
+		},	
 	  render: function() {
 		return (
-		  <div className="container-fluid">
+		  <div className="container-fluid niu">
 			http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4
 		  </div>
 		)
