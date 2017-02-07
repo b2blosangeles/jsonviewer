@@ -13,7 +13,10 @@
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 			{}, 
 			function (data) {
-				console.log(data); 
+				var d = JSON.parse(data); 
+				this.setState({	list: d }, () => {
+						console.log(d);
+					});				
 			},'text');		
 			return {};
 		},
