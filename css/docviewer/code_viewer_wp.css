@@ -36,5 +36,5 @@ body {
     
 .sample_section { margin-top:0.5em !important; }
 
-.qalet_table { border:3px solid #fff !important; border-collapse:collapse }
+.qalet_table { border:0px solid #fff !important; border-collapse:collapse }
 td, th { border:none}
