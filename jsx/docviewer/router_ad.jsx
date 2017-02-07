@@ -22,7 +22,7 @@
 		},	
 		render: function() {
 			return (
-				<table border={0}>
+				<table className="qalet_table">
 					<tr>
 						<td className="qalet_niu"></td>
 						<td></td>
