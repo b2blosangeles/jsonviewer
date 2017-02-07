@@ -10,10 +10,6 @@
 		"/js/json2.min.js",	
 		
 		"/js/jquery.json-viewer.js",
-	    	
-	    	"/jsx/docviewer/document.jsx",
-	    	"/jsx/docviewer/stuff.jsx",
-		"/jsx/docviewer/home.jsx",
 		"/jsx/docviewer/router_wp.jsx"
       ]
 }
