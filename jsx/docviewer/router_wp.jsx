@@ -26,7 +26,7 @@ var App = React.createClass({
     return (
       <div className="container-fluid">
 		<div className="container-fluid">
-			<table width="100%">
+			<table width="100%" border="0">
 				<tr>
 					<td width="228">
 						<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
