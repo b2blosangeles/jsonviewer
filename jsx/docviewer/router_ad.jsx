@@ -10,14 +10,16 @@
 
 	var App = React.createClass({
 		getInitialState: function() {
-			$('.niu').html('---');
 			return {};
+		},
+		componentDidMount : function() {
+			$('.niu').html('---');
 		},	
-	  render: function() {
-		return (
-		  <div className="container-fluid niu">
-			http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4
-		  </div>
+		render: function() {
+			return (
+				<div className="container-fluid niu">
+				http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4
+			</div>
 		)
 	  }
 	});
