@@ -15,7 +15,7 @@
 			function (data) {
 				var d = JSON.parse(data); 
 				this.setState({	list: d }, () => {
-						console.log(d);
+						console.log(d[3]);
 					});				
 			},'text');		
 			return {};
