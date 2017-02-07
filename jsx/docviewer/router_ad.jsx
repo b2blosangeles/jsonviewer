@@ -12,9 +12,7 @@
 	  render: function() {
 		return (
 		  <div className="container-fluid">
-			<video id="main_video" class="center" controls="" style="" src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4" width="300">
-			Your browser does not support HTML5 video. 
-			</video>
+			http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4
 		  </div>
 		)
 	  }
@@ -28,6 +26,4 @@
 		
 	});
 })();
-//		<video id="main_video" class="center" controls="" style="" src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4" width="300">
-//			Your browser does not support HTML5 video. 
-//		</video>
+
