@@ -58,7 +58,7 @@ $(function() {
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 		,
-		 $('#qalet_wp')[0]
+		 $('#qalet_docviewer')[0]
 	);	
 	
 });
