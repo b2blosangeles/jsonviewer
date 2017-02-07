@@ -62,7 +62,7 @@ $(function() {
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 		,
-		 $('#qalet_plugin')[0]
+		 $('#qalet_wp')[0]
 	);	
 	
 });
