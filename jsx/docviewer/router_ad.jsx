@@ -22,7 +22,6 @@
 		},	
 		render: function() {
 			return (
-				<style>{"table{border:1px solid red;}"}</style>
 				<table border={0}>
 					<tr>
 						<td className="qalet_niu"></td>
