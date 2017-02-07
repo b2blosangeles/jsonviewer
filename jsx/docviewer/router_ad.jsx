@@ -8,19 +8,6 @@ var { Router,
       IndexLink,
       Link } = ReactRouter;
 
-var Error = React.createClass({
-  render: function() {
-      return (
-	<div className="box_error">404 Error! Link does not exist!</div> 
-      );
-    }
-});
-
-var Niu = React.createClass({
-  render: function() {
-    }
-});
-
 var App = React.createClass({
   render: function() {
     return (
@@ -48,13 +35,13 @@ var App = React.createClass({
 });
 $(function() {
 	ReactDOM.render(
-		<video id="main_video" class="center" controls="" style="" src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4" width="300">
-			Your browser does not support HTML5 video. 
-		</video>
+		<span>test</span>
 		,
 		 $('#qalet_plugin_ad')[0]
 	);	
 	
 });
 
-
+//		<video id="main_video" class="center" controls="" style="" src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4" width="300">
+//			Your browser does not support HTML5 video. 
+//		</video>
