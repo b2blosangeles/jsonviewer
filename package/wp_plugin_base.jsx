@@ -8,8 +8,6 @@
 		"/js/showdown/showdown.min.js",
 		"/js/x2js/xml2json.min.js",
 		"/js/json2.min.js",	
-		
-		"/js/jquery.json-viewer.js",
-		"/jsx/docviewer/router_wp.jsx"
+		"/js/jquery.json-viewer.js"
       ]
 }
