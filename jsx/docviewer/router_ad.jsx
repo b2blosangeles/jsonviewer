@@ -35,7 +35,14 @@
 	});
 	$(function() {
 		ReactDOM.render(
-			<span>test</span>		
+			<span>test
+				<video width="320" height="240" controls>
+				  <source src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4 type="video/mp4">
+				  <source src="movie.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+				</video>			
+			
+			</span>		
 			,
 			$('#qalet_plugin_ad')[0]
 		);	
