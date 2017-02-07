@@ -10,6 +10,11 @@
 
 	var App = React.createClass({
 		getInitialState: function() {
+			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
+			{}, 
+			function (data) {
+				console.log(data); 
+			},'text');		
 			return {};
 		},
 		componentDidMount : function() {
