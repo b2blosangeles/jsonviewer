@@ -19,7 +19,7 @@
 	});
 	$(function() {
 		ReactDOM.render(
-			<bpp/>	
+			<Bpp/>	
 			,
 			$('#qalet_plugin_ad')[0]
 		);	
