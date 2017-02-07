@@ -10,11 +10,12 @@
 
 	var App = React.createClass({
 		getInitialState: function() {
+			var me = this;
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 			{}, 
 			function (data) {
 				var d = JSON.parse(data); 
-				this.setState({	list: d }, () => {
+				me.setState({	list: d }, () => {
 						console.log(d[3]);
 					});				
 			},'text');		
