@@ -36,8 +36,7 @@
 	$(function() {
 		ReactDOM.render(
 			<span>test
-				<video width="320" height="240" controls>
-				  <source src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4 type="video/mp4"/>
+				<video width="320" height="240" src="http://videorepo.com/api/streaming.js?vid=lKcZ551Ex4w.mp4 type="video/mp4" controls>
 				Your browser does not support the video tag.
 				</video>			
 			
