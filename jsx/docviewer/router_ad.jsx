@@ -8,7 +8,7 @@
 		  IndexLink,
 		  Link } = ReactRouter;
 
-	var Bpp = React.createClass({
+	var App = React.createClass({
 	  render: function() {
 		return (
 		  <div className="container-fluid">
@@ -19,7 +19,7 @@
 	});
 	$(function() {
 		ReactDOM.render(
-			<Bpp/>	
+			<App/>	
 			,
 			$('#qalet_plugin_ad')[0]
 		);	
