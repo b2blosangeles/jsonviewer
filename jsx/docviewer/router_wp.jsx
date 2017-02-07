@@ -241,5 +241,4 @@ var Document = React.createClass({
       );
     }
 });
-alert(1);
 })();
