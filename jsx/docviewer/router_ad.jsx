@@ -34,19 +34,13 @@
 		},	
 		render: function() {
 			return (
-				<table className="qalet_table">
-					<tr>
-						<td className="qalet_niu" width="80" valign="middle"></td>
-						<td width="*" valign="top">
-						{
-							this.state.list.map(function(item) {
-								return <span>{item.title}</span>
-							})
-						}						
-						
-						</td>
-					</tr>
-				</table>
+				<div>
+					{
+						this.state.list.map(function(item) {
+							return <span>{item.title}</span>
+						})
+					}						
+				</div>
 		)
 	  }
 	});
