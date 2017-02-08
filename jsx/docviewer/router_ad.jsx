@@ -7,6 +7,7 @@
 		  IndexRoute,
 		  IndexLink,
 		  Link } = ReactRouter;
+		  
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
@@ -42,7 +43,7 @@
 			return (
 				<div className="qalet_ad_section">
 					{this.state.list.map((item, index) => (
-						item.title
+						<Videoitem item={item.title}/>
 					))}									
 				</div>
 			)
