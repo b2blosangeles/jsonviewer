@@ -7,7 +7,13 @@
 		  IndexRoute,
 		  IndexLink,
 		  Link } = ReactRouter;
-
+	var Videoitem =  React.createClass({
+		render: function() {
+			return (
+				<span>===</span>
+			)
+		}	
+	});
 	var App = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -35,11 +41,9 @@
 		render: function() {
 			return (
 				<div className="qalet_ad_section">
-					{
-						this.state.list.map(function(item) {
-							return '<a>' + item.title + '</a> | '
-						})
-					}						
+					{this.state.list.map((item, index) => (
+						item.title}
+					))}									
 				</div>
 		)
 	  }
