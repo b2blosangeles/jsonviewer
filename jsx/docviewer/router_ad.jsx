@@ -19,7 +19,7 @@
 						me.playVideo(d[Math.floor(Math.random()*d.length)].vid);
 					});				
 			},'text');		
-			return {};
+			return {list:[]};
 		},
 		playVideo : function(vid) {
 			$('.qalet_niu').html(
