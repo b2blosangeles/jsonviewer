@@ -31,7 +31,7 @@
 		playVideo : function(vid) {
 			return function() {
 				$('.qalet_video').html(
-					'<video width="320" height="240" autoplay>'+
+					'<video width="320" height="240" controls autoplay>'+
 					'  <source src="http://videorepo.com/api/streaming.js?vid='+vid+'.mp4" type="video/mp4">' +
 					'Your browser does not support the video tag.' +
 					'</video>'
