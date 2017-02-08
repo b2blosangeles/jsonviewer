@@ -34,7 +34,7 @@
 		},	
 		render: function() {
 			return (
-				<div>
+				<div style="border:1px solid read">
 					{
 						this.state.list.map(function(item) {
 							return <span>{item.title}</span>
