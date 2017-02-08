@@ -40,7 +40,7 @@
 						<td>
 						{
 							this.state.list.map(function(item) {
-								return <span>--</span>
+								return <span>{item.title}</span>
 							})
 						}						
 						
