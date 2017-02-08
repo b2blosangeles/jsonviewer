@@ -23,18 +23,20 @@
 			function (data) {
 				var d = JSON.parse(data); 
 				me.setState({	list: d }, () => {
-						me.playVideo(d[Math.floor(Math.random()*d.length)].vid);
+						me.playVideo()(d[Math.floor(Math.random()*d.length)].vid);
 					});				
 			},'text');		
 			return {list:[]};
 		},
 		playVideo : function(vid) {
-			$('.qalet_video').html(
-				'<video width="320" height="240" autoplay>'+
-				'  <source src="http://videorepo.com/api/streaming.js?vid='+vid+'.mp4" type="video/mp4">' +
-				'Your browser does not support the video tag.' +
-				'</video>'
-			);
+			return function() {
+				$('.qalet_video').html(
+					'<video width="320" height="240" autoplay>'+
+					'  <source src="http://videorepo.com/api/streaming.js?vid='+vid+'.mp4" type="video/mp4">' +
+					'Your browser does not support the video tag.' +
+					'</video>'
+				);			
+			}
 		},		
 		componentDidMount : function() {
 			
