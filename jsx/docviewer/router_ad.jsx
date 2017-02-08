@@ -34,10 +34,10 @@
 		},	
 		render: function() {
 			return (
-				<div style="border:1px solid read">
+				<div style={border:'1px solid read'}>
 					{
 						this.state.list.map(function(item) {
-							return <span>{item.title}</span>
+							return <span>{item.title} |</span>
 						})
 					}						
 				</div>
