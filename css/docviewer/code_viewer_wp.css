@@ -40,3 +40,4 @@ body {
 td, th { border:none} 
 
 .qalet_ad_section { background-color:#ddd; padding:6px; }
+.qalet_video { float:right, width:320px; height:240px; }
