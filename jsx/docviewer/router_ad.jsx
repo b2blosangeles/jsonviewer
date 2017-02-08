@@ -37,7 +37,7 @@
 				<div className="qalet_ad_section">
 					{
 						this.state.list.map(function(item) {
-							return item.title 
+							return item.title + '&nbsp;&nbsp;|&nbsp;&nbsp;'
 						})
 					}						
 				</div>
