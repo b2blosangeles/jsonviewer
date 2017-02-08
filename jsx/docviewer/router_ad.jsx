@@ -29,7 +29,7 @@
 			return {list:[]};
 		},
 		playVideo : function(vid) {
-			$('.qalet_niu').html(
+			$('.qalet_video').html(
 				'<video width="320" height="240" autoplay>'+
 				'  <source src="http://videorepo.com/api/streaming.js?vid='+vid+'.mp4" type="video/mp4">' +
 				'Your browser does not support the video tag.' +
@@ -41,7 +41,7 @@
 		},	
 		render: function() {
 			return (
-				<div className="qalet_ad_section">
+				<div className="qalet_ad_section"><div className="qalet_video"></div>
 					{this.state.list.map((item, index) => (
 						<Videoitem item={item}/>
 					))}									
