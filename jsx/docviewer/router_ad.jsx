@@ -37,7 +37,14 @@
 				<table className="qalet_table">
 					<tr>
 						<td className="qalet_niu"></td>
-						<td></td>
+						<td>
+						{
+							this.state.list.map(function(item) {
+								return <span>--</span>
+							})
+						}						
+						
+						</td>
 					</tr>
 				</table>
 		)
