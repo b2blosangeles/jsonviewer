@@ -11,7 +11,7 @@
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
-				<span>{this.props.item.title}&nbsp;&nbsp;|</span>
+				<span><a href="JavaScript:void(0)">{this.props.item.title}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			)
 		}	
 	});
