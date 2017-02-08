@@ -39,5 +39,5 @@ body {
 .qalet_table { border:none; border-collapse:collapse }
 td, th { border:none} 
 
-.qalet_ad_section { background-color:#ddd; padding:6px; }
-.qalet_video { float:right; width:320px; height:240px;}
+.qalet_ad_section { background-color:#ddd; padding:6px; min-height:360px; }
+.qalet_video { float:right; width:320px; height:300px;}
