@@ -43,7 +43,7 @@
 			return (
 				<div className="qalet_ad_section">
 					{this.state.list.map((item, index) => (
-						<Videoitem item={item.title}/>
+						<Videoitem item={item}/>
 					))}									
 				</div>
 			)
