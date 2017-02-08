@@ -42,11 +42,11 @@
 			return (
 				<div className="qalet_ad_section">
 					{this.state.list.map((item, index) => (
-						item.title}
+						item.title
 					))}									
 				</div>
-		)
-	  }
+			)
+		  }
 	});
 	$(function() {
 		ReactDOM.render(
