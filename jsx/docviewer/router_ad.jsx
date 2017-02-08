@@ -11,7 +11,7 @@
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
-				<span><a href="JavaScript:void(0)">{this.props.item.title}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+				<span><a href="JavaScript:void(0)" onClick={this.props.parent.playVideo(this.props.item.vid)} >{this.props.item.title}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			)
 		}	
 	});
@@ -43,7 +43,7 @@
 			return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
 					{this.state.list.map((item, index) => (
-						<Videoitem item={item}/>
+						<Videoitem item={item} parent={this}/>
 					))}									
 				</div>
 			)
