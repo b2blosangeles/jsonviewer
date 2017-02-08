@@ -11,7 +11,7 @@
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
-				<span>===</span>
+				<span>{this.props.item.vid}</span>
 			)
 		}	
 	});
