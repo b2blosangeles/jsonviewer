@@ -38,3 +38,5 @@ body {
 
 .qalet_table { border:none; border-collapse:collapse }
 td, th { border:none} 
+
+.qalet_ad_section { background-color:#ddd; padding:6px; }
