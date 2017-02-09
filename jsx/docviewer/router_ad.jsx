@@ -1,4 +1,5 @@
 (function(){ 
+	/*
 	var { Router,
 		  Route,
 		  browserHistory,
@@ -7,7 +8,7 @@
 		  IndexRoute,
 		  IndexLink,
 		  Link } = ReactRouter;
-		  
+	*/	  
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
