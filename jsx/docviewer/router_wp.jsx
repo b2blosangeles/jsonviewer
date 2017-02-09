@@ -54,7 +54,7 @@ $(function() {
 				<Route path="home" component={Home} />
 				<Route path="stuff" component={StuffFrame} />
 				<Route path="document" component={Document} />	
-			    	<Route path="*" component={Error}/>	
+			    	<Route path="*" component={Home}/>	
 		    </ReactRouter.Route>
 		  </ReactRouter.Router>
 		,
