@@ -52,7 +52,7 @@
 		  }
 	});
 	$(function() {
-		setTimeout({
+		setTimeout(function(){
 			ReactDOM.render(
 				<App/>	
 				,
