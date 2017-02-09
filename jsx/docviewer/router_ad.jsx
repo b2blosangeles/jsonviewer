@@ -52,12 +52,15 @@
 		  }
 	});
 	$(function() {
-		ReactDOM.render(
-			<App/>	
-			,
-			$('#qalet_plugin_ad')[0]
-		);	
+		setTimeout({
+			ReactDOM.render(
+				<App/>	
+				,
+				$('#qalet_plugin_ad')[0]
+			);		
 		
+		},1000
+		);
 	});
 })();
 
