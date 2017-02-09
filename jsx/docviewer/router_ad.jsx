@@ -54,13 +54,14 @@
 	});
 	$(function() {
 		setTimeout(function(){
-			ReactDOM.render(
-				<App/>	
-				,
-				$('#qalet_plugin_ad')[0]
-			);		
-		
-		},1000
+			if ($('#qalet_plugin_ad')[0]) {
+				ReactDOM.render(
+					<App/>	
+					,
+					$('#qalet_plugin_ad')[0]
+				);			
+			}
+		},500
 		);
 	});
 })();

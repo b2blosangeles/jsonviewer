@@ -47,19 +47,23 @@
 	  }
 	});
 	$(function() {
-		ReactDOM.render(
-			<ReactRouter.Router history={browserHistory}>
-				<ReactRouter.Route path="/" component={App}>
-					<IndexRoute component={Home}/>
-					<Route path="home" component={Home} />
-					<Route path="stuff" component={StuffFrame} />
-					<Route path="document" component={Document} />	
-						<Route path="*" component={Home}/>	
-				</ReactRouter.Route>
-			  </ReactRouter.Router>
-			,
-			 $('#qalet_plugin_docviewer')[0]
-		);	
+		if ( $('#qalet_plugin_docviewer')[0]) {
+			ReactDOM.render(
+				<ReactRouter.Router history={browserHistory}>
+					<ReactRouter.Route path="/" component={App}>
+						<IndexRoute component={Home}/>
+						<Route path="home" component={Home} />
+						<Route path="stuff" component={StuffFrame} />
+						<Route path="document" component={Document} />	
+							<Route path="*" component={Home}/>	
+					</ReactRouter.Route>
+				  </ReactRouter.Router>
+				,
+				 $('#qalet_plugin_docviewer')[0]
+			);		
+		
+		}
+	
 		
 	});
 
