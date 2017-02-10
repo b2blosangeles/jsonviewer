@@ -17,6 +17,6 @@
 		"/jsx/docviewer/router.jsx"
       ],
 	"mapping": {
-		"d21":"/jsx/docviewer/test.jsx"
+		"d21":"/jsx/docviewer/test.jsx, /jsx/docviewer/test1.jsx"
 	}  
 }
