@@ -8,12 +8,10 @@
 		"/js/showdown/showdown.min.js",
 		"/js/x2js/xml2json.min.js",
 		"/js/json2.min.js",	
-		
-		"/js/jquery.json-viewer.js",
-	    	
-	    	"/jsx/docviewer/document.jsx",
-	    	"/jsx/docviewer/stuff.jsx",
-		"/jsx/docviewer/home.jsx",
-		"/jsx/docviewer/router.jsx"
-      ]
+		"/js/jquery.json-viewer.js"
+      ],
+	"mapping": {
+		"qalet_docviewer":"/jsx/docviewer/router_wp.jsx",
+		"qalet_ad":"/jsx/docviewer/router_ad.jsx"
+	}  
 }
