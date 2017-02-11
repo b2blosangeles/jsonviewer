@@ -1,5 +1,4 @@
-(function(){ 
-	/* 
+ 	/* 
 	var { Router,
 		  Route,
 		  browserHistory,
@@ -57,10 +56,9 @@
 				ReactDOM.render(
 					<App/>	
 					,
-					 $('.qalet_plugin_qalet_ad')[0]
+					 $('.qalet_plugin_'+mapping_code)[0]
 				);			
 		},5
 		);
 	});
-})();
 

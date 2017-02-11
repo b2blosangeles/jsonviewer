@@ -1,4 +1,3 @@
-(function(){ 
 	var { Router,
 		  Route,
 		  browserHistory,
@@ -59,7 +58,7 @@
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
 				,
-				 $('.qalet_plugin_qalet_docviewer')[0]
+				 $('.qalet_plugin_'+mapping_code)[0]
 			);		
 
 	
@@ -244,4 +243,3 @@
 		  );
 		}
 	});
-})();
