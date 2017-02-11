@@ -1,9 +1,8 @@
 {
     "tpls":[],
-    "filelist":[
-		"/jsx/docviewer/router_wp.jsx"
-      ],
+    "filelist":[],
 	"mapping": {
-		"test":"/jsx/docviewer/test.jsx"
+		"qalet_docviewer":"/jsx/docviewer/router_wp.jsx",
+		"qalet_ad":"/jsx/docviewer/router_ad.jsx"
 	}  
 }
