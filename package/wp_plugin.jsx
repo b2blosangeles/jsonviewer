@@ -10,7 +10,7 @@
 		"/js/json2.min.js",	
 		"/js/jquery.json-viewer.js"
       ],
-	"mapping": {
+	  "mapping": {
 		"qalet_docviewer":"/jsx/docviewer/router_wp.jsx",
 		"qalet_ad":"/jsx/docviewer/router_ad.jsx"
 	}  

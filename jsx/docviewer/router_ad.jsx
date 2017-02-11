@@ -57,7 +57,14 @@
 					<App/>	
 					,
 					 $('.'+mapping_code+'_plugin_')[0]
-				);			
+				);	
+
+				ReactDOM.render(
+					<App/>	
+					,
+					 $('.'+mapping_code+'_plugin_')[1]
+				);
+				
 		},5
 		);
 	});
