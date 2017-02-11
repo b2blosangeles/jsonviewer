@@ -54,13 +54,11 @@
 	});
 	$(function() {
 		setTimeout(function(){
-			if ($('#qalet_plugin_ad')[0]) {
 				ReactDOM.render(
 					<App/>	
 					,
 					 $('.qalet_plugin_qalet_ad')[0]
 				);			
-			}
 		},5
 		);
 	});
