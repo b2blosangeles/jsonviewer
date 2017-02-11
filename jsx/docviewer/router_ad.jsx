@@ -56,7 +56,7 @@
 				ReactDOM.render(
 					<App/>	
 					,
-					 $('.'+mapping_code+'_plugin_')[0]
+					 $('.'+mapping_data.tag+'_plugin_')[0]
 				);	
 				
 		},5
