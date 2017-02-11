@@ -59,7 +59,7 @@
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
 				,
-				 $('#qalet_test')[0]
+				 $('.qalet_plugin_test')[0]
 			);		
 
 	
