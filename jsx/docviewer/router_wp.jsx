@@ -47,7 +47,7 @@
 	  }
 	});
 	$(function() {
-		if ( $('#qalet_plugin_docviewer')[0]) {
+
 			ReactDOM.render(
 				<ReactRouter.Router history={browserHistory}>
 					<ReactRouter.Route path="/" component={App}>
@@ -61,8 +61,7 @@
 				,
 				 $('#qalet_test')[0]
 			);		
-		
-		}
+
 	
 		
 	});
