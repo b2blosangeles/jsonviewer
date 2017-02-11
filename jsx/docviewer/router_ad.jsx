@@ -56,7 +56,7 @@
 				ReactDOM.render(
 					<App/>	
 					,
-					 $('.qalet_plugin_'+mapping_code)[0]
+					 $('.'+mapping_code+'_plugin_')[0]
 				);			
 		},5
 		);
