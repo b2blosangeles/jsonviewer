@@ -4,7 +4,7 @@
 			$('#page').hide();
 			var v = $('#page').html();
 			v.replace(/\[\-(.*)\-\]/, '********');
-			$('#page').html(v).show();
+			$('#page').html('uuuu').show();
 		}
 	
 	);
