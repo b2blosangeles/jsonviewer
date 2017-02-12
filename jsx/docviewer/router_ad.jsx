@@ -4,7 +4,7 @@
 			$('#page').hide();
 			var v = $('#page').html();
 			
-			v.replace(/\[\-(.*)\]\/ig, '********');
+			v.replace('[-qalet_docviewer data=&#8221;[456,456]&#8221;-]', '********');
 			console.log(v);
 			$('#page').html(v).show();
 		}
