@@ -1,7 +1,8 @@
  	$(document).ready(
 		function() {
 			$('body').hide();
-		
+			var v = $('body').html();
+			$('body').html(v).show();
 		}
 	
 	);
