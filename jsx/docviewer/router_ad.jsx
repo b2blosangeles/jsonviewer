@@ -3,8 +3,9 @@
 		function() {
 			$('#page').hide();
 			var v = $('#page').html();
+			
+			v.replace(/\[\-(.*)\]\/ig, '********');
 			console.log(v);
-			v.replace(/\[(.*)\]/ig, '********');
 			$('#page').html(v).show();
 		}
 	
