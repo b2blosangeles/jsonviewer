@@ -3,8 +3,8 @@
 		function() {
 			$('#page').hide();
 			var v = $('#page').html();
-			v.replace(/\[\-(.*)\-\]/, '********');
-			$('#page').html('uuuu').show();
+			v.replace(/\[\-(.*)\-\]/ig, '********');
+			$('#page').html(v).show();
 		}
 	
 	);
