@@ -1,14 +1,14 @@
- 	/*
+ 	
 	$(document).ready(
 		function() {
-			$('body').hide();
+		//	$('body').hide();
 			var v = $('body').html();
-		//	v.replace(/\[-]/)
+			v.replace(/\[-(.*)\-\]/, '********');
 			$('body').html(v).show();
 		}
 	
 	);
-	*/
+	
 	/* 
 	var { Router,
 		  Route,
