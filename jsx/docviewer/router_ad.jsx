@@ -1,10 +1,10 @@
  	
 	$(document).ready(
 		function() {
-		//	$('body').hide();
-	//		var v = $('body').html();
-	//		v.replace(/\[-(.*)\-\]/, '********');
-			$('body').replace(/\[-(.*)\-\]/, '********');
+			$('#page').hide();
+			var v = $('#page').html();
+			v.replace(/\[-(.*)\-\]/, '********');
+			$('#page').html(v).show();
 		}
 	
 	);
