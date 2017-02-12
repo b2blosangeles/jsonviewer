@@ -58,7 +58,7 @@
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
 				,
-				 $('.'+mapping_data.tag+'_plugin_')[0]
+				 $('.'+mapping_data.id)[0]
 			);		
 
 	
