@@ -4,7 +4,7 @@
 			$('#page').hide();
 			var v = $('#page').html();
 			
-			v.replace('[-qalet_docviewer data=&#8221;[456,456]&#8221;-]', '********');
+			v.replace('[-qalet_docviewer data=”[456,456]”-]', '********');
 			console.log(v);
 			$('#page').html(v).show();
 		}
