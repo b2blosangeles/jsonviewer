@@ -2,10 +2,11 @@
 	$(document).ready(
 		function() {
 			$('body').hide();
-			var v = $('body').html();
+			var v = $('.entry-content').html();
 			v =v.replace(/\[\-(.*)\-\]/ig, '********');
 			console.log(v);
-			$('body').html(v).show();
+			$('.entry-content').html(v);
+			$('body').show();
 		}
 	
 	);
