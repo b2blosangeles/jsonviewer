@@ -4,7 +4,7 @@
 			$('.entry-content').hide();
 			var v = $('.entry-content').html();
 			console.log(v);
-			v.replace(/\[\-(.*)\-\]/ig, '********');
+			v.replace('qalet', '********');
 			console.log(v);
 			$('.entry-content').html(v).show();
 		}
