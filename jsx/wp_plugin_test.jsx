@@ -1,10 +1,10 @@
 $(document).ready(
 	function() {
-		$('.pageplugin').hide();
-		var v = $('.pageplugin').html();
+		$('.qaletplugin').hide();
+		var v = $('.qaletplugin').html();
 		v ='********';
-		$('.pageplugin').html(v);
-		$('.pageplugin').show();
+		$('.qaletplugin').html(v);
+		$('.qaletplugin').show();
 	}
 
 );
