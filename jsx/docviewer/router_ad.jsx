@@ -3,8 +3,7 @@
 		function() {
 			$('.entry-content').hide();
 			var v = $('.entry-content').html();
-			alert(v);
-			v.replace('qalet', '********');
+			v =v.replace(/[-(.*)\-]/, '********');
 			console.log(v);
 			$('.entry-content').html(v).show();
 		}
