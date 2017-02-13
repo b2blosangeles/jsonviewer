@@ -1,8 +1,9 @@
 {
     "tpls":[
-	"/js/jquery-2.1.3.min.js"
+	
 	],
     "filelist":[
+		"/js/jquery-2.1.3.min.js",
 		"/jsx/docviewer/router_ad.jsx"
       ]
 }
