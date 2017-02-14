@@ -33,6 +33,7 @@
 				</table>		
 			</div> 
 			<div className="container-fluid">
+				<Home/>
 			  {this.props.children}
 			</div>	
 			<br/><br/><br/><br/><br/><br/>
@@ -43,7 +44,7 @@
 	$(function() {
 
 			ReactDOM.render(
-				<App/>
+				<App/>	
 				,
 				 $('.'+mapping_data.id)[0]
 			);		
