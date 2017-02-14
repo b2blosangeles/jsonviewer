@@ -19,7 +19,7 @@ $(document).ready(
 		_QACALLBACK_ = function() {
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
-			//	$(v[i]).fadeIn( "slow");
+				$(v[i]).fadeIn( 1000);
 			}
 		};
 
