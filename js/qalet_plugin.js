@@ -29,7 +29,7 @@ $(document).ready(
 			function() {
 				_CALLBACK_();
 				
-			}, 1000	
+			}, 50	
 		);
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//qalet.com/css/bootstrap.min.css' });		
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//docviewer.qalet.com/package/docviewer_wp.min.css' });
