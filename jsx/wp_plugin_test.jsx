@@ -15,13 +15,13 @@ $(document).ready(
 				$(v[i]).html('<div class="'+o.id+'">'+o.id+'</div>').show();
 			}
 		}
-		/*
-		function _QACALLBACK_ {
+		
+		function _QACALLBACK_() {
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
 			}
 		}
-		*/
+		
 		// $('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '/css/your_css_file.css' });
 		$.getScript('http://docviewer.qalet.com/package/wp_plugin.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
 		setTimeout(
