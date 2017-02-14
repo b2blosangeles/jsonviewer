@@ -18,16 +18,16 @@ $(document).ready(
 				 $(v[i]).html('<div class="'+o.id+'"></div>');
 			}
 		}		
-		_CALLBACK_ = function() {
-			console.log(f);
+	//	_CALLBACK_ = function() {
+		//	console.log(f);
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
 				$(v[i]).fadeIn( "slow");
 			}
-		};
+	//	};
 		//setTimeout(
 		//	function() {
-				_CALLBACK_();
+	//			_CALLBACK_();
 				
 		//	}, 50	
 		//);
