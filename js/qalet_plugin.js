@@ -17,6 +17,7 @@ $(document).ready(
 		}
 		
 		_CALLBACK_ = function() {
+			console.log(f);
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
 				$(v[i]).fadeIn( "slow");
