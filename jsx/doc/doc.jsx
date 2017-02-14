@@ -15,11 +15,6 @@
 		}
 	});
 
-	var Niu = React.createClass({
-	  render: function() {
-		}
-	});
-
 	var App = React.createClass({
 	  render: function() {
 		return (
