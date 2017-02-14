@@ -47,6 +47,7 @@
 					<ReactRouter.Route path="/int/" component={App}>
 						<IndexRoute component={Home}/>
 						<Route path="home" component={Home} />
+						<Route path="form" component={Form} />
 						<Route path="*" component={Home}/>	
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
