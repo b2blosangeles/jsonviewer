@@ -1,3 +1,8 @@
+function _QACALLBACK_() {
+	for (var i=0; i<f.length; i++) {
+		_QALET_[f[i].module](f[i]);
+	}
+}
 $(document).ready(
 	function() {
 		function parse(v) {
@@ -16,11 +21,7 @@ $(document).ready(
 			}
 		}
 		
-		function _QACALLBACK_() {
-			for (var i=0; i<f.length; i++) {
-				_QALET_[f[i].module](f[i]);
-			}
-		}
+
 
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//qalet.com/css/bootstrap.min.css' });		
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//docviewer.qalet.com/package/docviewer_wp.min.css' });
