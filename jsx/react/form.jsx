@@ -38,7 +38,7 @@ var Form = React.createClass({
 			);	
 		}
 	});
-	var Service = React.createClass({
+	var Services = React.createClass({
 		render: function() {
 			return (	
 				 <div>Service</div>
