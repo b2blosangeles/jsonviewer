@@ -46,7 +46,7 @@
 				<ReactRouter.Router history={browserHistory}>
 					<ReactRouter.Route path="/int/" component={App}>
 						<IndexRoute component={Home}/>
-						<Route path="/int/home" component={Home} />
+						<Route path="home" component={Home} />
 						<Route path="*" component={Home}/>	
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
