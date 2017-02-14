@@ -17,7 +17,7 @@ $(document).ready(
 		}
 		function _QACALLBACK_ {
 			for (var i=0; i<f.length; i++) {
-				_QALET_[f[0].module](f[i]);
+				_QALET_[f[i].module](f[i]);
 			}
 		}
 		
