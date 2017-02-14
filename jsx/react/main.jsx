@@ -25,8 +25,13 @@
 						<td width="228">
 							<img src="http://www.qalet.com/images/qalet_main_log.png" height="36"/>
 						</td>
-						<td width="220" valign="top" align="left"><h3> Document viewer v2</h3></td>
-						<td width="*" align="right" valign="bottom">			
+						<td width="220" valign="top" align="left"><h3> Document viewer v3</h3></td>
+						<td width="*" align="right" valign="bottom">
+							<ul className="nav nav-pills pull-right">
+							  <li role="presentation"><Link to="/home">Home</Link></li>
+							  <li role="presentation"><Link to="/form">Form</Link> </li>
+							  <li role="presentation"><Link to="/about">About</Link></li>
+							</ul>					
 						</td>
 						
 					</tr>	
