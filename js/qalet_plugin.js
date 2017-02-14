@@ -23,6 +23,8 @@ var _CALLBACK_ = function() {
 				if (typeof _QALET_[f[i].module] == 'function') {
 					_QALET_[f[i].module](f[i]);
 					//$(v[i]).fadeIn( "slow");					
+				} esle {
+					console.log('=='+f[i].module+'==');
 				}
 			}
 
