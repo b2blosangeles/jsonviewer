@@ -12,14 +12,14 @@ $(document).ready(
 				r[o.module] = true;
 				o.id = o.module + '_plugin_' + i;
 				f[f.length] = o;
-			//	 $(v[i]).html('<div class="'+o.id+' container-fluid"></div>').show();
+				 $(v[i]).html('<div class="'+o.id+' container-fluid"></div>').show();
 			}
 		}
 		
 		_QACALLBACK_ = function() {
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
-				$(v[i]).html('<div class="'+f[i].id+' container-fluid"></div>').fadeIn( "slow");
+				//$(v[i]).html('<div class="'+f[i].id+' container-fluid"></div>').fadeIn( "slow");
 			}
 		};
 
