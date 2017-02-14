@@ -23,7 +23,7 @@
 				<table width="100%" className="qalet_table">
 					<tr>
 						<td width="228">
-							<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
+							<img src="http://www.qalet.com/images/qalet_main_log.png" height="36"/>
 						</td>
 						<td width="220" valign="top" align="left"><h3> Document viewer v2</h3></td>
 						<td width="*" align="right" valign="bottom">			
