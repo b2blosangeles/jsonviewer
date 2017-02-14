@@ -14,8 +14,7 @@ $(document).ready(
 				f[f.length] = o;
 				 $(v[i]).html('<div class="'+o.id+'"></div>');
 			}
-		}
-		console.log(f);		
+		}		
 		_CALLBACK_ = function() {
 			console.log(f);
 			for (var i=0; i<f.length; i++) {
