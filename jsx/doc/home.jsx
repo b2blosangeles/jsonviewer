@@ -49,9 +49,6 @@
 			);	
 		}
 	});
-			
-	
-
 
 	var Stuff = React.createClass({
 	  render: function() {
