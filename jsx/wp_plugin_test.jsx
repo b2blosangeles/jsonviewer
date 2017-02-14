@@ -21,7 +21,7 @@ $(document).ready(
 			}
 		}
 		
-		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '/css/your_css_file.css' });
+		// $('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '/css/your_css_file.css' });
 		$.getScript('http://docviewer.qalet.com/package/wp_plugin.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
 		setTimeout(
 			function() {
