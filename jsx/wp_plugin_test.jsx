@@ -7,6 +7,7 @@ $(document).ready(
 		var v = $('.qaletplugin'), r={};
 		for (var i = 0; i < v.length; i++) {
 			var o = parse($(v[i]).attr('data'));
+			console.log(o);
 			if (o.module) {
 				r[o.module] = true;
 				var sid = o.module + '_plugin_' + i;
