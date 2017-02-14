@@ -31,7 +31,7 @@ var App = React.createClass({
 					<td width="228">
 						<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
 					</td>
-					<td width="220" valign="top" align="left"><h3> Document viewer</h3></td>
+					<td width="220" valign="top" align="left"><h3> Document viewer B</h3></td>
 					<td width="*" align="right" valign="bottom">
 						<ul className="nav nav-pills pull-right">
 						  <li role="presentation"><Link to="/home">Home</Link></li>
