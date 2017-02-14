@@ -46,7 +46,7 @@
 	  }
 	});
 	$(function() {
-
+			alert(mapping_data.id);
 			ReactDOM.render(
 				<ReactRouter.Router history={browserHistory}>
 					<ReactRouter.Route path="/" component={App}>
