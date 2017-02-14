@@ -25,12 +25,12 @@ $(document).ready(
 				$(v[i]).fadeIn( "slow");
 			}
 		};
-		setTimeout(
-			function() {
+		//setTimeout(
+		//	function() {
 				_CALLBACK_();
 				
-			}, 50	
-		);
+		//	}, 50	
+		//);
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//qalet.com/css/bootstrap.min.css' });		
 		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//docviewer.qalet.com/package/docviewer_wp.min.css' });
 	//	$.getScript('http://docviewer.qalet.com/package/qalet_plugin_plus.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
