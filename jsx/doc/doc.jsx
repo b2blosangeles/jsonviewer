@@ -47,9 +47,7 @@
 					<ReactRouter.Route path="/" component={App}>
 						<IndexRoute component={Home}/>
 						<Route path="home" component={Home} />
-						<Route path="stuff" component={StuffFrame} />
-						<Route path="document" component={Document} />	
-							<Route path="*" component={Home}/>	
+						<Route path="*" component={Home}/>	
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
 				,
@@ -208,33 +206,5 @@
 		  );
 		}
 	});
-	var StuffFrame = React.createClass({
-	  render: function() {
-		  return (
-			<div className="doc_renderer">
-			  <Stuff/>
-			</div>
-		  );
-		}
-	});
 
-	var Document = React.createClass({
-	  getInitialState: function() {
-			return {
-				qq: '456--'
-			};
-		},
-	  
-	  render: function() {
-		  return (
-			<div className="doc_renderer">
-			  <h2>GOT QUESTIONS-->{this.pp}?</h2>
-			  <p>The easiest thing to do is post on
-			  our <a href="http://forum.kirupa.com">forums</a>.
-			  ===
-			  <Stuff name="niu" parent={this.state}/>
-			  </p>
-			</div>
-		  );
-		}
-	});
+
