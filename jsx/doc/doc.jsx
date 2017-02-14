@@ -214,7 +214,7 @@
 				</table>		
 			</div> 
 			<div className="container-fluid">
-			  <Error/>
+			  <Home/>
 			</div>	
 			<br/><br/><br/><br/><br/><br/>
 		  </div>
