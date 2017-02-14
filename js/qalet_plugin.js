@@ -1,4 +1,7 @@
-if (typeof _CALLBACK_ != 'function') var _CALLBACK_;
+if (typeof _CALLBACK_ != 'function') {
+	console.log('==niu==');
+	var _CALLBACK_;
+}	
 $(document).ready(
 	function() {
 		function parse(v) {
