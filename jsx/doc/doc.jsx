@@ -15,6 +15,11 @@
 		}
 	});
 
+	var Niu = React.createClass({
+	  render: function() {
+		}
+	});
+
 	var App = React.createClass({
 	  render: function() {
 		return (
@@ -33,8 +38,7 @@
 				</table>		
 			</div> 
 			<div className="container-fluid">
-				<Home/>
-
+			  {this.props.children}
 			</div>	
 			<br/><br/><br/><br/><br/><br/>
 		  </div>
@@ -44,7 +48,15 @@
 	$(function() {
 
 			ReactDOM.render(
-				<App/>	
+				<ReactRouter.Router history={browserHistory}>
+					<ReactRouter.Route path="/" component={App}>
+						<IndexRoute component={Home}/>
+						<Route path="home" component={Home} />
+						<Route path="stuff" component={StuffFrame} />
+						<Route path="document" component={Document} />	
+							<Route path="*" component={Home}/>	
+					</ReactRouter.Route>
+				  </ReactRouter.Router>
 				,
 				 $('.'+mapping_data.id)[0]
 			);		
@@ -162,11 +174,9 @@
 		render: function() {
 			return (
 				<div className="container-fluid">
-					
 					<div className="row">
-						====
 						<Form parent={this}/>
-						
+					
 						<div className="doc_renderer" id="doc-renderer"></div>
 						<div className="sample_section">  
 							Sample:<br/>
@@ -203,5 +213,33 @@
 		  );
 		}
 	});
+	var StuffFrame = React.createClass({
+	  render: function() {
+		  return (
+			<div className="doc_renderer">
+			  <Stuff/>
+			</div>
+		  );
+		}
+	});
 
-
+	var Document = React.createClass({
+	  getInitialState: function() {
+			return {
+				qq: '456--'
+			};
+		},
+	  
+	  render: function() {
+		  return (
+			<div className="doc_renderer">
+			  <h2>GOT QUESTIONS-->{this.pp}?</h2>
+			  <p>The easiest thing to do is post on
+			  our <a href="http://forum.kirupa.com">forums</a>.
+			  ===
+			  <Stuff name="niu" parent={this.state}/>
+			  </p>
+			</div>
+		  );
+		}
+	});
