@@ -2,7 +2,7 @@
     "tpls":[],
     "filelist":[],
 	  "mapping": {
-		"docviewer":"/jsx/docviewer/router_wp.jsx",
+		"docviewer":"/jsx/doc/doc.jsx",
 		"video":"/jsx/ad/ad.jsx"
 	}  
 }
