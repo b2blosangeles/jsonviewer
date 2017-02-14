@@ -21,8 +21,9 @@ $(document).ready(
 				_QALET_[f[i].module](f[i]);
 			}
 		}
-		
-		// $('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '/css/your_css_file.css' });
+
+		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//qalet.com/css/bootstrap.min.css' });		
+		$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//docviewer.qalet.com/package/docviewer_wp.min.css' });
 		$.getScript('http://docviewer.qalet.com/package/wp_plugin.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
 		setTimeout(
 			function() {
