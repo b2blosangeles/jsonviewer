@@ -31,7 +31,7 @@
 							<img src="http://www.qalet.com/images/qalet_main_logo.png" height="36"/>
 						</td>
 						<td width="220" valign="top" align="left"><h3> Document viewer</h3></td>
-						<td width="*" align="right" valign="bottom">					
+						<td width="*" align="right" valign="bottom">	===				
 						</td>
 						
 					</tr>	
