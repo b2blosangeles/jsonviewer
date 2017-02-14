@@ -10,7 +10,7 @@
 		"/js/jquery.json-viewer.js"
       ],
 	  "mapping": {
-		"docviwer":"/jsx/docviewer/router_wp.jsx",
+		"docviewer":"/jsx/docviewer/router_wp.jsx",
 		"video":"/jsx/docviewer/router_ad.jsx"
 	}  
 }
