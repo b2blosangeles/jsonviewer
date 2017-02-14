@@ -8,7 +8,6 @@ $(document).ready(
 		var v = $('.qaletplugin'), r={}, f=[];
 		for (var i = 0; i < v.length; i++) {
 			var o = parse($(v[i]).attr('data'));
-			console.log(o);
 			if (o.module) {
 				r[o.module] = true;
 				o.id = o.module + '_plugin_' + i;
