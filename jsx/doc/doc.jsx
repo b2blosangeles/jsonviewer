@@ -43,13 +43,7 @@
 	$(function() {
 
 			ReactDOM.render(
-				<ReactRouter.Router history={browserHistory}>
-					<ReactRouter.Route path="/" component={App}>
-						<IndexRoute component={Home}/>
-						<Route path="home" component={Home} />
-						<Route path="*" component={Home}/>	
-					</ReactRouter.Route>
-				  </ReactRouter.Router>
+				<Home/>
 				,
 				 $('.'+mapping_data.id)[0]
 			);		
