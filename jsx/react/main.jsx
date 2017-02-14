@@ -29,7 +29,7 @@
 						<td width="*" align="right" valign="bottom">
 							<ul className="nav nav-pills pull-right">
 							  <li role="presentation"><Link to="/int/home">Home</Link></li>
-							  <li role="presentation"><Link to="/int/form">Form</Link> </li>
+							  <li role="presentation"><Link to="/int/service">Services</Link> </li>
 							  <li role="presentation"><Link to="/int/about">About</Link></li>
 							</ul>					
 						</td>
@@ -52,7 +52,7 @@
 					<ReactRouter.Route path="/int/" component={App}>
 						<IndexRoute component={Home}/>
 						<Route path="home" component={Home} />
-						<Route path="form" component={Form} />
+						<Route path="service" component={Services} />
 						<Route path="about" component={About} />
 						<Route path="*" component={Error}/>	
 					</ReactRouter.Route>
