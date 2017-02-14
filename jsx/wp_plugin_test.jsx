@@ -13,7 +13,8 @@ $(document).ready(
 				r[o.module] = true;
 				o.id = o.module + '_plugin_' + i;
 				f[f.length] = o;
-				$(v[i]).html('<div class="'+o.id+'">'+o.id+'</div>').show();
+				// $(v[i]).html('<div class="'+o.id+'">'+o.id+'</div>').show();
+				 $(v[i]).html('<div class="'+o.id+'"></div>').show();
 			}
 		}
 		
