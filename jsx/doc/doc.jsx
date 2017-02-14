@@ -38,7 +38,7 @@
 				</table>		
 			</div> 
 			<div className="container-fluid">
-			  {this.props.children}
+			  <Home/>
 			</div>	
 			<br/><br/><br/><br/><br/><br/>
 		  </div>
