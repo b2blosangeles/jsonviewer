@@ -8,7 +8,8 @@ var _CALLBACK_ = function() {
 			var v = $('.qaletplugin'), r={}, f=[];
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
-				if (!data) data = $(v[i]).attr('data'); 
+				if (!data) data = $(v[i]).attr('data');
+				console.log(data);
 				var o = parse(data);
 				if (o.module) {
 					r[o.module] = true;
