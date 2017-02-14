@@ -1,13 +1,3 @@
-	/* 
-	var { Router,
-		  Route,
-		  browserHistory,
-		  createMemoryHistory,
-		  hashHistory,
-		  IndexRoute,
-		  IndexLink,
-		  Link } = ReactRouter;
-	*/	  
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
