@@ -15,14 +15,14 @@ var _CALLBACK_ = function() {
 					r[o.module] = true;
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
-					 $(v[i]).html('<div class="'+o.id+'"></div>');
+					 $(v[i]).html('<div class="'+o.id+'"></div>').fadeIn( "slow");
 				}
 			}		
 			console.log(f);
 			for (var i=0; i<f.length; i++) {
 				if (typeof _QALET_[f[i].module] == 'function') {
 					_QALET_[f[i].module](f[i]);
-					$(v[i]).fadeIn( "slow");					
+					//$(v[i]).fadeIn( "slow");					
 				}
 			}
 
