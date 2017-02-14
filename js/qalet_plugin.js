@@ -11,8 +11,6 @@ var _CALLBACK_ = function() {
 				if (!data) data = $(v[i]).attr('data');
 				
 				var o = parse(data);
-				console.log(o);
-				
 				if (o.module) {
 					r[o.module] = true;
 					o.id = o.module + '_plugin_' + i;
@@ -20,7 +18,7 @@ var _CALLBACK_ = function() {
 					 $(v[i]).html('<div class="'+o.id+'"></div>');
 				}
 			}		
-
+			console.log(f);
 			for (var i=0; i<f.length; i++) {
 				_QALET_[f[i].module](f[i]);
 				$(v[i]).fadeIn( "slow");
