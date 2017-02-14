@@ -1,4 +1,3 @@
-
 var _QACALLBACK_;
 $(document).ready(
 	function() {
