@@ -167,9 +167,11 @@
 		render: function() {
 			return (
 				<div className="container-fluid">
-					<div className="row">
-						<Form parent={this}/>
 					
+					<div className="row">
+						====
+						<Form parent={this}/>
+						
 						<div className="doc_renderer" id="doc-renderer"></div>
 						<div className="sample_section">  
 							Sample:<br/>
