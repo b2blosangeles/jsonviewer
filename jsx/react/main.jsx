@@ -28,9 +28,9 @@
 						<td width="220" valign="top" align="left"><h3> Document viewer v3</h3></td>
 						<td width="*" align="right" valign="bottom">
 							<ul className="nav nav-pills pull-right">
-							  <li role="presentation"><Link to="/int/home">Home</Link></li>
-							  <li role="presentation"><Link to="/int/service">Services</Link> </li>
-							  <li role="presentation"><Link to="/int/about">About</Link></li>
+							  <li role="presentation"><Link to="./home">Home</Link></li>
+							  <li role="presentation"><Link to="./service">Services</Link> </li>
+							  <li role="presentation"><Link to="./about">About</Link></li>
 							</ul>					
 						</td>
 						
