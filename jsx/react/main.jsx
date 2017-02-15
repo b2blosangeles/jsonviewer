@@ -49,11 +49,11 @@
 
 			ReactDOM.render(
 				<ReactRouter.Router history={browserHistory}>
-					<ReactRouter.Route path="/" component={App}>
+					<ReactRouter.Route path="/int/" component={App}>
 						<IndexRoute component={Home}/>
-						<Route path="/int/home" component={Home} />
-						<Route path="/int/service" component={Services} />
-						<Route path="/int/about" component={About} />
+						<Route path="home" component={Home} />
+						<Route path="service" component={Services} />
+						<Route path="about" component={About} />
 						<Route path="*" component={Error}/>	
 					</ReactRouter.Route>
 				  </ReactRouter.Router>
