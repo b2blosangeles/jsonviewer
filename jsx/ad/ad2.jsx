@@ -49,33 +49,15 @@ $(document).ready(
 			render: function() {
 				var me = this;
 				
-				if (this.state.list.length) {
-					
-					return (
-					<div className="qalet_ad_section"><div className="qalet_video"></div>
-						{this.state.list.map(function(v, k){
-							return k
-						})}			
-					</div>
-					)
-				} else {
-				
-					return (
-						<div className="qalet_ad_section"><div className="qalet_video"></div>
-							* * * *							
-						</div>
-					)				
-				}
-			
-				/*
+
 				return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
-						{this.state.list.map((item, index) => (
-							<Videoitem item={item} parent={this}/>
-						))}									
+						{this.state.list.map(function(item, index) {
+							return <Videoitem item={item} parent={this}/>
+						})}									
 					</div>
 				)
-				*/
+				
 			  }
 			  
 		});
