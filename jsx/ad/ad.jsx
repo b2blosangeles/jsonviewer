@@ -1,9 +1,16 @@
 	var Videoitem =  React.createClass({
+		/*
 		render: function() {
 			return (
 				<span><a href="JavaScript:void(0)" onClick={this.props.parent.playVideo(this.props.item.vid)} >{this.props.item.title}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			)
-		}	
+		}
+		*/
+		render: function() {
+			return (
+				<span>test</span>
+			)
+		}		
 	});
 	var App = React.createClass({
 		getInitialState: function() {
