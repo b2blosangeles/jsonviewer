@@ -48,17 +48,24 @@ $(document).ready(
 			},
 			render: function() {
 				var me = this;
+				if (this.state.list.length) {
+					
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					{
-						if (this.state.list.length) {		
-							this.state.list.map((item, index) => (
-								<span> --- </span>
-							))
-						}
+					{		
+						this.state.list.map((item, index) => (
+							<span> --- </span>
+						))
 					}								
 				</div>
 				)
+				} else {
+					return (
+						<div className="qalet_ad_section"><div className="qalet_video"></div>
+							* * * *							
+						</div>
+					)				
+				}
 			
 				/*
 				return (
