@@ -44,7 +44,7 @@ $(document).ready(
 			render: function() {
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					bbb								
+					ccc								
 				</div>
 				)
 			  }			
