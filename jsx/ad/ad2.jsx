@@ -18,7 +18,9 @@ $(document).ready(
 					// alert(data);
 					
 					var d = JSON.parse(data); 
-					me.setState({	list: d });					
+					me.setState({	list: d }, function() {
+						alert(12);
+					});					
 					/*
 					me.setState({	list: d }, () => {
 							me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
