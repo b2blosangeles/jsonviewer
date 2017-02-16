@@ -63,5 +63,5 @@ try {
 			 $('.'+mapping_data.id)[0]
 		);	
 } catch (err) {
-	console.log(err.message);
+	alert(err.message);
 }
