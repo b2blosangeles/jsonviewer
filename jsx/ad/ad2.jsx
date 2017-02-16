@@ -43,8 +43,9 @@ $(document).ready(
 			},
 			render: function() {
 				return (
-					<div>Niun  niu 								
-					</div>
+				<div className="qalet_ad_section"><div className="qalet_video"></div>
+					bbb								
+				</div>
 				)
 			  }			
 			/*
