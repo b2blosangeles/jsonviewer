@@ -11,7 +11,7 @@ $(document).ready(
 
 			getInitialState: function() {
 				var me = this;
-				/*
+				
 				$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 				{}, 
 				function (data) {
@@ -20,7 +20,7 @@ $(document).ready(
 							me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 						});				
 				},'text');
-				*/
+				
 				return {list:[]};
 			},
 			playVideo : function(vid) {
