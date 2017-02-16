@@ -15,15 +15,15 @@ try {
 				{}, 
 				function (data) {
 					var d = JSON.parse(data); 
-				
+					/*
 					me.setState({	list: d }, () => {
 							me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 						});						
-					/*
+					*/
 					me.setState({	list: d }, function() {
 						me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 					});
-					*/
+					
 				},'text');
 				
 				return {list:[]};
