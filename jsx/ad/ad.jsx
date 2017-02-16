@@ -10,6 +10,7 @@
 		
 		getInitialState: function() {
 			var me = this;
+			/*
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 			{}, 
 			function (data) {
@@ -17,7 +18,8 @@
 				me.setState({	list: d }, () => {
 						me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 					});				
-			},'text');		
+			},'text');
+			*/
 			return {list:[]};
 		},
 		playVideo : function(vid) {
