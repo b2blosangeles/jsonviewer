@@ -50,9 +50,13 @@ $(document).ready(
 				var me = this;
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					{this.state.list.map((item, index) => (
-							<span> --- </span>
-					))}								
+					{
+						if (this.state.list.length) {		
+							this.state.list.map((item, index) => (
+								<span> --- </span>
+							))
+						}
+					}								
 				</div>
 				)
 			
