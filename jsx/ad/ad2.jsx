@@ -15,9 +15,10 @@ $(document).ready(
 				$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 				{}, 
 				function (data) {
-					alert(data);
-					/*
+					// alert(data);
+					
 					var d = JSON.parse(data); 
+					/*
 					me.setState({	list: d }, () => {
 							me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 						});
