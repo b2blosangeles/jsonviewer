@@ -5,7 +5,7 @@ var _CALLBACK_ = function() {
 				var t = v.replace(/(“|”)/ig, '"');
 				return JSON.parse(t);
 			}			
-			var v = $('qaletplugin'), r={}, f=[];
+			var v = $('QALET'), r={}, f=[];
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
