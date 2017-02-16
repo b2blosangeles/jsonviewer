@@ -53,7 +53,7 @@ $(document).ready(
 				return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
 						{this.state.list.map(function(item, index) {
-							return <Videoitem item={item} parent={this}/>
+							return <Videoitem item={item} parent={me}/>
 						})}									
 					</div>
 				)
