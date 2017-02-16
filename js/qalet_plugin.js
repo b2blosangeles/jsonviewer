@@ -1,4 +1,4 @@
-var _CALLBACK_1 = function() {
+var _CALLBACK_ = function() {
 	$(document).ready(
 		function() {
 			function parse(v) {
