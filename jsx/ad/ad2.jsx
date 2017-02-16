@@ -53,8 +53,8 @@ $(document).ready(
 					
 					return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
-						{this.state.list.map(function(object, i){
-							8888
+						{this.state.list.map(function(v, k){
+							return k
 						})}			
 					</div>
 					)
