@@ -4,7 +4,9 @@ var _CALLBACK_ = function() {
 			function parse(v) {
 				console.log('v--->');
 				console.log(v);
+				console.log('2--->');
 				console.log(unescape(v));
+				console.log('v3--->');
 				var t = v.replace(/(“|”)/ig, '"').replace('&#8220;', '--');
 				return JSON.parse(t);
 			}			
