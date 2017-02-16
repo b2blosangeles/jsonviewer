@@ -48,20 +48,16 @@ $(document).ready(
 			},
 			render: function() {
 				var me = this;
-				/*
+				
 				if (this.state.list.length) {
 					
 					return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
-						{		
-							this.state.list.map((item, index) => (
-								<span> --- </span>
-							))
-						}								
+						8888								
 					</div>
 					)
 				} else {
-				*/
+				
 					return (
 						<div className="qalet_ad_section"><div className="qalet_video"></div>
 							* * * *							
