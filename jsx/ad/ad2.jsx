@@ -49,7 +49,7 @@
 	$(function() {
 		setTimeout(function(){
 				ReactDOM.render(
-					<span>test niu</span>	
+					<span>test niu3</span>	
 					,
 					 $('.'+mapping_data.id)[0]
 				);	
