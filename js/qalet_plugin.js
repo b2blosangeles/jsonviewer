@@ -9,6 +9,7 @@ var _CALLBACK_ = function() {
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
+				console.log(data);
 				
 				var o = parse(data);
 				if (o.module) {
