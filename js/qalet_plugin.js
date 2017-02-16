@@ -3,6 +3,7 @@ var _CALLBACK_ = function() {
 		function() {
 			function parse(v) {
 				var t = v.replace(/(“|”)/ig, '"');
+				alert(v);
 				return JSON.parse(t);
 			}			
 			var v = $('QALET'), r={}, f=[];
