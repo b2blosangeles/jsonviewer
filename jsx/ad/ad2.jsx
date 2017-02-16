@@ -41,7 +41,13 @@ $(document).ready(
 			componentDidMount : function() {
 
 			},
-
+			render: function() {
+				return (
+					<div>Niun  niu 								
+					</div>
+				)
+			  }			
+			/*
 			render: function() {
 				return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
@@ -51,6 +57,7 @@ $(document).ready(
 					</div>
 				)
 			  }
+			  */
 		});
 		$(function() {
 			setTimeout(function(){
