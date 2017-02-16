@@ -3,7 +3,7 @@ var _CALLBACK_ = function() {
 		function() {
 			function parse(v) {
 				var t = v.replace(/(“|”)/ig, '"');
-				alert(v);
+				
 				return JSON.parse(t);
 			}			
 			var v = $('QALET'), r={}, f=[];
@@ -16,6 +16,7 @@ var _CALLBACK_ = function() {
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
 					 $(v[i]).replaceWith('<div class="'+o.id+'"></div>').fadeIn( "slow");
+					alert( $(v[i]).html());
 				}
 			}		
 			for (var i=0; i<f.length; i++) {
