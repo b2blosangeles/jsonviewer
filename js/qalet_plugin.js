@@ -2,6 +2,9 @@ var _CALLBACK_ = function() {
 	$(document).ready(
 		function() {
 			function parse(v) {
+				console.log('v--->');
+				console.log(v);
+				console.log(unescape(v));
 				var t = v.replace(/(“|”)/ig, '"').replace('&#8220;', '--');
 				return JSON.parse(t);
 			}			
