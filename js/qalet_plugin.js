@@ -1,5 +1,5 @@
 var _CALLBACK_ = function() {
-	alert( 123);
+	alert(456);
 	/*
 	$(document).ready(
 		function() {
@@ -37,3 +37,8 @@ var _CALLBACK_ = function() {
 	);
 	*/
 };
+setTimeout(
+	function() {
+		_CALLBACK_();
+	}, 1000
+)
