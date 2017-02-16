@@ -7,7 +7,7 @@ var _CALLBACK_ = function() {
 				return JSON.parse(t);
 			}			
 			var v = $('QALET'), r={}, f=[];
-			alert( $(v[0]));
+			alert( 123);
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
