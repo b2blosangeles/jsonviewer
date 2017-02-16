@@ -8,7 +8,7 @@
 	});
 
 	var App = React.createClass({
-		
+		/*
 		getInitialState: function() {
 			var me = this;
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
@@ -34,7 +34,7 @@
 		componentDidMount : function() {
 			
 		},
-			
+		*/	
 		render: function() {
 			return (
 				<span>test niu2</span>	
@@ -45,7 +45,7 @@
 	$(function() {
 		setTimeout(function(){
 				ReactDOM.render(
-					<span>test niu3</span>	
+					<span>test niu3 5</span>	
 					,
 					 $('.'+mapping_data.id)[0]
 				);	
