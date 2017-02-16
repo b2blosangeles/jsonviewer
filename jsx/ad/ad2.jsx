@@ -47,10 +47,10 @@ $(document).ready(
 
 			},
 			render: function() {
-				
+				var me = this;
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					ccc								
+					{this.state}								
 				</div>
 				)
 			
