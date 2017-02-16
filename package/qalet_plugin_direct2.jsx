@@ -8,9 +8,10 @@
 		"/js/showdown/showdown.min.js",
 		"/js/x2js/xml2json.min.js",
 		"/js/json2.min.js",	
-		"/js/jquery.json-viewer.js"
+		"/js/jquery.json-viewer.js",
+		"/js/qalet_plugin.js"
       ],
-	  "mapping": {	
-		"docviewer":" /jsx/react/home.jsx, /jsx/react/form.jsx, /jsx/react/main.jsx"
+	  "mapping": {
+		"docviewer":" /jsx/doc/home.jsx, /jsx/doc/form.jsx,/jsx/doc/doc.jsx"
 	}  
 }
