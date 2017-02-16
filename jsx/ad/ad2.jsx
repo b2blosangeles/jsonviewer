@@ -6,7 +6,7 @@
 			)
 		}	
 	});
-/*
+
 	var App = React.createClass({
 		
 		getInitialState: function() {
@@ -37,15 +37,11 @@
 			
 		render: function() {
 			return (
-				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					{this.state.list.map((item, index) => (
-						<Videoitem item={item} parent={this}/>
-					))}									
-				</div>
+				<span>test niu2</span>	
 			)
 		  }
 	});
-*/
+
 	$(function() {
 		setTimeout(function(){
 				ReactDOM.render(
