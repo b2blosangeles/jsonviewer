@@ -1,5 +1,4 @@
-$(document).ready(
-	function() {
+try {
 		var Videoitem =  React.createClass({
 			render: function() {
 				return (
@@ -57,16 +56,12 @@ $(document).ready(
 			  }
 			  
 		});
-		$(function() {
-			setTimeout(function(){
-					ReactDOM.render(
-						<App/>	
-						,
-						 $('.'+mapping_data.id)[0]
-					);	
 
-			},500
-			);
-		});
-	}
-);
+		ReactDOM.render(
+			<App/>	
+			,
+			 $('.'+mapping_data.id)[0]
+		);	
+} catch (err) {
+	console.log(err.message);
+}
