@@ -8,7 +8,7 @@
 	});
 
 	var App = React.createClass({
-		/*
+		
 		getInitialState: function() {
 			var me = this;
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
@@ -21,6 +21,8 @@
 			},'text');		
 			return {list:[]};
 		},
+		
+		/*
 		playVideo : function(vid) {
 			return function() {
 				$('.'+mapping_data.id).find('.qalet_video').html(
@@ -45,7 +47,7 @@
 	$(function() {
 		setTimeout(function(){
 				ReactDOM.render(
-					<span>test niu3 5</span>	
+					<span>test niu3 6</span>	
 					,
 					 $('.'+mapping_data.id)[0]
 				);	
