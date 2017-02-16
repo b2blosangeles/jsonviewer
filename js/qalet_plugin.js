@@ -17,7 +17,6 @@ var _CALLBACK_ = function() {
 					 $(v[i]).html('<div class="'+o.id+'"></div>').fadeIn( "slow");
 				}
 			}		
-			console.log(f);
 			for (var i=0; i<f.length; i++) {
 				if (typeof _QALET_[f[i].module] == 'function') {
 					_QALET_[f[i].module](f[i]);
