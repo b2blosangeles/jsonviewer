@@ -10,6 +10,7 @@
 		"/js/json2.min.js",	
 		"/js/jquery.json-viewer.js"
       ],
-	  "mapping": {		  
+	  "mapping": {	
+		"docviewer":" /jsx/react/home.jsx, /jsx/react/form.jsx, /jsx/react/main.jsx"
 	}  
 }
