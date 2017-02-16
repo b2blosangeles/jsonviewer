@@ -9,7 +9,7 @@
 	var App = React.createClass({
 		
 		getInitialState: function() {
-			/*var me = this;
+			var me = this;
 			$.get('http://videorepo.com/api/youtube.js?opt=getAll',
 			{}, 
 			function (data) {
@@ -17,17 +17,22 @@
 				me.setState({	list: d }, () => {
 						me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 					});				
-			},'text');*/		
+			},'text');		
 			return {list:[]};
 		},
 		playVideo : function(vid) {
 			return function() {
+				/*
 				$('.'+mapping_data.id).find('.qalet_video').html(
 					'<video width="320" height="240" controls autoplay>'+
 					'  <source src="http://videorepo.com/api/streaming.js?vid='+vid+'.mp4" type="video/mp4">' +
 					'Your browser does not support the video tag.' +
 					'</video>'
-				);			
+				);
+				*/
+				$('.'+mapping_data.id).find('.qalet_video').html(
+					'test====='
+				);				
 			}
 		},		
 		componentDidMount : function() {
