@@ -1,3 +1,4 @@
+	/*
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
@@ -52,3 +53,4 @@
 		},5
 		);
 	});
+*/
