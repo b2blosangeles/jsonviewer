@@ -50,7 +50,9 @@ $(document).ready(
 				var me = this;
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					{JSON.stringify(this.state)}								
+					{this.state.list.map((item, index) => (
+							<span> --- </span>
+					))}								
 				</div>
 				)
 			
