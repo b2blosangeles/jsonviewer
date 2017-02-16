@@ -5,7 +5,7 @@ var _CALLBACK_ = function() {
 				var t = v.replace(/(“|”)/ig, '"');
 				return JSON.parse(t);
 			}			
-			var v = $('.qaletplugin'), r={}, f=[];
+			var v = $('qaletplugin'), r={}, f=[];
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
@@ -14,7 +14,7 @@ var _CALLBACK_ = function() {
 					r[o.module] = true;
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
-					 $(v[i]).html('<div class="'+o.id+'"></div>').fadeIn( "slow");
+					 $(v[i]).replaceWith(('<div class="'+o.id+'"></div>').fadeIn( "slow");
 				}
 			}		
 			for (var i=0; i<f.length; i++) {
