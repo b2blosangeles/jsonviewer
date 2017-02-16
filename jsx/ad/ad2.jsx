@@ -50,13 +50,9 @@
 		  }
 	});
 	$(function() {
-		setTimeout(function(){
-				ReactDOM.render(
-					<span> test span </span>	
-					,
-					 $('.'+mapping_data.id)[0]
-				);	
-				
-		},1000
-		);
+		ReactDOM.render(
+			<span> test span </span>	
+			,
+			 $('.'+mapping_data.id)[0]
+		);	
 	});
