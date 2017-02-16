@@ -39,7 +39,7 @@ $(document).ready(
 					);
 					*/
 					$('.'+mapping_data.id).find('.qalet_video').html(
-						'http://videorepo.com/api/streaming.js?vid=.mp4"'
+						'http://videorepo.com/api/streaming.js?vid=.mp4'
 					);					
 				}
 			},		
