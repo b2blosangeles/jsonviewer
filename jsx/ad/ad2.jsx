@@ -53,7 +53,9 @@ $(document).ready(
 					
 					return (
 					<div className="qalet_ad_section"><div className="qalet_video"></div>
-						8888								
+						{this.state.list.map((item, index) => (	
+							8888
+						))}			
 					</div>
 					)
 				} else {
