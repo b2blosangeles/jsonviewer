@@ -1,6 +1,4 @@
 var _CALLBACK_ = function() {
-	alert(456);
-	/*
 	$(document).ready(
 		function() {
 			function parse(v) {
@@ -35,10 +33,5 @@ var _CALLBACK_ = function() {
 		//	$.getScript('http://docviewer.qalet.com/package/qalet_plugin_plus.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
 		}
 	);
-	*/
 };
-setTimeout(
-	function() {
-		_CALLBACK_();
-	}, 1000
-)
+
