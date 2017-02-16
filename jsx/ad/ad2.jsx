@@ -50,7 +50,7 @@ $(document).ready(
 				var me = this;
 				return (
 				<div className="qalet_ad_section"><div className="qalet_video"></div>
-					{this.state}								
+					{JSON.stringify(this.state)}								
 				</div>
 				)
 			
