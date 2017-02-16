@@ -1,4 +1,4 @@
-/*
+
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
@@ -6,6 +6,7 @@
 			)
 		}	
 	});
+/*
 	var App = React.createClass({
 		
 		getInitialState: function() {
