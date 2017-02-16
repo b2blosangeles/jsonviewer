@@ -1,4 +1,4 @@
-
+/*
 	var Videoitem =  React.createClass({
 		render: function() {
 			return (
@@ -49,6 +49,7 @@
 			)
 		  }
 	});
+*/
 	$(function() {
 		setTimeout(function(){
 				ReactDOM.render(
