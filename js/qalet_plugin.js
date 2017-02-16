@@ -2,7 +2,7 @@ var _CALLBACK_ = function() {
 	$(document).ready(
 		function() {
 			function parse(v) {
-				var t = v.replace(/(“|”)/ig, '"').replace(/(”|”)/ig, '"');
+				var t = v.replace(/(“|”)/ig, '"').replace(/(”|”)/ig, '--');
 				return JSON.parse(t);
 			}			
 			var v = $('.qaletplugin'), r={}, f=[];
