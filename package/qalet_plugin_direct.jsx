@@ -12,7 +12,7 @@
 		"/js/qalet_plugin.js"
       ],
 	  "mapping": {
-		"docviewer":" /jsx/doc/home.jsx, /jsx/doc/form.jsx,/jsx/doc/doc.jsx",
+		"docviewer":" /jsx/react/home.jsx, /jsx/react/form.jsx,/jsx/react/main_router.jsx",
 		"video":"/jsx/ad/ad.jsx"		  
 	}  
 }
