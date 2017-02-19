@@ -5,7 +5,6 @@ var Body_section = React.createClass({
 			<table width="100%" className="qalet_table" style={{borderTop:'3px double #ccc'}}>
 				<tr>
 					<td width="100%">
-						test
 					</td>
 				</tr>	
 			</table>		
