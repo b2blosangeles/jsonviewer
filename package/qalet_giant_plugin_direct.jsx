@@ -17,6 +17,7 @@
 				"/jsx/giant_plugin/top_section.jsx",
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
-			]
+			],
+		"video":["/jsx/ad/ad.jsx"]		
 	}  
 }
