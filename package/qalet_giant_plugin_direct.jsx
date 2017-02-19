@@ -3,10 +3,7 @@
     "filelist":[
 		"/js/json2.min.js",
 		"/js/jquery-2.1.3.min.js",
-		"/js/showdown/showdown.min.js",
-		"/js/x2js/xml2json.min.js",		
-		"/js/jquery.json-viewer.js",
-		
+
 		"/js/qalet_plugin.js",
 		
 		"/js/react/react.min.js",
@@ -30,6 +27,9 @@
 	}, 
 	"dependence": {
 		"giant_plugin":[
+			"/js/showdown/showdown.min.js",
+			"/js/x2js/xml2json.min.js",		
+			"/js/jquery.json-viewer.js"
 			],
 		"video":[],
 		"docviewer":[]	
