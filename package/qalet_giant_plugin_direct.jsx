@@ -3,7 +3,6 @@
     "filelist":[
 		"/js/json2.min.js",
 		"/js/jquery-2.1.3.min.js",
-
 		"/js/qalet_plugin.js",
 		
 		"/js/react/react.min.js",
