@@ -1,5 +1,5 @@
-var url = (req.query.url)?req.query.url:req.post.url;
-url = 'http://giantleap.com/exponential-technologies/';
+//var url = (req.query.url)?req.query.url:req.post.url;
+var url = 'http://giantleap.com/exponential-technologies/';
 if (url) {
 	pkg.request(url, function (err, resp, body) {
 		
