@@ -1,7 +1,7 @@
 ReactDOM.render(
 	<div className="container-fluid">
 		<div className="row">
-			test
+			<Top/>
 		</div>	
 	</div>
 	,

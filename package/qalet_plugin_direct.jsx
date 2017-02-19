@@ -12,7 +12,7 @@
 		"/js/qalet_plugin.js"
       ],
 	  "mapping": {
-		"giant_plugin":" /jsx/giant_plugin/main.jsx",
+		"giant_plugin":"/jsx/giant_plugin/top_section.jsx,/jsx/giant_plugin/main.jsx",
 		"docviewer":" /jsx/react/home.jsx, /jsx/react/form.jsx,/jsx/react/main_router.jsx",
 		"video":"/jsx/ad/ad.jsx"		  
 	}  
