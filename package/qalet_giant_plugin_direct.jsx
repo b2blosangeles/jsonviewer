@@ -27,7 +27,7 @@
 				"/jsx/doc/form.jsx",
 				"/jsx/doc/doc.jsx"
 			]	
-	}  
+	}, 
 	"dependence": {
 		"giant_plugin":[
 			],
