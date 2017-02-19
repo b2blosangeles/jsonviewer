@@ -3,7 +3,6 @@ ReactDOM.render(
 		<div className="row">
 			<Top_section/>
 			<Body_section/>
-			<Body_section/>
 		</div>	
 	</div>
 	,
