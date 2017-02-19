@@ -18,6 +18,7 @@
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
 			],
-		"video":["/jsx/ad/ad.jsx"]		
+		"video":["/jsx/ad/ad.jsx"],
+		"docviewer":" /jsx/doc/home.jsx, /jsx/doc/form.jsx,/jsx/doc/doc.jsx"	
 	}  
 }
