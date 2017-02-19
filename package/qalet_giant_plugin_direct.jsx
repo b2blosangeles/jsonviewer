@@ -13,6 +13,7 @@
       ],
 	"mapping": {
 		"giant_plugin":[
+				"/jsx/giant_plugin/ad.jsx",
 				"/jsx/giant_plugin/top_section.jsx",
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
