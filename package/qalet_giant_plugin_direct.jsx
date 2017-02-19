@@ -11,7 +11,7 @@
 		"/js/jquery.json-viewer.js",
 		"/js/qalet_plugin.js"
       ],
-	  "mapping": {
+	"mapping": {
 		"giant_plugin":"/jsx/giant_plugin/top_section.jsx,/jsx/giant_plugin/main.jsx"
 	}  
 }
