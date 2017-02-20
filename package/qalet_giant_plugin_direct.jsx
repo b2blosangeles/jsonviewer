@@ -15,7 +15,7 @@
 		"giant_angular":[
 			"/mservices/angular/main.js"
 		],	
-		"giant_smarty":[
+		"giant_jsmarty":[
 			"/mservices/smarty/main.js"
 		],		
 		"video":["/mservices/jsx/ad/ad.jsx"],
