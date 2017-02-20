@@ -1,7 +1,5 @@
 {
-    "tpls":[
-		"tpl/home.html"
-	],
+    "tpls":[],
     "filelist":[
 		"/js/json2.min.js",
 		"/js/jquery-2.1.3.min.js",
@@ -42,5 +40,10 @@
 			"/js/react/react-dom.min.js",
 			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"		
 		]	
-	}  	
+	},
+	"mapping_tpls": {
+		"giant_plugin":[
+			"tpl/home.html"
+		]
+	]	
 }
