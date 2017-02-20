@@ -56,7 +56,7 @@
 		"giant_angular":[
 			"tpl/home.html"
 		],
-		"giant_smarty":[
+		"giant_jsmarty":[
 			"tpl/smarty/home.html"
 		]
 	}	
