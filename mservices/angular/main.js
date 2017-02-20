@@ -17,7 +17,7 @@ angular.element(function() {
 });
 
 $('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
-angular.module('mapp', []).controller('MyController', ['$scope', function ($scope) {
+var app = angular.module('mapp', []).controller('MyController', ['$scope', function ($scope) {
 		$scope.greetMe = mapping_data;
 	  }
 	  
