@@ -1,9 +1,9 @@
 var m = mapping_data;
 (function(mapping_data) {
 	
-console.log('====6->');
+console.log('====7->');
 	var vm = mapping_data;	
-	
+	console.log(vm);
 	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 	  
 	  angular.module('myApp', [])
