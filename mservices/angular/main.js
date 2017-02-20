@@ -1,4 +1,4 @@
-$($('.'+mapping_data.id)[0]).html('<div ng-controller="MyController">angularjs Hello -- {{greetMe}}!</div>');
+$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(' == angularjs Hello == {{greetMe}}!');
   
   angular.module('myApp', [])
       .controller('MyController', ['$scope', function ($scope) {
