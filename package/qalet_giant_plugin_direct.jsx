@@ -45,5 +45,5 @@
 		"giant_plugin":[
 			"tpl/home.html"
 		]
-	]	
+	}	
 }
