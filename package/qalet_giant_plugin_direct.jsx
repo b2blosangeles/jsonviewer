@@ -12,9 +12,7 @@
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
 			],
-		"giant_angular":[
-			"/jsx/giant_plugin/ad.jsx"
-			],			
+		"giant_angular":[],			
 		"video":["/jsx/ad/ad.jsx"],
 		"docviewer":[
 
