@@ -34,7 +34,7 @@ app.directive('topSection', function() {
 
 var mapp;
 $('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
-angular.module('myApp', [])
+angular.module('mapp', [])
 	  .controller('MyController', ['$scope', function ($scope) {
 		$scope.greetMe = mapping_data;
 	  }
