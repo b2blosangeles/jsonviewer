@@ -14,7 +14,8 @@
 			],
 		"giant_angular":[
 			"/mservices/angular/main.js",
-			"/mservices/angular/directive.js"
+			"/mservices/angular/directive.js",
+			"/mservices/angular/bind.js"
 		],	
 		"giant_jsmarty":[
 			"/mservices/smarty/main.js"
