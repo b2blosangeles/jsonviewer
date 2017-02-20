@@ -10,10 +10,10 @@ angular.module('myApp_'+mapping_data.id, [])
 	  
 ]);
 */
-/*
+
 var mapp;
 angular.element(function() {  
-	angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
+//	angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
 });
 
 $('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
@@ -29,19 +29,8 @@ app.directive('topSection', function() {
         template:_TPL_['tpl/angularjs/module.html']
     };
 }); 
+angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
 
-*/
 
-var mapp;
-angular.element(function() {
-  angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
-});
 
-$('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
-angular.module('mapp', [])
-	  .controller('MyController', ['$scope', function ($scope) {
-		$scope.greetMe = mapping_data;
-	  }
-	  
-]);
 // angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
