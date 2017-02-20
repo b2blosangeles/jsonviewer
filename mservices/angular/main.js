@@ -1,15 +1,12 @@
-	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController"+mapping_data.id).html(_TPL_['tpl/angularjs/home.html']);
-	  angular.module('myApp'+mapping_data.id, [])
-		  .controller('MyController'+mapping_data.id, ['$scope', function ($scope) {
-			  
-			  console.log('mapping_data--5->');
-			  console.log(mapping_data);
+	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
+	  angular.module('myApp_'+mapping_data.id, [])
+		  .controller('MyController', ['$scope', function ($scope) {
 			$scope.greetMe = mapping_data;
 		  }
 		  
 		  ]);
 
 		angular.element(function() {
-		  angular.bootstrap($('.'+mapping_data.id)[0], ['myApp'+mapping_data.id]);
+		  angular.bootstrap($('.'+mapping_data.id)[0], ['myApp_'+mapping_data.id]);
 		});	
 
