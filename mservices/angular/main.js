@@ -12,6 +12,7 @@ app.controller('MyController', ['$scope', function ($scope) {
 	  }
 	  
 ]);
+angular.bootstrap($('.'+mapping_data.id)[0], ['app']);
 app.directive('topSection', function() {
     return {
 	restrict:'E',    
@@ -19,4 +20,3 @@ app.directive('topSection', function() {
     };
 }); 
 
-angular.bootstrap($('.'+mapping_data.id)[0], ['app']);
