@@ -2,11 +2,11 @@ $($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(' == ang
   
   angular.module('myApp', [])
       .controller('MyController', ['$scope', function ($scope) {
-        $scope.greetMe = 'World';
+        $scope.greetMe = 'World2';
       }]);
 
     angular.element(function() {
-      angular.bootstrap(document, ['myApp']);
+      angular.bootstrap($('.'+mapping_data.id)[0], ['myApp']);
     });
 	
 
