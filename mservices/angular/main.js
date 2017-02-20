@@ -6,7 +6,7 @@ var app = angular.module('app_'+mapping_data.id, [
 	'ngCookies',
 	'ngRoute'
 ]);
-app.controller('rootController', ['$scope', function ($scope, $location, $http, $cookies, $timeout, $sce) {
+app.controller('rootController', ['$scope$location', function ($scope, $location, $http, $cookies, $timeout, $sce) {
 		$scope.greetMe = mapping_data;
 	
 	  }
