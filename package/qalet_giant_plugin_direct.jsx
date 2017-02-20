@@ -37,7 +37,9 @@
 			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"			
 			],
 		"giant_angular":[
-			"/js/angularjs/angular_v1.4.5.min.js"
+			"/js/angular-1.4.5/angular.min.js",
+			"/js/angular-1.4.5/angular-cookies.min.js",
+			"/js/angular-1.4.5/angular-route.min.js"
 		],	
 		"giant_jsmarty":[
 			"/js/jsmarty/smart-2.9.min.js"
