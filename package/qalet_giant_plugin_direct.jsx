@@ -48,7 +48,6 @@
 			"tpl/home.html"
 		],
 		"giant_smarty":[
-			"/js/react/react.min.js"
 		]
 	}	
 }
