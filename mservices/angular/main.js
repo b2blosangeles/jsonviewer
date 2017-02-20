@@ -19,4 +19,4 @@ app.directive('topSection', function() {
     };
 }); 
 
-angular.bootstrap($('.'+mapping_data.id)[0], ['myApp']);
+angular.bootstrap($('.'+mapping_data.id)[0], ['app']);
