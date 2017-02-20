@@ -4,12 +4,7 @@ angular.element(function() {
   
 });
 */
-app.directive('topSection', function() {
-    return {
-	restrict:'E',    
-        template:_TPL_['tpl/angularjs/module.html']
-    };
-}); 
+
 
 console.log('myApp');
 var myApp;
@@ -20,4 +15,11 @@ app.controller('MyController', ['$scope', function ($scope) {
 	  }
 	  
 ]);
+app.directive('topSection', function() {
+    return {
+	restrict:'E',    
+        template:_TPL_['tpl/angularjs/module.html']
+    };
+}); 
+
 angular.bootstrap($('.'+mapping_data.id)[0], ['myApp']);
