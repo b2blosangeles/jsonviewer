@@ -13,7 +13,8 @@
 				"/mservices/jsx/giant_plugin/main.jsx"
 			],
 		"giant_angular":[
-			"/mservices/angular/main.js"
+			"/mservices/angular/main.js",
+			"/mservices/angular/directive.js"
 		],	
 		"giant_jsmarty":[
 			"/mservices/smarty/main.js"
