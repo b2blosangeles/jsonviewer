@@ -13,6 +13,7 @@
 				"/jsx/giant_plugin/main.jsx"
 			],
 		"giant_angular":[
+			"/jsx/giant_plugin/ad.jsx"
 			],			
 		"video":["/jsx/ad/ad.jsx"],
 		"docviewer":[
