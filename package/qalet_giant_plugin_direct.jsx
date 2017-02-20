@@ -7,19 +7,19 @@
       ],
 	"mapping": {
 		"giant_react":[
-				"/jsx/giant_plugin/ad.jsx",
-				"/jsx/giant_plugin/top_section.jsx",
-				"/jsx/giant_plugin/body_section.jsx",
-				"/jsx/giant_plugin/main.jsx"
+				"/mservice/jsx/giant_plugin/ad.jsx",
+				"/mservice/jsx/giant_plugin/top_section.jsx",
+				"/mservice/jsx/giant_plugin/body_section.jsx",
+				"/mservice/jsx/giant_plugin/main.jsx"
 			],
 		"giant_angular":[],	
 		"giant_smarty":[],		
-		"video":["/jsx/ad/ad.jsx"],
+		"video":["/mservice/jsx/ad/ad.jsx"],
 		"docviewer":[
 
-				"/jsx/doc/home.jsx", 
+				"/mservice/jsx/doc/home.jsx", 
 				"/jsx/doc/form.jsx",
-				"/jsx/doc/doc.jsx"
+				"/mservice/jsx/doc/doc.jsx"
 			]	
 	}, 
 	"dependence": {
