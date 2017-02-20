@@ -2,7 +2,7 @@ $($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['t
   
   angular.module('myApp', [])
       .controller('MyController', ['$scope', function ($scope) {
-        $scope.greetMe = 'World2';
+        $scope.greetMe = mapping_data;
       }]);
 
     angular.element(function() {
