@@ -12,11 +12,12 @@
 				"/mservices/jsx/giant_plugin/body_section.jsx",
 				"/mservices/jsx/giant_plugin/main.jsx"
 			],
-		"giant_angular":[],	
+		"giant_angular":[
+			"/mservices/angular/main.js"
+		],	
 		"giant_smarty":[],		
 		"video":["/mservices/jsx/ad/ad.jsx"],
 		"docviewer":[
-
 				"/mservices/jsx/doc/home.jsx", 
 				"/mservices/jsx/doc/form.jsx",
 				"/mservices/jsx/doc/doc.jsx"
