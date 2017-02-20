@@ -19,6 +19,7 @@ angular.element(function() {
 $('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 var app = angular.module('mapp', []).controller('MyController', ['$scope', function ($scope) {
 		$scope.greetMe = mapping_data;
+		angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
 	  }
 	  
 ]);
@@ -29,7 +30,7 @@ app.directive('topSection', function() {
         template:_TPL_['tpl/angularjs/module.html']
     };
 }); 
-// angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
+
 
 
 
