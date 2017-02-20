@@ -6,12 +6,14 @@
 		"/js/qalet_plugin.js"
       ],
 	"mapping": {
-		"giant_plugin":[
+		"giant_react":[
 				"/jsx/giant_plugin/ad.jsx",
 				"/jsx/giant_plugin/top_section.jsx",
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
 			],
+		"giant_angular":[
+			],			
 		"video":["/jsx/ad/ad.jsx"],
 		"docviewer":[
 
@@ -21,7 +23,7 @@
 			]	
 	}, 
 	"dependence": {
-		"giant_plugin":[
+		"giant_react":[
 			"/js/showdown/showdown.min.js",
 			"/js/x2js/xml2json.min.js",		
 			"/js/jquery.json-viewer.js",
@@ -42,7 +44,7 @@
 		]	
 	},
 	"ms_tpls": {
-		"giant_plugin":[
+		"giant_angular":[
 			"tpl/home.html"
 		]
 	}	
