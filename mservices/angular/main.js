@@ -5,9 +5,6 @@ angular.element(function() {
 });
 */
 
-
-console.log('myApp');
-var myApp;
 $('.'+mapping_data.id)[0].attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 var app = angular.module('app', []);
 app.controller('MyController', ['$scope', function ($scope) {
