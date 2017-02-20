@@ -5,13 +5,13 @@ console.log('====77->');
 	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 	  
 	  angular.module('myApp', [])
-		  .controller('MyController', ['$scope', (function($scope, mapping_data) { 
+		  .controller('MyController', ['$scope', (function($scope) { 
 			  return function ($scope) {
 				console.log('mapping_data--88->');
 				console.log(mapping_data);
 				$scope.greetMe = mapping_data;
 			  }	
-		  })($scope, mapping_data)
+		  })($scope)
 		  
 		  ]);
 
