@@ -54,7 +54,8 @@
 	},
 	"ms_tpls": {
 		"giant_angular":[
-			"tpl/angularjs/home.html"
+			"tpl/angularjs/home.html",
+			"tpl/angularjs/module.html"
 		],
 		"giant_jsmarty":[
 			"tpl/smarty/home.html"
