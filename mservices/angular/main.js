@@ -22,7 +22,7 @@ app.controller('MyController', ['$scope', function ($scope) {
 	  }
 	  
 ]);
-
+/*
 app.directive('topSection', function() {
     return {
 	restrict:'E',    
@@ -30,3 +30,4 @@ app.directive('topSection', function() {
     };
 }); 
 
+*/
