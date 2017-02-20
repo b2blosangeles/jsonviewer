@@ -21,6 +21,7 @@ var _CALLBACK_ = function() {
 			}		
 			for (var i=0; i<f.length; i++) {
 				if (typeof _QALET_[f[i].module] == 'function') {
+					console.log(f[i]);
 					_QALET_[f[i].module](f[i])();
 					//$(v[i]).fadeIn( "slow");					
 				} else {
