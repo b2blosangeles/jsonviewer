@@ -3,10 +3,7 @@ angular.element(function() {
 	angular.bootstrap($('.'+mapping_data.id)[0], ['app_'+mapping_data.id]);	 
 });
 var app = angular.module('app_'+mapping_data.id, []);
-app.controller('rootController', ['$scope', function ($scope) {
-		$scope.greetMe = mapping_data;
+app.controller('rootController', function ($scope) {
+	$scope.greetMe = mapping_data;
 	
-	  }
-	  
-]);
-
+});
