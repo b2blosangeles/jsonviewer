@@ -57,6 +57,7 @@
 			"tpl/home.html"
 		],
 		"giant_smarty":[
+			"tpl/smarty/home.html"
 		]
 	}	
 }
