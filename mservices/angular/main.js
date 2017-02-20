@@ -33,6 +33,10 @@ app.directive('topSection', function() {
 */
 
 var mapp;
+angular.element(function() {
+  angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
+});
+
 $('.'+mapping_data.id).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 angular.module('mapp', [])
 	  .controller('MyController', ['$scope', function ($scope) {
@@ -40,4 +44,4 @@ angular.module('mapp', [])
 	  }
 	  
 ]);
-angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
+// angular.bootstrap($('.'+mapping_data.id)[0], ['mapp']);
