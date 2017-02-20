@@ -43,7 +43,8 @@
 	},
 	"ms_tpls": {
 		"giant_plugin":[
-			"tpl/home.html"
+			"tpl/home.html",
+			"/jsx/ad/ad.jsx"
 		]
 	}	
 }
