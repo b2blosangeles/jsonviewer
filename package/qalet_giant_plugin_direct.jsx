@@ -12,7 +12,8 @@
 				"/jsx/giant_plugin/body_section.jsx",
 				"/jsx/giant_plugin/main.jsx"
 			],
-		"giant_angular":[],			
+		"giant_angular":[],	
+		"giant_smarty":[],		
 		"video":["/jsx/ad/ad.jsx"],
 		"docviewer":[
 
@@ -45,6 +46,9 @@
 	"ms_tpls": {
 		"giant_angular":[
 			"tpl/home.html"
+		],
+		"giant_smarty":[
+			"/js/react/react.min.js"
 		]
 	}	
 }
