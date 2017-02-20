@@ -1,4 +1,4 @@
-
+console.log(mapping_data);
 	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
 	  
 	  angular.module('myApp', [])
