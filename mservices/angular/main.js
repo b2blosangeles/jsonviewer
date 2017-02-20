@@ -1,8 +1,8 @@
-	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController").html(_TPL_['tpl/angularjs/home.html']);
+	$($('.'+mapping_data.id)[0]).attr("ng-controller", "MyController"+mapping_data.id).html(_TPL_['tpl/angularjs/home.html']);
 	(function(nnn) { 
 
 	  angular.module('myApp', [])
-		  .controller('MyController', ['$scope', function ($scope) {
+		  .controller('MyController'+mapping_data.id, ['$scope', function ($scope) {
 			  
 		console.log('--nnn-y-->');
 		console.log(nnn);			  
