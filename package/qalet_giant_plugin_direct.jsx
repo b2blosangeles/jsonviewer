@@ -41,7 +41,7 @@
 			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"		
 		]	
 	},
-	"mservice_tpls": {
+	"ms_tpls": {
 		"giant_plugin":[
 			"tpl/home.html"
 		]
