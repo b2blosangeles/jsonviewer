@@ -1,4 +1,6 @@
-    angular.module('myApp', [])
+$($('.'+mapping_data.id)[0]).html('angularjs Hello -- {{greetMe}}!');
+  
+  angular.module('myApp', [])
       .controller('MyController', ['$scope', function ($scope) {
         $scope.greetMe = 'World';
       }]);
@@ -7,4 +9,4 @@
       angular.bootstrap(document, ['myApp']);
     });
 	
-$($('.'+mapping_data.id)[0]).html('angularjs Hello {{greetMe}}!');
+
