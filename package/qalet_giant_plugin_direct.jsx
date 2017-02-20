@@ -38,6 +38,9 @@
 		"giant_angular":[
 			"/js/angularjs/angular_v1.4.5.min.js"
 		],	
+		"giant_jsmarty":[
+			"/js/jsmarty/smart-2.9.min.js"
+		],
 		"video":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
