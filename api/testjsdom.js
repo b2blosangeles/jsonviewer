@@ -11,9 +11,13 @@ pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {
       'http://code.jquery.com/jquery-1.5.min.js'
     ]
   }, function (err, window) {
-	  res.send(body);
-	  
-    var $ = window.jQuery;
-    res.send($('body').html());
+	  if (err) {
+		  res.send('errrr');
+	  } else {
+		res.send(body);
+		return true;		
+		var $ = window.jQuery;
+		res.send($('body').html());
+	  }
   });
 });
