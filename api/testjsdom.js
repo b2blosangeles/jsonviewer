@@ -1,6 +1,6 @@
 pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
-
+res.send(body);
   if (error && response.statusCode !== 200) {
     res.send('Error when contacting google.com')
   }
