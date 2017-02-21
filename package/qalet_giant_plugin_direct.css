@@ -2,7 +2,10 @@
     "filelist":[],
 	"mservice": {
 		"giant_jsmarty":[
-				"css/giant_smarty/mservice.css"
-			]
+			"css/giant_smarty/mservice.css"
+			],
+		"giant_angular":[	
+			"css/giant_angular/mservice.css"
+		]
 	}
 }
