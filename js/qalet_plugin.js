@@ -6,8 +6,7 @@ var _CALLBACK_ = function() {
 				
 				return JSON.parse(t);
 			}			
-			var v = $('QALET'), r={}, f=[];
-			
+			var v = $('QALET'), r={}, f=[];	
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
@@ -23,7 +22,8 @@ var _CALLBACK_ = function() {
 							$.get(o.css, function( data ) {
 								data = data.
 								replace(/\/\*(.*)\*\/((\n|\r|\s)+|)/gi,'').
-								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
+								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, o.id + ' $1 { $2} '); 
+							//	replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
