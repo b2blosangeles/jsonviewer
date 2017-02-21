@@ -5,7 +5,7 @@
 		"/js/jquery-2.1.3.min.js",
 		"/js/qalet_plugin.js"
       ],
-	"mapping": {
+	"mservice": {
 		"giant_react":[
 				"/mservices/jsx/giant_plugin/ad.jsx",
 				"/mservices/jsx/giant_plugin/top_section.jsx",
