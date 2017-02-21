@@ -18,12 +18,13 @@ var _CALLBACK_ = function() {
 					f[f.length] = o;
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').fadeIn( "slow");
 					if (o.css) {
-						$.get(o.css, function( data ) {
-							data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
-							$('head').append('<style>'+data+'</style>');
-						  console.log(data);
-						});						
-						
+						(function(o){
+							$.get(o.css, function( data ) {
+								data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
+								$('head').append('<style>'+data+'</style>');
+							  console.log(data);
+							});						
+						})(o);
 						
 						$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
 					}
