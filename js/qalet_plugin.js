@@ -19,13 +19,13 @@ var _CALLBACK_ = function() {
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').fadeIn( "slow");
 					if (o.css) {
 						$.get(o.css, function( data ) {
-							data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.code)?" .class_":''); 
+							data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((arr[v].code)?" .class_":'')+ arr[v].code + ((arr[v].code)?'':'') + ' $1 { $2} '); 
 							$('head').append('<style>'+data+'</style>');
-							console.log(data);
+						  console.log(data);
 						});						
 						
 						
-					//	$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
+						$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
 					}
 				}
 			}		
