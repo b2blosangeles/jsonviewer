@@ -16,7 +16,7 @@ var _CALLBACK_ = function() {
 					r[o.module] = true;
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
-					 $(v[i]).replaceWith('<div class="'+o.id+'"></div>').fadeIn( "slow");
+					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').fadeIn( "slow");
 				}
 			}		
 			for (var i=0; i<f.length; i++) {
