@@ -17,6 +17,7 @@ var _CALLBACK_ = function() {
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
+					 $('.'+o.id).hide();
 					 //.fadeIn( "slow");
 					if (o.css) {
 						(function(o){
