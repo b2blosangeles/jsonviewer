@@ -4,7 +4,8 @@ if (url) {
 	var jqdom = require(env.space_path + '/api/jqdom/node_modules/jqdom');
 	pkg.request(url, function (err, resp, body) {
 		var $ = jqdom(body);
-		res.send($('title').text());
+		res.send(url);
+		// res.send($('title').text());
 	});
 } else {
 	 res.send('Missing url!');
