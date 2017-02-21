@@ -20,11 +20,12 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						$.get(o.css, function( data ) {
 							data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.code)?" .class_":'') 
+							$('head').append('<style>'+data+'</style>');
 							console.log(data);
 						});						
 						
 						
-						$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
+					//	$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
 					}
 				}
 			}		
