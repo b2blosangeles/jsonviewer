@@ -22,7 +22,7 @@ var _CALLBACK_ = function() {
 							$.get(o.css, function( data ) {
 								data = data.
 								replace(/\/\*(.*)\*\/((\n|\r|\s)+|)/gi,'').
-								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, o.id + ' $1 { $2} '); 
+								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, '.' + o.id + ' $1 { $2} '); 
 							//	replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
