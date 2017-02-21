@@ -31,11 +31,15 @@ var _CALLBACK_ = function() {
 			}		
 			for (var i=0; i<f.length; i++) {
 				if (typeof _QALET_[f[i].module] == 'function') {
-					_QALET_[f[i].module](f[i]);				
+					_QALET_[f[i].module](f[i]);
+					//$(v[i]).fadeIn( "slow");					
 				} else {
 					console.log('=='+f[i].module+'==');
 				}
 			}
+	
+		//	$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: '//docviewer.qalet.com/package/docviewer_wp.min.css' });
+		//	$.getScript('http://docviewer.qalet.com/package/qalet_plugin_plus.jsx?plus='+Object.keys(r).join(',') + '&callback=_QACALLBACK_');
 		}
 	);
 };
