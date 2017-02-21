@@ -19,7 +19,8 @@ var _CALLBACK_ = function() {
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').fadeIn( "slow");
 					if (o.css) {
 						$.get(o.css, function( data ) {
-						  console.log(data);
+							data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.code)?" .class_":'') 
+							console.log(data);
 						});						
 						
 						
