@@ -8,15 +8,16 @@ pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {
     html: body,
     scripts: [
       'http://code.jquery.com/jquery-1.5.min.js'
-    ]
-  }, function (err, window) {
-	  if (err) {
-		  res.send('errrr');
-	  } else {
-		res.send(body);
-		return true;		
-		var $ = window.jQuery;
-		res.send($('body').html());
+    ],
+    done:function (err, window) {
+		  if (err) {
+			  res.send('errrr');
+		  } else {
+			res.send(body);
+			return true;		
+			var $ = window.jQuery;
+			res.send($('body').html());
+		  }
 	  }
   });
 });
