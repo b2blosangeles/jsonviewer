@@ -21,7 +21,9 @@ var _CALLBACK_ = function() {
 						 $('.'+o.id).hide();
 						(function(o){
 							$.get(o.css, function( data ) {
-								data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
+								data = data.
+								replace(/\/\*()\*\//gi,'').
+								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
