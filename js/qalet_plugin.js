@@ -17,14 +17,13 @@ var _CALLBACK_ = function() {
 					o.id = o.module + '_plugin_' + i;
 					f[f.length] = o;
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
-					
-					 //.fadeIn( "slow");
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
 							$.get(o.css, function( data ) {
 								data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
 								$('head').append('<style>'+data+'</style>');
+								$('.'+o.id).hide();
 							});						
 						})(o);
 					}
