@@ -1,5 +1,6 @@
 pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
+
   if (error && response.statusCode !== 200) {
     res.send('Error when contacting google.com')
   }
@@ -10,6 +11,8 @@ pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {
       'http://code.jquery.com/jquery-1.5.min.js'
     ]
   }, function (err, window) {
+	  res.send(body);
+	  
     var $ = window.jQuery;
     res.send($('body').html());
   });
