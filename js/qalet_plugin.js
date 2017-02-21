@@ -24,6 +24,7 @@ var _CALLBACK_ = function() {
 								data = data.replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
+								console.log(data);
 							});						
 						})(o);
 					}
