@@ -4,7 +4,6 @@ pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {
   if (error && response.statusCode !== 200) {
     res.send('Error when contacting google.com')
   }
-	res.send('errrr00');
   jsdom.env({
     html: body,
     scripts: [
