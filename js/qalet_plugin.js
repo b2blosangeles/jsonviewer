@@ -18,6 +18,11 @@ var _CALLBACK_ = function() {
 					f[f.length] = o;
 					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').fadeIn( "slow");
 					if (o.css) {
+						$.get(o.css, function( data ) {
+						  console.log(data);
+						});						
+						
+						
 						$('<link>').appendTo('head').attr({ type: 'text/css', rel: 'stylesheet', href: o.css });
 					}
 				}
