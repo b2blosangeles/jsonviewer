@@ -4,5 +4,9 @@
 	<top-section></top-section>
 	<hr>
 	<h2>angularjs Hello ==---= {{greetMe}}!</h2>
-
+	
+	<select name="mySelect" id="mySelect"
+      		ng-options="option.name for option in data.availableOptions track by option.id"
+      		ng-model="data.selectedOption">
+	</select>
 </div>
