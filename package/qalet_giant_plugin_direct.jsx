@@ -4,7 +4,7 @@
 		"/js/json2.min.js",
 		"/js/jquery-2.1.3.min.js",
 		"/js/qalet_plugin.js",
-	    	"/js/bootstrap.3.1.1.js"
+	    	"/js/bootstrap.3.3.7.js"
       ],
 	"mservice": {
 		"giant_react":[
