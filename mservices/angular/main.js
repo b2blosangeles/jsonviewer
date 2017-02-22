@@ -15,6 +15,6 @@ app.controller('rootController', function ($rootScope, $scope, $location, $http,
 	      {id: '2', name: 'Option B'},
 	      {id: '3', name: 'Option C'}
 	    ],
-	    selectedOption: {id: '3', name: 'Option C'} //This sets the default value of the select in the ui
+	    selectedOption: {id: '3', name: 'Option rc'} //This sets the default value of the select in the ui
 	 };
 });
