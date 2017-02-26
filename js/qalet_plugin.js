@@ -1,10 +1,10 @@
 var _CALLBACK_ = function() {
-	$(document).ready(
-		function() {
-			function URL(url) {
-				var a = document.createElement('a').href; a.href = url;
-				return a.cloneNode(false).href;
-			}			
+	function URL(url) {
+		var a = document.createElement('a').href; a.href = url;
+		return a.cloneNode(false).href;
+	}		
+	$(document).ready(	
+		function() {		
 			function parse(v) {
 				var t = v.replace(/(“|”)/ig, '"');
 				return JSON.parse(t);
