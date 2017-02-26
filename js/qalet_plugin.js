@@ -25,6 +25,8 @@ var _CALLBACK_ = function() {
 								return a.cloneNode(false).href;
 							}								
 							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
+								var v = data.match(/^\/\*ERR(.*)\*\//);
+								console.log(v);
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								// console.log(data);
