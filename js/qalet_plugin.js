@@ -1,14 +1,10 @@
 var _CALLBACK_ = function() {
-	var getAbsoluteUrl = (function() {
-		var a = null;
-		return function(url) {
-			a = a || document.createElement('a');
-			a.href = url;
-
-			return a.href;
-		};
-	})();
-		alert(getAbsoluteUrl()('sd.js'))
+	function qualifyURL(url) {
+		var a = document.createElement('a');
+		a.href = url;
+		return a.cloneNode(false).href;
+	}
+		alert(qualifyURL('sd.js'))
 	$(document).ready(
 		function() {
 			function parse(v) {
