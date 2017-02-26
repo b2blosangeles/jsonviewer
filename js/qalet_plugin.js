@@ -22,7 +22,7 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							$.get('/_x/cssrange/.'+ o.id +'/http://'+URL(o.css), function( data ) { 
+							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
