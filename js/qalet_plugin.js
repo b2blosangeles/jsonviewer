@@ -1,9 +1,5 @@
 var _CALLBACK_ = function() {
-	function URL(url) {
-		var a = document.createElement('a');
-		a.href = url;
-		return a.cloneNode(false).href;
-	}		
+	
 	$(document).ready(	
 		function() {		
 			function parse(v) {
@@ -23,6 +19,11 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
+							function URL(url) {
+								var a = document.createElement('a');
+								a.href = url;
+								return a.cloneNode(false).href;
+							}								
 							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
