@@ -19,7 +19,7 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							$.get('http://qalet.com/_x/cssrange/'+ o.id +'/http://docviewer.qalet.com/'+o.css, function( data ) { 
+							$.get('http://qalet.com/_x/cssrange/.'+ o.id +'/http://docviewer.qalet.com'+o.css, function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
