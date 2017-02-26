@@ -1,15 +1,12 @@
 var _CALLBACK_ = function() {
-	function qualifyURL(url) {
-		var a = document.createElement('a');
-		a.href = url;
-		return a.cloneNode(false).href;
-	}
-		alert(qualifyURL('sd.js'))
 	$(document).ready(
 		function() {
+			function URL(url) {
+				var a = document.createElement('a').href; a.href = url;
+				return a.cloneNode(false).href;
+			}			
 			function parse(v) {
 				var t = v.replace(/(“|”)/ig, '"');
-				
 				return JSON.parse(t);
 			}			
 			var v = $('QALET'), r={}, f=[];	
@@ -25,7 +22,7 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							$.get('http://qalet.com/_x/cssrange/.'+ o.id +'/http://docviewer.qalet.com'+o.css, function( data ) { 
+							$.get('/_x/cssrange/.'+ o.id +'/http://'+URL(o.css), function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
