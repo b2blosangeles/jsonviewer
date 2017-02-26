@@ -19,11 +19,7 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							$.get(o.css, function( data ) {
-								data = data.
-								replace(/\/\*(.*)\*\/((\n|\r|\s)+|)/gi,'').
-								replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, '.' + o.id + ' $1 { $2} '); 
-							//	replace(/([^\{]+)\{([^\}]+)\}((\s|;)+|$)/gi, ((o.module)?" .class_":'')+ o.module + ' $1 { $2} '); 
+							$.get('http://qalet.com/_x/cssrange/uuu/http://docviewer.qalet.com/'+o.css, function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
 								console.log(data);
