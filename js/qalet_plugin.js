@@ -26,10 +26,12 @@ var _CALLBACK_ = function() {
 							}								
 							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
 								var v = data.match(/^\/\*ERR(.*)\*\//);
-								console.log(v);
-								$('head').append('<style>'+data+'</style>');
-								$('.'+o.id).show();
-								// console.log(data);
+								if (v) {
+									console.log(v[1]);
+								} else {
+									$('head').append('<style>'+data+'</style>');
+									$('.'+o.id).show();									
+								}
 							});						
 						})(o);
 					}
