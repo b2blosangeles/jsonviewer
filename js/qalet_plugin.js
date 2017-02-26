@@ -27,7 +27,7 @@ var _CALLBACK_ = function() {
 							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
 								$('head').append('<style>'+data+'</style>');
 								$('.'+o.id).show();
-								console.log(data);
+								// console.log(data);
 							});						
 						})(o);
 					}
