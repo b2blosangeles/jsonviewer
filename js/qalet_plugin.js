@@ -1,6 +1,7 @@
 var _CALLBACK_ = function() {
 	function URL(url) {
-		var a = document.createElement('a').href; a.href = url;
+		var a = document.createElement('a');
+		a.href = url;
 		return a.cloneNode(false).href;
 	}		
 	$(document).ready(	
