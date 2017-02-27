@@ -30,6 +30,14 @@ var _CALLBACK_ = function() {
 								$('.'+o.id).show();									
 							});		
 							var color = ['#2471A3', '#17A589', '#D35400', '#943126'];
+							function getRandomColor() {
+								var letters = '0123456789ABCDEF';
+								var color = '#';
+								for (var i = 0; i < 6; i++ ) {
+									color += letters[Math.floor(Math.random() * 16)];
+								}
+								return color;
+							}							
 							setInterval(
 								function () {
 									$.get('/css/giant_smarty/mservice2.css', function( data ) { 
@@ -40,11 +48,10 @@ var _CALLBACK_ = function() {
 											jSmart.prototype.left_delimiter = '[';
 											jSmart.prototype.right_delimiter = ']';
 											
-											var item = color[Math.floor(Math.random()*color.length)];
-											
+											var item = color[Math.floor(Math.random()*color.length)];											
 											var tpl = new jSmart(UIQALET.css.stringify(v));
 											// console.log(tpl.fetch( {color:item}));
-											$('head').append('<style>'+tpl.fetch( {color:item})+'</style>');
+											$('head').append('<style>'+tpl.fetch( {color:getRandomColor()})+'</style>');
 										} catch (err) {
 											console.log(err.message);
 										}
