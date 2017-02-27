@@ -38,8 +38,8 @@ var _CALLBACK_ = function() {
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 											
 										//	console.log(jsmarty.render(tpl, {}));
-											jSmart.left_delimiter = '[';
-											jSmart.right_delimiter = ']';										
+											jSmart->left_delimiter = '[';
+											jSmart->right_delimiter = ']';										
 											var tpl = new jSmart(UIQALET.css.stringify(v));
 
 											
@@ -50,7 +50,7 @@ var _CALLBACK_ = function() {
 										}
 										$('.'+o.id).show();									
 									});										
-								}, 4000
+								}, 1000
 							
 							);		
 						})(o);
