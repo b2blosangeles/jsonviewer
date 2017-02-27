@@ -43,7 +43,7 @@ var _CALLBACK_ = function() {
 											var item = color[Math.floor(Math.random()*color.length)];
 											
 											var tpl = new jSmart(UIQALET.css.stringify(v));
-											console.log(tpl.fetch( {color:item}));
+											// console.log(tpl.fetch( {color:item}));
 											$('head').append('<style>'+tpl.fetch( {color:item})+'</style>');
 										} catch (err) {
 											console.log(err.message);
