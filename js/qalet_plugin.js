@@ -27,6 +27,7 @@ var _CALLBACK_ = function() {
 							$.get(URL(o.css), function( data ) { 
 								try {
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+									console.log(data.replace(/\}([\;|\s]*)/g, '} '));
 									var s = UIQALET.css.ruleSelect(v.stylesheet,o.id);
 									console.log(UIQALET.css.stringify(s));
 									$('head').append('<style>'+UIQALET.css.stringify(s)+'</style>');
