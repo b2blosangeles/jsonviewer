@@ -36,6 +36,10 @@ var _CALLBACK_ = function() {
 										try {
 											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+											
+										//	console.log(jsmarty.render(tpl, {}));
+											var tpl = new jSmart(UIQALET.css.stringify(v));
+											console.log(tpl.fetch( {err:123}));
 											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 										} catch (err) {
 											console.log(err.message);
