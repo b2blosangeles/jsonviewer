@@ -38,14 +38,14 @@ var _CALLBACK_ = function() {
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 											
 										//	console.log(jsmarty.render(tpl, {}));
-											jSmart.prototype.left_delimiter = '[';
-											jSmart.prototype.right_delimiter = ']';
+
 										//	jSmart.ldelim = '[';
 										//	jSmart.rdelim = ']';										
 											var tpl = new jSmart(UIQALET.css.stringify(v));
-
+											tpl.prototype.left_delimiter = '[';
+											tpl.prototype.right_delimiter = ']';
 											
-											console.log(tpl.fetch( {color:'lightblue'}));
+											console.log(tpl.fetch( {color:'yellow'}));
 											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 										} catch (err) {
 											console.log(err.message);
