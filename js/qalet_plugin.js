@@ -29,10 +29,9 @@ var _CALLBACK_ = function() {
 									console.log(data.replace(/\}([\;|\s]*)/g, '} '));
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 									console.log(v);
-									var s = UIQALET.css.ruleSelect(v.stylesheet,o.id);
-									console.log(s);
-									console.log(UIQALET.css.stringify(s));
-									$('head').append('<style>'+UIQALET.css.stringify(s)+'</style>');
+									UIQALET.css.ruleSelect(v.stylesheet,o.id);
+									console.log(UIQALET.css.stringify(v));
+									$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 								} catch (err) {
 									console.log(err.message);
 								}
