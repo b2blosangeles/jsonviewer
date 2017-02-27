@@ -19,11 +19,12 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
+							/*
 							function URL(url) {
 								var a = document.createElement('a');
 								a.href = url;
 								return a.cloneNode(false).href;
-							}
+							}*/
 							$.get(URL(o.css), function( data ) { 
 								try {
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
