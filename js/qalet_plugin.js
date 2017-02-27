@@ -49,8 +49,8 @@ var _CALLBACK_ = function() {
 				}
 			}		
 			for (var i=0; i<f.length; i++) {
-				if (typeof _QALET_[f[i].module] == 'function') {
-					_QALET_[f[i].module](f[i]);				
+				if (typeof _QALET_._Q[f[i].module] == 'function') {
+					_QALET_._Q[f[i].module](f[i]);				
 				} else {
 					console.log('=='+f[i].module+'==');
 				}
