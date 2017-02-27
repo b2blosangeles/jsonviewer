@@ -3,9 +3,9 @@
     "filelist":[
 		"/js/json2.min.js",
 		"/js/jquery-2.1.3.min.js",
+	    	"/js/UIQALET/css.js",
 		"/js/qalet_plugin.js",
-	    	"/js/bootstrap.3.3.7.js",
-	    	"/js/UIQALET/css.js"
+	    	"/js/bootstrap.3.3.7.js"
       ],
 	"mservice": {
 		"giant_react":[
