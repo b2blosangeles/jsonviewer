@@ -34,6 +34,7 @@ var _CALLBACK_ = function() {
 								function () {
 									$.get('/css/giant_smarty/mservice2.css', function( data ) { 
 										try {
+											akert(2);
 											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
