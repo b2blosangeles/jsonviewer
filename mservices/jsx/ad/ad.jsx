@@ -1,4 +1,5 @@
 try {
+	/*
 		var Videoitem =  React.createClass({
 			render: function() {
 				return (
@@ -61,7 +62,8 @@ try {
 			<App/>	
 			,
 			 $('.'+mapping_data.id)[0]
-		);	
+		);
+	*/
 } catch (err) {
 	alert(err.message);
 }
