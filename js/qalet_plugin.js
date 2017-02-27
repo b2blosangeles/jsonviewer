@@ -25,7 +25,7 @@ var _CALLBACK_ = function() {
 								a.href = url;
 								return a.cloneNode(false).href;
 							}*/
-							$.get(URL(o.css), function( data ) { 
+							$.get(o.css, function( data ) { 
 								try {
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 									UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
