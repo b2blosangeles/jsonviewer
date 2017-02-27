@@ -38,8 +38,10 @@ var _CALLBACK_ = function() {
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 											
 										//	console.log(jsmarty.render(tpl, {}));
-											jSmart.ldelim = '[';
-											jSmart.rdelim = ']';										
+											jSmart.prototype.left_delimiter = '[';
+											jSmart.prototype.right_delimiter = '[';
+										//	jSmart.ldelim = '[';
+										//	jSmart.rdelim = ']';										
 											var tpl = new jSmart(UIQALET.css.stringify(v));
 
 											
