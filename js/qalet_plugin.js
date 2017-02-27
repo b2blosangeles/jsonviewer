@@ -23,7 +23,15 @@ var _CALLBACK_ = function() {
 								var a = document.createElement('a');
 								a.href = url;
 								return a.cloneNode(false).href;
-							}								
+							}
+							$.get(URL(o.css), function( data ) { 
+								var v = UIQALET.css.parse(data);
+								var s = UIQALET.css.ruleSelect(v.stylesheet,o.id);
+								console.log(s);
+									$('head').append('<style>'+s+'</style>');
+									$('.'+o.id).show();									
+							});							
+							/*
 							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
 								var v = data.match(/^\/\*ERR(.*)\*\//);
 								if (v) {
@@ -32,7 +40,8 @@ var _CALLBACK_ = function() {
 									$('head').append('<style>'+data+'</style>');
 									$('.'+o.id).show();									
 								}
-							});						
+							});
+							*/
 						})(o);
 					}
 				}
