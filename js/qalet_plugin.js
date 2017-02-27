@@ -19,17 +19,6 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							$.get(o.css, function( data ) { 
-								try {
-									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-									UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-									$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
-								} catch (err) {
-									console.log(err.message);
-								}
-								$('.'+o.id).show();									
-							});		
-
 							function getRandomColor() {
 								var letters = '0123456789ABCDEF';
 								var color = '#';
@@ -38,26 +27,26 @@ var _CALLBACK_ = function() {
 								}
 								return color;
 							}							
-							setInterval(
-								function () {
+
 									$.get('/css/giant_smarty/mservice2.css', function( data ) { 
 										try {
 											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-											
-											jSmart.prototype.left_delimiter = '[';
-											jSmart.prototype.right_delimiter = ']';
-																					
-											var tpl = new jSmart(UIQALET.css.stringify(v));
-											$('head').append('<style>'+tpl.fetch( {color:getRandomColor()})+'</style>');
+											setInterval(
+												jSmart.prototype.left_delimiter = '[';
+												jSmart.prototype.right_delimiter = ']';											
+												function () {										
+													var tpl = new jSmart(UIQALET.css.stringify(v));
+													$('head').append('<style>'+tpl.fetch( {color:getRandomColor()})+'</style>');
+												}, 300);
 										} catch (err) {
 											console.log(err.message);
 										}
 										$('.'+o.id).show();									
 									});										
-								}, 300
+								
 							
-							);		
+									
 						})(o);
 					}
 				}
