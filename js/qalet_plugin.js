@@ -51,7 +51,7 @@ var _CALLBACK_ = function() {
 										//	tpl.prototype.right_delimiter = ']';
 											
 											console.log(tpl.fetch( {color:'yellow'}));
-											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
+											$('head').append('<style>'+tpl.fetch( {color:'yellow'})+'</style>');
 										} catch (err) {
 											console.log(err.message);
 										}
