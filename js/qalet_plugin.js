@@ -50,7 +50,7 @@ var _CALLBACK_ = function() {
 										}
 										$('.'+o.id).show();									
 									});										
-								}, 3000
+								}, 1000
 							
 							);		
 						})(o);
