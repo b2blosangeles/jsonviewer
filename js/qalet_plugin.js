@@ -39,6 +39,9 @@ var _CALLBACK_ = function() {
 											
 										//	console.log(jsmarty.render(tpl, {}));
 											var tpl = new jSmart(UIQALET.css.stringify(v));
+											tpl.left_delimiter = '[';
+											tpl.right_delimiter = ']';
+											
 											console.log(tpl.fetch( {err:123}));
 											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 										} catch (err) {
