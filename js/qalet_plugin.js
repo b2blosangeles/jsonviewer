@@ -33,9 +33,9 @@ var _CALLBACK_ = function() {
 											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 											setInterval(
-												jSmart.prototype.left_delimiter = '[';
-												jSmart.prototype.right_delimiter = ']';											
-												function () {										
+												function () {	
+													jSmart.prototype.left_delimiter = '[';
+													jSmart.prototype.right_delimiter = ']';														
 													var tpl = new jSmart(UIQALET.css.stringify(v));
 													$('head').append('<style>'+tpl.fetch( {color:getRandomColor()})+'</style>');
 												}, 300);
