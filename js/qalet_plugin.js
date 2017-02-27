@@ -29,7 +29,7 @@ var _CALLBACK_ = function() {
 									console.log(data.replace(/\}([\;|\s]*)/g, '} '));
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 									console.log(v);
-									UIQALET.css.ruleSelect(v.stylesheet,o.id);
+									UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 									console.log(UIQALET.css.stringify(v));
 									$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 								} catch (err) {
