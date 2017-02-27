@@ -1,9 +1,8 @@
 {
-    "filelist":[
-		"/css/giant_smarty/mservice.css"
-	],
+    "filelist":[],
 	"mservice": {
 		"giant_jsmarty":[
+			"/css/Bootstrap.3.3.7.css",
 			"/css/giant_smarty/mservice.css"
 			],
 		"giant_angular":[
