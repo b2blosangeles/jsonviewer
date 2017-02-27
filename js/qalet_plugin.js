@@ -19,12 +19,6 @@ var _CALLBACK_ = function() {
 					if (o.css) {
 						 $('.'+o.id).hide();
 						(function(o){
-							/*
-							function URL(url) {
-								var a = document.createElement('a');
-								a.href = url;
-								return a.cloneNode(false).href;
-							}*/
 							$.get(o.css, function( data ) { 
 								try {
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
@@ -35,17 +29,6 @@ var _CALLBACK_ = function() {
 								}
 								$('.'+o.id).show();									
 							});							
-							/*
-							$.get('/_x/cssrange/.'+ o.id +'/'+URL(o.css), function( data ) { 
-								var v = data.match(/^\/\*ERR(.*)\*\//);
-								if (v) {
-									console.log(v[1]);
-								} else {
-									$('head').append('<style>'+data+'</style>');
-									$('.'+o.id).show();									
-								}
-							});
-							*/
 						})(o);
 					}
 				}
