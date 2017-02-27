@@ -26,27 +26,25 @@ var _CALLBACK_ = function() {
 									color += letters[Math.floor(Math.random() * 16)];
 								}
 								return color;
-							}							
-
-									$.get('/css/giant_smarty/mservice2.css', function( data ) { 
-										try {
-											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-											setInterval(
-												function () {	
-													jSmart.prototype.left_delimiter = '[';
-													jSmart.prototype.right_delimiter = ']';														
-													var tpl = new jSmart(UIQALET.css.stringify(v));
-													$('head').append('<style>'+tpl.fetch( {color:getRandomColor(), bgcolor:getRandomColor()})+'</style>');
-												}, 300);
-										} catch (err) {
-											console.log(err.message);
-										}
-										$('.'+o.id).show();									
-									});										
-								
-							
-									
+							}	
+							if (o.css) {
+								$.get(o.css, function( data ) { 
+									try {
+										var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+										UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+										setInterval(
+											function () {	
+												jSmart.prototype.left_delimiter = '[';
+												jSmart.prototype.right_delimiter = ']';														
+												var tpl = new jSmart(UIQALET.css.stringify(v));
+												$('head').append('<style>'+tpl.fetch( {color:getRandomColor(), bgcolor:getRandomColor()})+'</style>');
+											}, 300);
+									} catch (err) {
+										console.log(err.message);
+									}
+									$('.'+o.id).show();									
+								});									
+							}		
 						})(o);
 					}
 				}
