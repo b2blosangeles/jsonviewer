@@ -28,8 +28,8 @@ var _CALLBACK_ = function() {
 								try {
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 									var s = UIQALET.css.ruleSelect(v.stylesheet,o.id);
-									console.log(s);
-									$('head').append('<style>'+s+'</style>');
+									console.log(UIQALET.css.stringify(s));
+									$('head').append('<style>'+UIQALET.css.stringify(s)+'</style>');
 								} catch (err) {
 									console.log(err.message);
 								}
