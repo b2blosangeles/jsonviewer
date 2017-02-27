@@ -28,7 +28,26 @@ var _CALLBACK_ = function() {
 									console.log(err.message);
 								}
 								$('.'+o.id).show();									
-							});							
+							});		
+
+							setTimeout(
+								function () {
+									$.get('/css/giant_smarty/mservice2.css', function( data ) { 
+										try {
+											var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+											UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
+										} catch (err) {
+											console.log(err.message);
+										}
+										$('.'+o.id).show();									
+									});										
+								}, 4000
+							
+							);	
+							
+
+							
 						})(o);
 					}
 				}
