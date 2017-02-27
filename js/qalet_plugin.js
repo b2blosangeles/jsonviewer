@@ -1,5 +1,4 @@
 var _CALLBACK_ = function() {
-	
 	$(document).ready(	
 		function() {		
 			function parse(v) {
