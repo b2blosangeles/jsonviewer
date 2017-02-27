@@ -45,7 +45,7 @@ var _CALLBACK_ = function() {
 											var tpl = new jSmart(UIQALET.css.stringify(v));
 
 											
-											console.log(tpl.fetch( {err:123}));
+											console.log(tpl.fetch( {color:'lightblue'}));
 											$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 										} catch (err) {
 											console.log(err.message);
