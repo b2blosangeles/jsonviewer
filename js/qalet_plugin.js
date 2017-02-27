@@ -47,7 +47,8 @@ var _CALLBACK_ = function() {
 						})(o);
 					}
 				}
-			}		
+			}
+			/*
 			for (var i=0; i<f.length; i++) {
 				if (typeof _QALET_._Q[f[i].module] == 'function') {
 					_QALET_._Q[f[i].module](f[i]);				
@@ -55,6 +56,7 @@ var _CALLBACK_ = function() {
 					console.log('=='+f[i].module+'==');
 				}
 			}
+			*/
 		}
 	);
 };
