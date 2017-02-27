@@ -26,11 +26,8 @@ var _CALLBACK_ = function() {
 							}
 							$.get(URL(o.css), function( data ) { 
 								try {
-									console.log(data.replace(/\}([\;|\s]*)/g, '} '));
 									var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-									console.log(v);
 									UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-									console.log(UIQALET.css.stringify(v));
 									$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 								} catch (err) {
 									console.log(err.message);
