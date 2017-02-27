@@ -39,7 +39,7 @@ var _CALLBACK_ = function() {
 											
 										//	console.log(jsmarty.render(tpl, {}));
 											jSmart.prototype.left_delimiter = '[';
-											jSmart.prototype.right_delimiter = '[';
+											jSmart.prototype.right_delimiter = ']';
 										//	jSmart.ldelim = '[';
 										//	jSmart.rdelim = ']';										
 											var tpl = new jSmart(UIQALET.css.stringify(v));
