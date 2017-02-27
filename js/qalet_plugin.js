@@ -37,7 +37,7 @@ var _CALLBACK_ = function() {
 													jSmart.prototype.left_delimiter = '[';
 													jSmart.prototype.right_delimiter = ']';														
 													var tpl = new jSmart(UIQALET.css.stringify(v));
-													$('head').append('<style>'+tpl.fetch( {color:getRandomColor()})+'</style>');
+													$('head').append('<style>'+tpl.fetch( {color:getRandomColor(), bgcolor:getRandomColor()})+'</style>');
 												}, 300);
 										} catch (err) {
 											console.log(err.message);
